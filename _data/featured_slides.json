@@ -1,0 +1,29 @@
+[
+  {
+    "order": 1,
+    "image": "CSS/SLIDER/CaneyGroupbanner.png",
+    "alt": "LasTerrenasPlayaBonita",
+    "refFilename": "LasTerrenasPlayaBonita",
+    "href": "https://www.instagram.com/caneyinmobiliaria"
+  },
+  {
+    "order": 2,
+    "image": "CSS/SLIDER/1.png",
+    "alt": "CanaBayPoseidonia",
+    "refFilename": "CanaBayPoseidonia",
+    "href": "las-terrenas-playa-bonita-proyecto-residencial-playa-bonita.html"
+  },
+  {
+    "order": 3,
+    "image": "CSS/SLIDER/2.png",
+    "alt": "Oferta",
+    "href": "poseidonia-proyecto-cana-bay-cana-bay.html"
+  },
+
+  {
+  "order": 4,
+  "image": "CSS/SLIDER/3.png",
+  "alt": "Slide 4",
+  "href": "OFERTAS.html"
+}
+]
