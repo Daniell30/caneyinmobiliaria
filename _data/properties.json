@@ -86,6 +86,23 @@
   "description": "Penthouse de dos niveles con distribución pensada para el confort, lujo y privacidad. 4 habitaciones (cada una con walk-in closet), 4 baños, 2 medios baños para visitas, 3 parqueos, cuarto de servicio con baño, área de lavado y lockers para almacenamiento adicional. Diseño moderno: sala, comedor, cocina fría y caliente y amplia área social privada con jacuzzi; balcón con vista al mar. Acabados de primera: pisos en mármol, ventanales con gran iluminación natural, aire central y terminaciones de lujo; edificio con ascensores de carga y de visita y 3 parqueos techados exclusivos."
 },
 
+{
+  "title": "Apartamento Torre Caney",
+  "filename": "ApartamentoTorreCaney",
+  "area": "Santo Domingo",
+  "sector": "Anacaona",
+  "type": "Apartamento",
+  "location": "Av. Anacaona, Santo Domingo",
+  "price": "USD$1,800,000",
+  "size": "854m2",
+  "bedrooms": "4",
+  "bathrooms": "5.5",
+  "folder": "Santo Domingo/Torrecaney",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
+  "description": "Exclusivo apartamento en piso alto de la Torre Caney con 4 habitaciones con walk-in closets, 5.5 baños, 2 cocinas, sala formal, estudio, family, comedor formal e informal, oficina, área de servicio, balcón frontal con vista al mar y múltiples espacios sociales (piscinas, gimnasio, canchas, jacuzzi, sauna, salones, jardines, entre otros). Incluye 5 parqueos techados, 8 de visita y locker."
+},
+
+
   
 
   {
@@ -617,6 +634,7 @@
 
 
 ]
+
 
 
 
