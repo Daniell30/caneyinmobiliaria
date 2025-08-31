@@ -1,0 +1,17 @@
+{
+  "name": "caney-site",
+  "private": true,
+  "description": "Listado de Bienes Raices para Caney Inmobiliaria built with Eleventy",
+  "author": "Daniel Lombert / Caney Inmobiliaria",
+  "scripts": {
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
