@@ -1,6 +1,13 @@
 {
   "name": "Inmobiliaria Caney",
-  "url": "http://localhost:8080/",
+  "url": "https://caneyinmobiliaria.netlify.app/",
   "lang": "es-DO",
-  "logo": "CSS/Images caney/GENERAL/CANEYLOGO.png"
-} 
+  "logo": "CSS/Images caney/GENERAL/CANEYLOGO.png",
+  "phone": "+1-809-224-2769",
+  "email": "caneyinmobiliaria@yahoo.com",
+  "social": {
+    "instagram": "https://www.instagram.com/caneyinmobiliaria/"
+  },
+  "brand": "Inmobiliaria Caney",
+  "legalName": "Inmobiliaria Caney SRL"
+}
