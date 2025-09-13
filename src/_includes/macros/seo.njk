@@ -1,26 +1,21 @@
 {% macro tags(pageTitle, pageDesc, pageImage) %}
-  {# Choose an image: pageImage -> fallback to site.logo #}
   {% set imgPath = (pageImage or site.logo) | url %}
 
   <title>{{ pageTitle | safe }}</title>
   <meta name="description" content="{{ pageDesc | striptags | truncate(160, true, '') }}">
-
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-  {# Open Graph #}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:description" content="{{ pageDesc | striptags | truncate(200, true, '') }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:image" content="{{ site.url }}{{ imgPath }}">
 
-  {# Twitter #}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ pageTitle }}">
   <meta name="twitter:description" content="{{ pageDesc | striptags | truncate(200, true, '') }}">
   <meta name="twitter:image" content="{{ site.url }}{{ imgPath }}">
 
-  {# Organization JSON-LD #}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,6 +28,7 @@
   }
   </script>
 {% endmacro %}
+
 
 
 
