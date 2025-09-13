@@ -1,40 +1,37 @@
+{# src/_includes/macros/seo.njk #}
 {% macro tags(pageTitle, pageDesc, pageImage) %}
-  {# Fallbacks #}
-  {% set finalTitle = pageTitle or title or site.name %}
-  {% set relImage = (pageImage or site.logo) | url %}
-  {% set absImage = site.url ~ relImage %}
+  {% set title = (pageTitle | default('')) | safe %}
+  {% set desc = (pageDesc | default('') | striptags | truncate(160, true, '')) %}
+  {% set canonical = (site.url | default('')) ~ (page.url | default('')) %}
+  {% set ogimg = pageImage
+      ? ( (site.url | default('')) ~ (pageImage | url) )
+      : ( (site.url | default('')) ~ (site.logo | url) ) %}
 
-  {# Title & meta #}
-  <title>{{ finalTitle | safe }}</title>
-  <meta name="description" content="{{ (pageDesc or '') | striptags | truncate(160, true, '') }}">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ desc }}">
+  <link rel="canonical" href="{{ canonical }}">
 
-  {# Canonical (page.url is provided by Eleventy) #}
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  <link rel="alternate" hreflang="{{ site.lang | default('es') }}" href="{{ site.url }}{{ page.url }}">
-
-  {# Open Graph #}
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ finalTitle }}">
-  <meta property="og:description" content="{{ (pageDesc or '') | striptags | truncate(200, true, '') }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ absImage }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ desc }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ ogimg }}">
 
-  {# Twitter #}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ finalTitle }}">
-  <meta name="twitter:description" content="{{ (pageDesc or '') | striptags | truncate(200, true, '') }}">
-  <meta name="twitter:image" content="{{ absImage }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ desc }}">
+  <meta name="twitter:image" content="{{ ogimg }}">
 
-  {# Organization JSON-LD (site-wide) #}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    "name": "{{ site.name }}",
-    "url": "{{ site.url }}",
-    "logo": "{{ site.url }}{{ site.logo | url }}"{% if site.phone %},
-    "telephone": "{{ site.phone }}"{% endif %}{% if site.social and site.social.instagram %},
-    "sameAs": ["{{ site.social.instagram }}"]{% endif %}
+    "name": "{{ site.brand | default(site.name) }}",
+    "url": "{{ site.url | default('') }}",
+    "logo": "{{ (site.url | default('')) ~ (site.logo | url) }}",
+    "telephone": "{{ site.phone | default('') }}"
   }
   </script>
 {% endmacro %}
+
+
