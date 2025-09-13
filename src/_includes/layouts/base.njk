@@ -1,19 +1,18 @@
-{# src/_includes/layouts/base.njk #}
 <!doctype html>
 <html lang="{{ site.lang | default('es-DO') }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {# Import SEO macro and emit SEO tags #}
   {% from "macros/seo.njk" import tags as seo %}
-  {{ seo(pageTitle or title or site.name, pageDesc or '', pageImage or site.logo, page) }}
+  {{ seo(pageTitle or title or site.name, pageDesc, pageImage) }}
 
-  {# Page-specific CSS (IMPORTANT: exact key name is pageCSS) #}
-  {% if pageCSS %}
-    <link rel="stylesheet" href="{{ pageCSS }}">
-  {% else %}
-    <link rel="stylesheet" href="/CSS/Caneyvisual.css">
+  <link rel="stylesheet" href="{{ '/CSS/Caneyvisual.css' | url }}">
+
+  {# Support BOTH pageCss and pageCSS so casing never bites us again #}
+  {% set pageStyle = pageCss or pageCSS %}
+  {% if pageStyle %}
+    <link rel="stylesheet" href="{{ pageStyle | url }}">
   {% endif %}
 </head>
 <body>
