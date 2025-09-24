@@ -172,7 +172,7 @@ ${sliderItems}
 
   <!-- 4) CTA -->
   <div class="contact-cta">
-    <a href="https://www.instagram.com/caneyinmobiliaria/" class="btn-contact" target="_blank">Contáctanos Hoy Mismo</a>
+    <a href="https://daniell30.github.io/caney-contact-linktree/" class="btn-contact" target="_blank">Contáctanos Hoy Mismo</a>
   </div>
 
   <footer>
@@ -237,3 +237,4 @@ ${sliderItems}
 `;
   }
 };
+
