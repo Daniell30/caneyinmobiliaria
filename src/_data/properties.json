@@ -303,6 +303,23 @@
 },
 
 {
+  "title": "Local Comercial - Distrito Nacional",
+  "filename": "LocalComercialDistritoNacional",
+  "area": "Santo Domingo",
+  "sector": "27 de Febrero",
+  "type": "Casa",
+  "location": "Avenida 27 de Febrero esquina Calle Barahona, Distrito Nacional",
+  "price": "RD$5,000,000 (NEGOCIABLE)",
+  "size": "112m2",
+  "bedrooms": "",
+  "bathrooms": "2",
+  "folder": "Santo Domingo/LOCAL COMERCIAL 27 febrero",
+  "images": ["1.png","4.png","5.png","7.png"],
+  "description": "Local comercial ubicado en la Avenida 27 de Febrero esquina Calle Barahona, Distrito Nacional. Cuenta con 112 m² de construcción. Ideal para negocio o inversión. Precio negociable."
+},
+
+
+{
   "title": "Casa en Brisa Oriental - Santo Domingo Este",
   "filename": "CasaBrisaOriental",
   "area": "Santo Domingo",
@@ -693,6 +710,7 @@
 
 
 ]
+
 
 
 
