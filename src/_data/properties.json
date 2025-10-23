@@ -20,6 +20,22 @@
 },
 
 {
+"title": "Apartamento Amueblado - Esperilla",
+"filename": "ApartamentoAmuebladoEsperilla",
+"area": "Santo Domingo",
+"sector": "La Esperilla",
+"type": "Apartamento",
+"location": "Esperilla, Distrito Nacional",
+"price": "ALQUILER US$2,200 incluye mantenimiento",
+"size": "110 metros",
+"bedrooms": "2 habitaciones c/ walk-in closet",
+"bathrooms": "2.5 baños",
+"folder": "Santo Domingo/Esperilla Apartamento ALQUILER AMUEBLADO",
+"images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png"],
+"description": "FINAMENTE AMUEBLADO Y DECORADO. 2 parqueos; cocina con desayunador; comedor; sala; balcon; aires acondicionados; planta full; Portón Eléctrico. Áreas sociales: Piscina techada; Bbq; Area de juegos de niños; Gimnasio; Salón multiuso. Características: Techo de concreto; Pisos de porcelanato; Marcos de roble; Gabinetes de roble; Puertas de roble; Excelente ubicacion."
+},
+
+{
   "title": "Moderno apartamento en venta en Los Cacicazgos",
   "filename": "AptoLosCacicazgos",
   "area": "Santo Domingo",
@@ -710,6 +726,7 @@
 
 
 ]
+
 
 
 
