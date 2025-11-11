@@ -1,7 +1,21 @@
 
 
 [
-
+{
+"title": "Bella Vista Penthouse",
+"filename": "BellaVistaPenthouse",
+"area": "Santo Domingo",
+"sector": "Bella Vista",
+"type": "Penthouse",
+"location": "Distrito Nacional, Bella Vista",
+"price": "US$337,000",
+"size": "292 m2 de construcción",
+"bedrooms": "3",
+"bathrooms": "3.5",
+"folder": "Santo Domingo/Bella Vista Penthouse",
+"images": ["1.png","2.png","3.png","4.png","5.png","6.png"],
+"description": "Exclusivo penthouse de 292 m2 en Bella Vista, a pasos del centro comercial Downtown Center con amplias áreas sociales, estudio, terraza techada, 2 parqueos y cuarto de servicio, a pasos de Downtown Center y en torre con planta eléctrica."
+},
 
   {
 "title": "Amplio Apartamento en Bella Vista",
@@ -726,6 +740,7 @@
 
 
 ]
+
 
 
 
