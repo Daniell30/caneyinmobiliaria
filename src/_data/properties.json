@@ -1,6 +1,23 @@
 
 
 [
+
+  {
+  "title": "Penthouse de lujo en Los Cacicazgos",
+  "filename": "PenthouseLosCacicazgos",
+  "area": "Santo Domingo",
+  "sector": "Los Cacicazgos",
+  "type": "Penthouse",
+  "location": "Los Cacicazgos, Distrito Nacional",
+  "price": " ̶U̶S̶$̶8̶2̶0̶,̶0̶0̶0̶ REBAJADO US$750,000",
+  "size": "420 m² de construcción",
+  "bedrooms": "4",
+  "bathrooms": "4 baños + 2 medios baños",
+  "folder": "Santo Domingo/Penthouse Los Cascicazgos",
+  "images": ["1.png","12.png","13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png","21.png"],
+  "description": "Penthouse de dos niveles con distribución pensada para el confort, lujo y privacidad. 4 habitaciones (cada una con walk-in closet), 4 baños, 2 medios baños para visitas, 3 parqueos, cuarto de servicio con baño, área de lavado y lockers para almacenamiento adicional. Diseño moderno: sala, comedor, cocina fría y caliente y amplia área social privada con jacuzzi; balcón con vista al mar. Acabados de primera: pisos en mármol, ventanales con gran iluminación natural, aire central y terminaciones de lujo; edificio con ascensores de carga y de visita y 3 parqueos techados exclusivos."
+},
+  
 {
 "title": "Bella Vista Penthouse",
 "filename": "BellaVistaPenthouse",
@@ -114,22 +131,6 @@
   "folder": "Santo Domingo/Gazcue Penthouse",
   "images": ["1.png","4.png","6.png","8.png","10.png","12.png","14.png","16.png","18.png"],
   "description": "Penthouse en piso 8 de 300 m² con 4 habitaciones + cuarto de servicio y 3.5 baños + baño de servicio. Sala, comedor, cocina, área de lavado, 2 terrazas, 2 parqueos (1 techado y 1 destechado), lobby, ascensor, video portero e interfon. Extras: walk-in closet, calentador de gas, gas común, rejas, shutters y toldos, pet friendly."
-},
-
-{
-  "title": "Penthouse de lujo en Los Cacicazgos",
-  "filename": "PenthouseLosCacicazgos",
-  "area": "Santo Domingo",
-  "sector": "Los Cacicazgos",
-  "type": "Penthouse",
-  "location": "Los Cacicazgos, Distrito Nacional",
-  "price": "US$820,000",
-  "size": "420 m² de construcción",
-  "bedrooms": "4",
-  "bathrooms": "4 baños + 2 medios baños",
-  "folder": "Santo Domingo/Penthouse Los Cascicazgos",
-  "images": ["1.png","12.png","13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png","21.png"],
-  "description": "Penthouse de dos niveles con distribución pensada para el confort, lujo y privacidad. 4 habitaciones (cada una con walk-in closet), 4 baños, 2 medios baños para visitas, 3 parqueos, cuarto de servicio con baño, área de lavado y lockers para almacenamiento adicional. Diseño moderno: sala, comedor, cocina fría y caliente y amplia área social privada con jacuzzi; balcón con vista al mar. Acabados de primera: pisos en mármol, ventanales con gran iluminación natural, aire central y terminaciones de lujo; edificio con ascensores de carga y de visita y 3 parqueos techados exclusivos."
 },
 
 {
@@ -756,6 +757,7 @@
 
 
 ]
+
 
 
 
