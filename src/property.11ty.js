@@ -103,7 +103,7 @@ module.exports = class {
         ${p.bedrooms ? `<p class="property-price"><strong>Habitaciones:</strong> ${S(p.bedrooms)}</p>` : ""}
         ${p.bathrooms ? `<p class="property-price"><strong>Baños:</strong> ${S(p.bathrooms)}</p>` : ""}
         <p class="property-description">${S(p.description) || "Para más información o agendar una visita, contáctanos."}</p>
-        <a href="contact.html" class="contact-button">Contáctanos: 809-224-2769 / 829-380-2769</a>
+        <a href="https://daniell30.github.io/caney-contact-linktree/" class="contact-button">Contáctanos: 809-224-2769 / 829-380-2769</a>
       </div>
     </div>
   </main>
@@ -118,6 +118,7 @@ module.exports = class {
 </html>`;
   }
 };
+
 
 
 
