@@ -23,7 +23,7 @@ module.exports = function (eleventyConfig) {
       }
     }
 
-    const prop = list.find(p => String(p.filename).trim() === String(s.refFilename).trim());
+    const prop = list.find(p => String(p.filename).trim() === String(s.filename).trim());
     if (!prop) return "#";
 
     const titleSlug = slugify(prop.title || "");
@@ -42,12 +42,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/FONTS");
   eleventyConfig.addPassthroughCopy("src/FONTSS");
 
+  // --- Added passthrough mappings (safe, additive) ---
+  // Ensure linktree.css is available at site root: /linktree.css
+  eleventyConfig.addPassthroughCopy({ "src/linktree.css": "linktree.css" });
+
+  // Ensure contact page images are available at site root: /caneycontactpics/...
+  eleventyConfig.addPassthroughCopy({ "src/caneycontactpics": "caneycontactpics" });
+
   // ---------------- Watch targets ----------------
   eleventyConfig.addWatchTarget("src/CSS");
   eleventyConfig.addWatchTarget("src/Images caney");
   eleventyConfig.addWatchTarget("src/SLIDER");
   eleventyConfig.addWatchTarget("src/FONTS");
   eleventyConfig.addWatchTarget("src/FONTSS");
+
+  // --- Added watch targets (safe, additive) ---
+  eleventyConfig.addWatchTarget("src/linktree.css");
+  eleventyConfig.addWatchTarget("src/caneycontactpics");
 
   // ---------------- Eleventy dirs & engines ----------------
   return {
