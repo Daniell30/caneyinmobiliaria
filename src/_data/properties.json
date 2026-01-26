@@ -17,6 +17,23 @@
   "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png"],
   "description": "Penthouse de dos niveles con distribución pensada para el confort, lujo y privacidad. 4 habitaciones (cada una con walk-in closet), 4 baños, 2 medios baños para visitas, 3 parqueos, cuarto de servicio con baño, área de lavado y lockers para almacenamiento adicional. Diseño moderno: sala, comedor, cocina fría y caliente y amplia área social privada con jacuzzi; balcón con vista al mar. Acabados de primera: pisos en mármol, ventanales con gran iluminación natural, aire central y terminaciones de lujo; edificio con ascensores de carga y de visita y 3 parqueos techados exclusivos."
 },
+
+  {
+  "title": "Apartamento amueblado en Bella Vista",
+  "filename": "ApartamentoBellaVistaAmueblado",
+  "area": "Santo Domingo",
+  "sector": "Bella Vista",
+  "type": "Apartamento",
+  "location": "Bella Vista, Distrito Nacional",
+  "price": "US$235,000",
+  "size": "150 m²",
+  "bedrooms": "2",
+  "bathrooms": "2 baños",
+  "folder": "Santo Domingo/Apartamento BELLA VISTA AMUEBLADO",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png"],
+  "description": "Apartamento amueblado en Bella Vista (Distrito Nacional) con 150 m². Cuenta con 2 habitaciones con walk-in closet, 2 baños, 2 parqueos, ascensor y aire acondicionado. Espacios sociales amplios y listos para mudarse."
+},
+
   
 {
 "title": "Bella Vista Penthouse",
@@ -757,6 +774,7 @@
 
 
 ]
+
 
 
 
