@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="{{ site.lang | default('es-DO') }}">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17897616535"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17897616535');
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="EAe0uIdP1PeWUzNKg97Sfa3jm82P7OulSVRGBwDt1CQ" />
@@ -20,5 +29,6 @@
   {{ content | safe }}
 </body>
 </html>
+
 
 
