@@ -39,6 +39,15 @@ module.exports = class {
     return `<!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17897616535"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17897616535');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${S(p.title)} | ${S(site.name)}</title>
@@ -118,6 +127,7 @@ module.exports = class {
 </html>`;
   }
 };
+
 
 
 
