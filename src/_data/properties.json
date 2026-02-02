@@ -416,7 +416,21 @@
 
 
 
-
+{
+  "title": "Solar frente al Mirador Sur",
+  "filename": "SolarMiradorSurJoseContreras",
+  "area": "Solares",
+  "sector": "Mirador Sur / Av. José Contreras",
+  "type": "Solar",
+  "location": "Av. José Contreras, Distrito Nacional",
+  "price": "RD$12,000,000",
+  "size": "227 m² de solar",
+  "bedrooms": "",
+  "bathrooms": "",
+  "folder": "Solares/Solar Mirador Sur y Jose Contreras",
+  "images": ["1.png"],
+  "description": "Solar de 227 m² colindante con el Mirador Sur, con acceso por Av. José Contreras. Excelente oportunidad para desarrollo o inversión en una zona céntrica del Distrito Nacional, cerca de puntos de referencia y vías principales."
+},
 
 
 
@@ -774,6 +788,7 @@
 
 
 ]
+
 
 
 
