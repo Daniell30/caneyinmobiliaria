@@ -2,6 +2,22 @@
 
 [
 
+{
+  "title": "Apartamento en Los Cacicazgos, próximo a Av. Anacaona",
+  "filename": "ApartamentoLosCacicazgosAnacaona",
+  "area": "Santo Domingo",
+  "sector": "Los Cacicazgos",
+  "type": "Apartamento",
+  "location": "Los Cacicazgos, próximo a Av. Anacaona, Distrito Nacional",
+  "price": "US$730,000",
+  "size": "339.20 m²",
+  "bedrooms": "3",
+  "bathrooms": "3.5 baños",
+  "folder": "Santo Domingo/Apartamento Los Cacicazgos Anacaona",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"],
+  "description": "Apartamento ubicado en piso 6 con 339.20 m². Cuenta con 3 habitaciones (cada una con su baño; 2 con walk-in closet), 2 salas, comedor, family, cocina fría y caliente, balcón tipo terraza, cuarto de servicio, área de lavado, 3 parqueos, lobby y locker. Edificio con 2 ascensores de última generación, planta full, vigilancia 24 horas, sistema de cámaras y gas común. Amenidades: área social, gimnasio, terraza y jacuzzi."
+},
+
   {
   "title": "Penthouse de lujo en Los Cacicazgos",
   "filename": "PenthouseLosCacicazgos",
@@ -788,6 +804,7 @@
 
 
 ]
+
 
 
 
