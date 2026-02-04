@@ -26,7 +26,7 @@
   "type": "Penthouse",
   "location": "Bella Vista, Distrito Nacional",
   "price": "US$550,000",
-  "size": "650 m² total contando parqueo y terraza)",
+  "size": "650 m² total (contando parqueo y terraza)",
   "bedrooms": "4",
   "bathrooms": "4.5",
   "folder": "Santo Domingo/Bella Vista Penthouse 2",
@@ -820,6 +820,7 @@
 
 
 ]
+
 
 
 
