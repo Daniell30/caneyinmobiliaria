@@ -19,6 +19,22 @@
 },
 
   {
+  "title": "Penthouse en Bella Vista",
+  "filename": "PenthouseBellaVista",
+  "area": "Santo Domingo",
+  "sector": "Bella Vista",
+  "type": "Penthouse",
+  "location": "Bella Vista, Distrito Nacional",
+  "price": "US$550,000",
+  "size": "650 m² total contando parqueo y terraza)",
+  "bedrooms": "4",
+  "bathrooms": "4.5",
+  "folder": "Santo Domingo/Bella Vista Penthouse 2",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+  "description": "Penthouse en Bella Vista (Distrito Nacional) con 550 m² de construcción más 80 m² de terraza. Cuenta con 4 habitaciones (cada una con su baño y walk-in closet), 4.5 baños, 3 parqueos, ascensor y cocina fría y caliente. Amplios espacios sociales y distribución ideal para comodidad y entretenimiento."
+},
+
+  {
   "title": "Penthouse de lujo en Los Cacicazgos",
   "filename": "PenthouseLosCacicazgos",
   "area": "Santo Domingo",
@@ -804,6 +820,7 @@
 
 
 ]
+
 
 
 
