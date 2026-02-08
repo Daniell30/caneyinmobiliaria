@@ -177,7 +177,7 @@ ${sliderItems}
   </div>
 
   <footer>
-    <span>Inmobiliaria Caney 2025</span>
+    <span>Inmobiliaria Caney 2026</span>
   </footer>
 
   <!-- Mobile nav toggle -->
@@ -253,3 +253,4 @@ ${sliderItems}
 `;
   }
 };
+
