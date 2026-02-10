@@ -50,6 +50,23 @@
   "description": "Penthouse de dos niveles con distribución pensada para el confort, lujo y privacidad. 4 habitaciones (cada una con walk-in closet), 4 baños, 2 medios baños para visitas, 3 parqueos, cuarto de servicio con baño, área de lavado y lockers para almacenamiento adicional. Diseño moderno: sala, comedor, cocina fría y caliente y amplia área social privada con jacuzzi; balcón con vista al mar. Acabados de primera: pisos en mármol, ventanales con gran iluminación natural, aire central y terminaciones de lujo; edificio con ascensores de carga y de visita y 3 parqueos techados exclusivos."
 },
 
+{
+  "title": "Apartamento de lujo en Los Cacicazgos, Av. Enriquillo",
+  "filename": "ApartamentoLosCacicazgosEnriquillo450",
+  "area": "Santo Domingo",
+  "sector": "Los Cacicazgos",
+  "type": "Apartamento",
+  "location": "Av. Enriquillo, Los Cacicazgos, Distrito Nacional",
+  "price": "US$1,300,000 (venta) | US$7,500 (renta)",
+  "size": "450 m²",
+  "bedrooms": "4",
+  "bathrooms": "4.5 baños",
+  "folder": "Santo Domingo/Av Enriquillo Los Cacicazgos",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
+  "description": "Apartamento de alto nivel en Av. Enriquillo, Los Cacicazgos, con 450 m². Cuenta con 4 habitaciones y 4.5 baños, 4 parqueos techados y balcón terraza con vista al mar. Incluye sala, recibidor, comedor, estudio, cocina fría y caliente, clóset de ropa blanca, área de lavado y cuarto de servicio. Torre con amenidades premium: piscina, gym, área de bar, área de masajes, sauna y ducha para sauna, estar de choferes, salón de reuniones, lobby climatizado, 3 ascensores, planta full y gas común. 1 apartamento por nivel (16 familias). Agenda tu visita: 809-224-2769 / 829-380-2769."
+},
+
+
   {
   "title": "Apartamento amueblado en Bella Vista",
   "filename": "ApartamentoBellaVistaAmueblado",
@@ -820,6 +837,7 @@
 
 
 ]
+
 
 
 
