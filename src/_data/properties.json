@@ -497,6 +497,22 @@
   "description": "Solar de 227 m² colindante con el Mirador Sur, con acceso por Av. José Contreras. Excelente oportunidad para desarrollo o inversión en una zona céntrica del Distrito Nacional, cerca de puntos de referencia y vías principales."
 },
 
+ {
+  "title": "Solar con potencial industrial - Punta Caucedo 2",
+  "filename": "SolarPuntaCaucedoIndustrial",
+  "area": "Solares",
+  "sector": "Punta Caucedo",
+  "type": "Solar",
+  "location": "Punta Caucedo, próximo al Aeropuerto Internacional de Las Américas, República Dominicana",
+  "price": "US$1.50 x cada m²",
+  "size": "23,736 m² de solar",
+  "bedrooms": "",
+  "bathrooms": "",
+   "folder": "Solares/PUNTA CAUCEDO SOLAR 2",
+  "images": ["1.png","2.png","3.png"],
+  "description": "Solar nivelado y aplanado con potencial industrial en Punta Caucedo. Cuenta con 23,736 m² y precio de US$1.50 por m². Ubicación estratégica cerca del Aeropuerto Internacional de Las Américas, con acceso a vías principales y zona logística/portuaria."
+},
+
 
 
 
@@ -853,6 +869,7 @@
 
 
 ]
+
 
 
 
