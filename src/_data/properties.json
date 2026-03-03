@@ -17,6 +17,22 @@
   "images": ["1.png","2.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png","14.png"],
   "description": "Penthouse de 2 niveles en Av. Enriquillo, Los Cacicazgos, con 532.98 m². Distribución: lobby privado, sala principal, 2 comedores, 2 balcones, 3 family rooms, cuarto de bar con vinera, 4 habitaciones (cada una con baño y walk-in closet), baño de visitas, cocina fría y cocina caliente, habitación de servicio, 2 terrazas techadas con 2 baños, 4 parqueos y locker. Espacios amplios con iluminación natural y áreas sociales ideales para entretenimiento y vida familiar."
 },
+ 
+ {
+  "title": "Apartamento en alquiler en Sector Quisqueya",
+  "filename": "ApartamentoQuisqueyaAlquiler",
+  "area": "Santo Domingo",
+  "sector": "Sector Quisqueya",
+  "type": "Apartamento",
+  "location": "Sector Quisqueya, Distrito Nacional",
+  "price": "US$950 (alquiler)",
+  "size": "90 m²",
+  "bedrooms": "1",
+  "bathrooms": "2 baños",
+  "folder": "Santo Domingo/Apartamento Sector Quisqueya - Alquiler",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"],
+  "description": "Apartamento en alquiler en el Sector Quisqueya (Distrito Nacional) con 90 m². Cuenta con 1 habitación, 2 baños y 1 parqueo. Incluye sala, comedor y cocina. Amenidades del edificio: área social con jacuzzi y terraza."
+},
 
 {
   "title": "Apartamento en Los Cacicazgos, próximo a Av. Anacaona",
@@ -869,6 +885,7 @@
 
 
 ]
+
 
 
 
