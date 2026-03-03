@@ -29,7 +29,7 @@
   "size": "90 m²",
   "bedrooms": "1",
   "bathrooms": "2 baños",
-  "folder": "Santo Domingo/Apartamento Sector Quisqueya - Alquiler",
+  "folder": "Santo Domingo/Sector Quisqueya Alquiler",
   "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"],
   "description": "Apartamento en alquiler en el Sector Quisqueya (Distrito Nacional) con 90 m². Cuenta con 1 habitación, 2 baños y 1 parqueo. Incluye sala, comedor y cocina. Amenidades del edificio: área social con jacuzzi y terraza."
 },
@@ -885,6 +885,7 @@
 
 
 ]
+
 
 
 
