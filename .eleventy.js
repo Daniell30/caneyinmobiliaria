@@ -37,6 +37,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/Images caney");
   eleventyConfig.addPassthroughCopy("src/SLIDER");
 
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon-32x32.png": "favicon-32x32.png" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon-16x16.png": "favicon-16x16.png" });
+  eleventyConfig.addPassthroughCopy({ "src/apple-touch-icon.png": "apple-touch-icon.png" });
+
   // If you actually have these folders under src, keep these lines.
   // If not, you can remove them safely.
   eleventyConfig.addPassthroughCopy("src/FONTS");
