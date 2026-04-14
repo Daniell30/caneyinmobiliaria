@@ -24,17 +24,27 @@ module.exports = class {
   render({ p }) {
     const base = `/CSS/Images caney/${S(p.folder)}/`;
     const first = (p.images && p.images[0]) ? S(p.images[0]) : "";
-    const thumbs = (p.images || []).map(img => `<img src="${base}${S(img)}" alt="img" onclick="swapImage(this.src)">`).join("\n          ");
+    const primaryImg = first ? `${base}${first}` : S(site.logo);
+
+    const thumbs = (p.images || []).map((img, i) => `
+          <img
+            src="${base}${S(img)}"
+            alt="${S(p.title)} - imagen ${i + 1}"
+            onclick="swapImage(this)"
+            loading="lazy"
+            decoding="async"
+            width="140"
+            height="140"
+          >`).join("\n");
 
     const pageSlug = `${slugify(S(p.title))}-${slugify(S(p.sector || p.area))}`;
     const permalink = `${pageSlug}.html`;
 
-    const primaryImg = (p.images && p.images[0]) ? `/CSS/Images caney/${S(p.folder)}/${S(p.images[0])}` : S(site.logo);
-    const canonical  = new URL(permalink, S(site.url)).toString();
-    const imgAbs     = new URL(primaryImg, S(site.url)).toString();
+    const canonical = new URL(permalink, S(site.url)).toString();
+    const imgAbs = new URL(primaryImg, S(site.url)).toString();
 
     const descRaw = S(p.description) || `${S(p.type)} en ${S(p.location)} — ${S(p.size)} ${S(p.price)}`;
-    const desc    = descRaw.trim().slice(0, 155);
+    const desc = descRaw.trim().slice(0, 155);
 
     return `<!DOCTYPE html>
 <html lang="es">
@@ -54,6 +64,7 @@ module.exports = class {
   <meta name="description" content="${desc}">
   <link rel="canonical" href="${canonical}">
   <link rel="stylesheet" href="/CSS/Detalles.css">
+  <link rel="preload" as="image" href="${primaryImg}">
 
   <meta property="og:type" content="product">
   <meta property="og:title" content="${S(p.title)} — ${S(p.location)}">
@@ -97,9 +108,19 @@ module.exports = class {
   <main>
     <div class="property-container">
       <div class="property-gallery">
-        <img id="featuredImage" src="${base}${first}" alt="" class="featured-image">
+        <img
+          id="featuredImage"
+          src="${primaryImg}"
+          alt="${S(p.title)}"
+          class="featured-image"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          width="900"
+          height="900"
+        >
         <div class="property-thumbnails">
-          ${thumbs}
+${thumbs}
         </div>
       </div>
 
@@ -122,12 +143,18 @@ module.exports = class {
     <span><a href="/" class="footerbutton" rel="noopener">Ver más propiedades</a></span>
   </footer>
 
-  <script>function swapImage(s){ document.getElementById('featuredImage').src = s; }</script>
+  <script>
+    function swapImage(img){
+      const featured = document.getElementById('featuredImage');
+      if (!img || !img.src) return;
+      featured.src = img.src;
+      featured.alt = img.alt || featured.alt;
+    }
+  </script>
 </body>
 </html>`;
   }
 };
-
 
 
 
