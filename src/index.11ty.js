@@ -121,42 +121,42 @@ ${sliderItems}
 
   <!-- 2) ¿Qué buscas? -->
   <main class="members">
-    <section>
+    <section class="search-section">
       <h3 class="quebuscasopening">¿Qué buscas?</h3>
       <div class="quebuscas">
-        <div class="SantoDomingo">
-          <img src="CSS/Images caney/GENERAL/1.png" alt="stodmg" class="icon">
-          <p>Santo Domingo</p>
-          <a href="INMUEBLES SANTO DOMINGO.html" target="_blank">
-            <img src="CSS/Images caney/GENERAL/Verinmuebles boton.png" alt="Learn More" class="learnmore">
+        <div class="SantoDomingo location-card">
+          <img src="CSS/Images caney/GENERAL/1.png" alt="Santo Domingo" class="icon" loading="lazy" decoding="async">
+          <p class="location-name">Santo Domingo</p>
+          <a href="INMUEBLES SANTO DOMINGO.html" target="_blank" rel="noopener" class="learnmore">
+            Ver inmuebles
           </a>
         </div>
-        <div class="column">
-          <img src="CSS/Images caney/GENERAL/2.png" alt="puntacana" class="icon">
-          <p>Punta Cana</p>
-          <a href="INMUEBLES PUNTA CANA.html" target="_blank">
-            <img src="CSS/Images caney/GENERAL/Verinmuebles boton.png" alt="Learn More" class="learnmore">
+        <div class="column location-card">
+          <img src="CSS/Images caney/GENERAL/2.png" alt="Punta Cana" class="icon" loading="lazy" decoding="async">
+          <p class="location-name">Punta Cana</p>
+          <a href="INMUEBLES PUNTA CANA.html" target="_blank" rel="noopener" class="learnmore">
+            Ver inmuebles
           </a>
         </div>
-        <div class="column">
-          <img src="CSS/Images caney/GENERAL/3.png" alt="Solares" class="icon">
-          <p>Solares</p>
-          <a href="INMUEBLES SOLARES.html" target="_blank">
-            <img src="CSS/Images caney/GENERAL/Verinmuebles boton.png" alt="Learn More" class="learnmore">
+        <div class="column location-card">
+          <img src="CSS/Images caney/GENERAL/3.png" alt="Solares" class="icon" loading="lazy" decoding="async">
+          <p class="location-name">Solares</p>
+          <a href="INMUEBLES SOLARES.html" target="_blank" rel="noopener" class="learnmore">
+            Ver inmuebles
           </a>
         </div>
-        <div class="column">
-          <img src="CSS/Images caney/GENERAL/4.png" alt="juandolio" class="icon">
-          <p>Juan Dolio</p>
-          <a href="INMUEBLES JUAN DOLIO.html" target="_blank">
-            <img src="CSS/Images caney/GENERAL/Verinmuebles boton.png" alt="Learn More" class="learnmore">
+        <div class="column location-card">
+          <img src="CSS/Images caney/GENERAL/4.png" alt="Juan Dolio" class="icon" loading="lazy" decoding="async">
+          <p class="location-name">Juan Dolio</p>
+          <a href="INMUEBLES JUAN DOLIO.html" target="_blank" rel="noopener" class="learnmore">
+            Ver inmuebles
           </a>
         </div>
-        <div class="column">
-          <img src="CSS/Images caney/GENERAL/OTRO.png" alt="otro" class="icon">
-          <p>Otro</p>
-          <a href="INMUEBLES OTRO.html" target="_blank">
-            <img src="CSS/Images caney/GENERAL/Verinmuebles boton.png" alt="Learn More" class="learnmore">
+        <div class="column location-card">
+          <img src="CSS/Images caney/GENERAL/OTRO.png" alt="Otro" class="icon" loading="lazy" decoding="async">
+          <p class="location-name">Otro</p>
+          <a href="INMUEBLES OTRO.html" target="_blank" rel="noopener" class="learnmore">
+            Ver inmuebles
           </a>
         </div>
       </div>
