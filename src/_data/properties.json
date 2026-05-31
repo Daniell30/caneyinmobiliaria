@@ -1,22 +1,22 @@
 
 
 [
- 
-{
-  "title": "Penthouse de lujo en Av. Enriquillo, Los Cacicazgos",
-  "filename": "PenthouseLosCacicazgosEnriquillo532",
+ {
+  "title": "Penthouse en Bella Vista",
+  "filename": "PenthouseBellaVista",
   "area": "Santo Domingo",
-  "sector": "Los Cacicazgos",
+  "sector": "Bella Vista",
   "type": "Penthouse",
-  "location": "Av. Enriquillo, Los Cacicazgos, Distrito Nacional",
-  "price": "US$880,000",
-  "size": "792.68 m²",
+  "location": "Bella Vista, Distrito Nacional",
+  "price": "US$550,000",
+  "size": "650 m² total (contando parqueo y terraza)",
   "bedrooms": "4",
-  "bathrooms": "4 baños + baño de visitas + 2 baños en terrazas",
-  "folder": "Santo Domingo/Av Enriquillo Los cacicazgos Penthouse 2",
-  "images": ["1.png","2.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png","14.png"],
-  "description": "Penthouse de 2 niveles en Av. Enriquillo, Los Cacicazgos, con 532.98 m². Distribución: lobby privado, sala principal, 2 comedores, 2 balcones, 3 family rooms, cuarto de bar con vinera, 4 habitaciones (cada una con baño y walk-in closet), baño de visitas, cocina fría y cocina caliente, habitación de servicio, 2 terrazas techadas con 2 baños, 4 parqueos y locker. Espacios amplios con iluminación natural y áreas sociales ideales para entretenimiento y vida familiar."
+  "bathrooms": "4.5",
+  "folder": "Santo Domingo/Bella Vista Penthouse 2",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+  "description": "Penthouse en Bella Vista (Distrito Nacional) con 550 m² de construcción más 80 m² de terraza. Cuenta con 4 habitaciones (cada una con su baño y walk-in closet), 4.5 baños, 3 parqueos, ascensor y cocina fría y caliente. Amplios espacios sociales y distribución ideal para comodidad y entretenimiento."
 },
+ 
 
  {
   "title": "Apartamento NUEVO en Evaristo Morales",
@@ -80,22 +80,6 @@
   "folder": "Santo Domingo/SOLAR Y VILLA PEDRO BRAND LOMAS LINDAS",
   "images": ["1.png","2.png","3.png","4.png"],
   "description": "Solar + villa en venta en Pedro Brand, Lomas Lindas. Cuenta con 5,700 m² de terreno y una villa con 2 habitaciones, 1 baño, sala y cocina. Incluye área de parqueo y planta eléctrica. Ideal para quienes buscan amplitud, tranquilidad y contacto con la naturaleza."
-},
- 
-  {
-  "title": "Penthouse en Bella Vista",
-  "filename": "PenthouseBellaVista",
-  "area": "Santo Domingo",
-  "sector": "Bella Vista",
-  "type": "Penthouse",
-  "location": "Bella Vista, Distrito Nacional",
-  "price": "US$550,000",
-  "size": "650 m² total (contando parqueo y terraza)",
-  "bedrooms": "4",
-  "bathrooms": "4.5",
-  "folder": "Santo Domingo/Bella Vista Penthouse 2",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
-  "description": "Penthouse en Bella Vista (Distrito Nacional) con 550 m² de construcción más 80 m² de terraza. Cuenta con 4 habitaciones (cada una con su baño y walk-in closet), 4.5 baños, 3 parqueos, ascensor y cocina fría y caliente. Amplios espacios sociales y distribución ideal para comodidad y entretenimiento."
 },
 
   {
@@ -738,6 +722,30 @@
 
 
 
+
+
+
+
+
+
+
+ 
+
+{
+  "title": "Villa amueblada en Ciudad Las Canas, Cap Cana (Punta Cana)",
+  "filename": "VillaCiudadLasCanasCapCanaAmueblada",
+  "area": "Punta Cana",
+  "sector": "Ciudad Las Canas",
+  "type": "Villa",
+  "location": "Ciudad Las Canas, Cap Cana, Punta Cana",
+  "price": "US$1,325,000",
+  "size": "860 m² de construcción (877 m² de terreno)",
+  "bedrooms": "4",
+  "bathrooms": "5 baños",
+  "folder": "Punta Cana/CIUDAD LAS CANAS CAP CANA CASA",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png"],
+  "description": "Dream House Villa en Cap Cana, Punta Cana (Solar 45, Ciudad Las Canas). Residencia de 2 niveles totalmente amueblada y equipada, con 4 habitaciones (todas con walk-in closet y baño), 5 baños, marquesina/área de parqueo para 4 vehículos y piscina. Incluye gazebo, terraza y área de BBQ. Cuenta con estudio/oficina privada, 2 living rooms + antesala, línea blanca de primera, aires acondicionados en todas las áreas, cocina en alto brillo con topes de cuarzo blanco, puertas en maderas preciosas, ventanales europeos anticiclónicos y escalera completa en cuarzo blanco."
+},
 
 
 
