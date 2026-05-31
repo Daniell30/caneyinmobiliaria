@@ -1,238 +1,393 @@
 @font-face {
-    font-family: Rubik;
-    src: url(FONTSS/Rubik-VariableFont_wght.ttf);
+  font-family: Rubik;
+  src: url(FONTSS/Rubik-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: Poppins;
-    src: url(FONTSS/Poppins-Thin.ttf);
+  font-family: Poppins;
+  src: url(FONTSS/Poppins-Thin.ttf);
 }
 
 @font-face {
-    font-family: Poppins Bold;
-    src: url(FONTSS/Poppins-Bold.ttf);
+  font-family: "Poppins Bold";
+  src: url(FONTSS/Poppins-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --caney-cream: #fcf6f0;
+  --caney-page: #f1ece6;
+  --caney-surface: #fff9f2;
+  --caney-card: #fffdfa;
+  --caney-border: rgba(123, 98, 82, 0.14);
+  --caney-border-strong: rgba(123, 98, 82, 0.22);
+  --caney-text: #353232;
+  --caney-muted: #7f6558;
+  --caney-copy: #6c625b;
+  --caney-shadow: 0 12px 28px rgba(63, 48, 38, 0.07);
+  --caney-shadow-hover: 0 18px 34px rgba(63, 48, 38, 0.1);
 }
 
 body {
-    /* Old browsers */
-    background: #ededed;
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: #ededed;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: #ededed;
-    margin: 0;
-    padding: 0;
-  }
-
-
-
-header{
-    z-index: 1;
-    background-color:#fcf6f0;
-    
-
-}
-nav{background-color:#fcf6f0;
-    box-sizing: border-box;
-    overflow: hidden;
-  
-
+  background: var(--caney-page);
+  color: var(--caney-text);
+  font-family: Poppins, sans-serif;
 }
 
-nav img{display:block;
-    width: 20%;
-    margin: 0 auto; 
-    padding: 5px 0px;
+header {
+  background: rgba(252, 246, 240, 0.96);
+  border-bottom: 1px solid rgba(123, 98, 82, 0.08);
+}
 
+nav {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0.95rem;
+}
 
+nav a {
+  display: flex;
+  justify-content: center;
+}
+
+nav img {
+  display: block;
+  width: auto;
+  height: 108px;
+  max-width: min(100%, 360px);
+  transition: opacity 180ms ease, transform 180ms ease;
 }
 
 nav img:hover {
-    opacity: 0.8; /* Slight hover effect */
-  }
-
-
-  body {
-    font-family: Poppins;
-    font-weight: 900;
-    background-color: #ededed;
-    margin: 0;
-    padding: 0;
-}
-h1 {font-family: Poppins;
-    color: rgb(53, 50, 50);
-    font-size:40px;
-    text-align: center;
-    position: relative;
-    top:10px;
-    padding-left: 25%;
-    padding-right: 25%;}
-
-
-
-/* Filter button + icon */
-.filter-toggle{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:#e7ccab;
-  border:none;
-  padding:10px 14px;
-  border-radius:6px;
-  cursor:pointer;
-  font-family:'Poppins Bold',sans-serif;
-  line-height:1;
-  /* If you previously tried a background icon, kill it: */
-  background-image: none !important;
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 
-.icon{
-  width:5px !important;     /* ← adjust to taste */
-  height:5px !important;
-  flex:0 0 20px;
-  object-fit:contain;
-  display:inline-block;
-  max-width:none !important; /* neutralize any global img rules */
+h1 {
+  max-width: 1240px;
+  margin: 1.8rem auto 0.75rem;
+  padding: 0 1.5rem;
+  color: var(--caney-text);
+  font-family: Poppins, sans-serif;
+  font-size: clamp(2.2rem, 4.2vw, 3.7rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-align: center;
 }
 
-/* Container for all listings */
+.toolbar,
+.filters,
+.property-listing,
+.empty-msg,
+.pager {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.25rem;
+  padding-bottom: 0.85rem;
+}
+
+.filter-toggle,
+.filters button,
+.view-details {
+  border: none;
+  border-radius: 999px;
+  background: #e6ccaa;
+  color: var(--caney-text);
+  cursor: pointer;
+  font-family: "Poppins Bold", sans-serif;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 50px;
+  padding: 0.85rem 1.35rem;
+  box-shadow: 0 10px 18px rgba(127, 101, 88, 0.12);
+}
+
+.filter-toggle:hover,
+.filters button:hover,
+.view-details:hover {
+  background: #dac09d;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 22px rgba(127, 101, 88, 0.18);
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: end;
+  padding-bottom: 1.5rem;
+}
+
+.filters > div {
+  background: var(--caney-card);
+  border: 1px solid var(--caney-border);
+  border-radius: 18px;
+  box-shadow: var(--caney-shadow);
+  padding: 1rem;
+}
+
+.filters .btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--caney-muted);
+  font-family: "Poppins Bold", sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.filters select,
+.filters input[type="number"] {
+  width: 100%;
+  border: 1px solid rgba(123, 98, 82, 0.16);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--caney-text);
+  font-family: Rubik, sans-serif;
+  font-size: 0.98rem;
+  padding: 0.9rem 1rem;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.filters select:focus,
+.filters input[type="number"]:focus {
+  border-color: rgba(127, 101, 88, 0.35);
+  box-shadow: 0 0 0 4px rgba(230, 204, 170, 0.2);
+}
+
+.filters button {
+  min-height: 48px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 10px 18px rgba(127, 101, 88, 0.1);
+}
+
 .property-listing {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  display: grid;
+  gap: 1.35rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.6rem;
 }
 
-/* Individual property item */
 .property-item {
-    display: flex;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--caney-surface);
+  border: 1px solid var(--caney-border);
+  border-radius: 24px;
+  box-shadow: var(--caney-shadow);
+  padding: 1.35rem;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
-/* Image on the left side */
+.property-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--caney-shadow-hover);
+  border-color: var(--caney-border-strong);
+}
+
 .property-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  display: block;
+  background: #f5efe8;
 }
 
-/* Info on the right side */
 .property-info {
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
 }
 
-/* Styling for the property title and details */
 .property-info h2 {
-    margin: 0 0 10px 0;
-    font-size: 1.5em;
+  margin: 0 0 0.4rem;
+  color: var(--caney-text);
+  font-family: Poppins, sans-serif;
+  font-size: clamp(1.7rem, 2vw, 2.35rem);
+  font-weight: 300;
+  line-height: 1.1;
 }
 
 .property-info p {
-    margin: 5px 0;
-    color: #555;
+  color: var(--caney-copy);
+  font-family: Rubik, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
+.property-info p strong {
+  color: var(--caney-text);
+}
 
-
-
-
-
-
-
-/* Link to view more details */
 .view-details {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #e7ccab; /* same color as your other button */
-    color: #353232;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-family: 'Poppins Bold', sans-serif; /* if you use a bold version of Poppins */
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    margin-top: 10px; /* Add spacing above button if needed */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-width: 190px;
+  margin-top: 0.9rem;
+  padding: 0.9rem 1.45rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 18px rgba(127, 101, 88, 0.12);
+}
+
+.empty-msg {
+  color: var(--caney-copy);
+  font-family: Rubik, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  padding-top: 1rem;
+  padding-bottom: 2.6rem;
+}
+
+.pager .view-details {
+  align-self: center;
+  margin-top: 0;
+}
+
+@media (max-width: 1100px) {
+  nav img {
+    height: 92px;
   }
-  
-  .view-details:hover {
-    background-color: #d2bba0;
+
+  .filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  
-  /* Property listing styles (example) */
-  .property-listing {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px;
-  }
-  
+
   .property-item {
-    display: flex;
-    background-color: #fff5e9;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    grid-template-columns: 220px minmax(0, 1fr);
   }
-  
+
   .property-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+    width: 220px;
+    height: 220px;
   }
-  
-  .property-info {
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
+}
+
+@media (max-width: 820px) {
+  nav {
+    padding: 0.8rem 1rem 0.85rem;
+  }
+
+  nav img {
+    height: 76px;
+  }
+
+  h1 {
+    margin-top: 1.4rem;
+    padding: 0 1rem;
+    letter-spacing: 0.04em;
+  }
+
+  .toolbar,
+  .filters,
+  .property-listing,
+  .empty-msg,
+  .pager {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .toolbar {
     justify-content: center;
   }
-  
+
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .property-item {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    padding: 1rem;
+  }
+
+  .property-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    justify-self: center;
+  }
+
+  .property-info {
+    text-align: center;
+    align-items: center;
+  }
+
   .property-info h2 {
-    margin: 0 0 10px 0;
-    font-size: 1.5em;
+    font-size: 1.8rem;
   }
-  
+
+  .view-details {
+    align-self: center;
+    width: min(100%, 320px);
+  }
+
+  .pager {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .filters .btns {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-toggle {
+    width: 100%;
+  }
+
+  .property-info h2 {
+    font-size: 1.55rem;
+  }
+
   .property-info p {
-    margin: 5px 0;
-    color: #555;
+    font-size: 0.95rem;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .property-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .property-image {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-    }
-
-    .property-info {
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;
-    }
 }

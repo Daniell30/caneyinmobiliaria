@@ -110,20 +110,6 @@ module.exports = class {
 
   <h1>SANTO DOMINGO</h1>
 
-  <!-- Page-local styles (kept here if you want the small helpers inline) -->
-  <style>
-    .toolbar { max-width:1200px; margin:0 auto; padding:0 20px 10px; display:flex; justify-content:flex-end; }
-    .filter-toggle { background:#e7ccab; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; font-family:'Poppins Bold',sans-serif; }
-    .filters { max-width: 1200px; margin: 0 auto; padding: 0 20px 10px;
-               display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 10px; align-items: end; }
-    .filters label { font-family: Poppins, sans-serif; font-weight: 700; display:block; margin-bottom:4px; }
-    .filters select, .filters input[type="number"] { width:100%; padding:8px; border:1px solid #ddd; border-radius:6px; }
-    .filters .btns { display:flex; gap:8px; }
-    .filters button { background:#e7ccab; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; font-family:'Poppins Bold',sans-serif; }
-    .pager { text-align:center; margin: 30px 0; }
-    .empty-msg { text-align:center; margin:20px 0; font-family:Poppins,sans-serif; }
-  </style>
-
   <!-- Toggle button -->
   <div class="toolbar">
     <button id="toggleFilters" class="filter-toggle">Filtros</button>
