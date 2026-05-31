@@ -5,6 +5,13 @@ const slugify = require("./_utils/slugify");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
 
 const S = v => String(v ?? ""); // <- safe string
+const THUMB_PLACEHOLDER = (label) =>
+  `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+      <rect width="80" height="80" rx="10" fill="#f5efe8"/>
+      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#7f6558" font-family="Arial, sans-serif" font-size="20">${label}</text>
+    </svg>`
+  )}`;
 
 module.exports = class {
   data() {
@@ -24,7 +31,17 @@ module.exports = class {
   render({ p }) {
     const base = `/CSS/Images caney/${S(p.folder)}/`;
     const first = (p.images && p.images[0]) ? S(p.images[0]) : "";
-    const thumbs = (p.images || []).map(img => `<img src="${base}${S(img)}" alt="img" onclick="swapImage(this.src)">`).join("\n          ");
+    const imageSources = (p.images || []).map((img) => `${base}${S(img)}`);
+    const preloadLinks = imageSources
+      .slice(0, 1)
+      .map((src) => `<link rel="preload" as="image" href="${src}" fetchpriority="high">`)
+      .join("\n  ");
+    const thumbs = imageSources
+      .map((src, index) => {
+        const placeholder = index === 0 ? src : THUMB_PLACEHOLDER(index + 1);
+        return `<img src="${placeholder}" data-full="${src}" data-thumb="${src}" alt="Vista ${index + 1} de ${S(p.title)}" class="thumbnail-image${index === 0 ? " is-active" : " is-placeholder"}" loading="lazy" decoding="async" fetchpriority="low" onclick="swapImage(this)">`;
+      })
+      .join("\n          ");
 
     const pageSlug = `${slugify(S(p.title))}-${slugify(S(p.sector || p.area))}`;
     const permalink = `${pageSlug}.html`;
@@ -54,6 +71,7 @@ module.exports = class {
   <meta name="description" content="${desc}">
   <link rel="canonical" href="${canonical}">
   <link rel="stylesheet" href="/CSS/Detalles.css">
+  ${preloadLinks}
 
   <meta property="og:type" content="product">
   <meta property="og:title" content="${S(p.title)} — ${S(p.location)}">
@@ -97,7 +115,9 @@ module.exports = class {
   <main>
     <div class="property-container">
       <div class="property-gallery">
-        <img id="featuredImage" src="${base}${first}" alt="" class="featured-image">
+        <div class="featured-image-shell">
+          <img id="featuredImage" src="${base}${first}" alt="${S(p.title)}" class="featured-image" loading="eager" decoding="async" fetchpriority="high" data-current="${base}${first}">
+        </div>
         <div class="property-thumbnails">
           ${thumbs}
         </div>
@@ -122,7 +142,98 @@ module.exports = class {
     <span><a href="/" class="footerbutton" rel="noopener">Ver más propiedades</a></span>
   </footer>
 
-  <script>function swapImage(s){ document.getElementById('featuredImage').src = s; }</script>
+  <script>
+    const gallerySources = ${JSON.stringify(imageSources)};
+
+    function preloadImage(src, priority) {
+      if (!src) return Promise.resolve();
+
+      const image = new Image();
+      image.decoding = 'async';
+      if (priority) image.fetchPriority = priority;
+      image.src = src;
+
+      if (typeof image.decode === 'function') {
+        return image.decode().catch(() => {});
+      }
+
+      return new Promise((resolve) => {
+        image.onload = () => resolve();
+        image.onerror = () => resolve();
+      });
+    }
+
+    function hydrateThumbnail(thumb) {
+      if (!thumb || thumb.dataset.loaded === 'true') return;
+      const thumbSrc = thumb.dataset.thumb;
+      if (!thumbSrc) return;
+
+      preloadImage(thumbSrc, 'low').then(() => {
+        thumb.src = thumbSrc;
+        thumb.dataset.loaded = 'true';
+        thumb.classList.remove('is-placeholder');
+      });
+    }
+
+    function hydrateThumbnailsSequentially() {
+      const thumbs = Array.from(document.querySelectorAll('.thumbnail-image'));
+      let index = 1;
+
+      function next() {
+        if (index >= thumbs.length) return;
+        hydrateThumbnail(thumbs[index]);
+        index += 1;
+        window.setTimeout(next, 180);
+      }
+
+      next();
+    }
+
+    function markActiveThumbnail(src) {
+      const thumbs = document.querySelectorAll('.thumbnail-image');
+      thumbs.forEach((thumb) => {
+        thumb.classList.toggle('is-active', thumb.dataset.full === src);
+      });
+    }
+
+    function swapImage(target) {
+      const featured = document.getElementById('featuredImage');
+      const gallery = document.querySelector('.property-gallery');
+      const src = typeof target === 'string' ? target : target?.dataset?.full || target?.src;
+
+      if (!featured || !src || featured.dataset.current === src) return;
+
+      gallery && gallery.classList.add('is-loading');
+
+      preloadImage(src, 'high').then(() => {
+        featured.src = src;
+        featured.dataset.current = src;
+        markActiveThumbnail(src);
+        gallery && gallery.classList.remove('is-loading');
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const thumbs = Array.from(document.querySelectorAll('.thumbnail-image'));
+      if (thumbs[0]) {
+        thumbs[0].dataset.loaded = 'true';
+        thumbs[0].classList.remove('is-placeholder');
+      }
+
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener('mouseenter', () => hydrateThumbnail(thumb), { passive: true });
+        thumb.addEventListener('focus', () => hydrateThumbnail(thumb), { passive: true });
+      });
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => hydrateThumbnailsSequentially(), { timeout: 1200 });
+      } else {
+        window.setTimeout(hydrateThumbnailsSequentially, 700);
+      }
+
+      gallerySources.slice(1, 3).forEach((src) => preloadImage(src, 'low'));
+    });
+  </script>
 </body>
 </html>`;
   }
