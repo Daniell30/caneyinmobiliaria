@@ -71,9 +71,10 @@ module.exports = class {
       ? slidesResolved
       : [
           { image: "CSS/SLIDER/CaneyGroupbanner.png", alt: "Slide 1", href: "" },
-          { image: "CSS/SLIDER/1.png", alt: "Slide 2", href: "" },
-          { image: "CSS/SLIDER/2.png", alt: "Slide 3", href: "" },
-          { image: "CSS/SLIDER/3.png", alt: "Slide 4", href: "" },
+          { image: "CSS/SLIDER/4.png", alt: "Slide 2", href: "" },
+          { image: "CSS/SLIDER/1.png", alt: "Slide 3", href: "" },
+          { image: "CSS/SLIDER/2.png", alt: "Slide 4", href: "" },
+          { image: "CSS/SLIDER/3.png", alt: "Slide 5", href: "" },
         ]
     )
       .map((s, i) => {
