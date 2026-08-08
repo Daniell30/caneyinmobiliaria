@@ -16,6 +16,22 @@
   "images": ["2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
   "description": "Proyecto residencial en el Sector Honduras, Distrito Nacional, con apartamentos de 2 habitaciones y 2.5 baños desde US$156,000. El proyecto contará con terminaciones de primera, preinstalación de aire acondicionado, área social amueblada con bar y jacuzzi, gimnasio amueblado y planta eléctrica full. Entrega prevista para diciembre de 2027."
 },
+
+ {
+  "title": "Apartamento en alquiler en Serrallés",
+  "filename": "ApartamentoSerrallesAlquiler",
+  "area": "Santo Domingo",
+  "sector": "Serrallés",
+  "type": "Apartamento",
+  "location": "Serrallés, Distrito Nacional",
+  "price": "US$1,450 (alquiler)",
+  "size": "135 m²",
+  "bedrooms": "2",
+  "bathrooms": "2.5 baños",
+  "folder": "Santo Domingo/ALQUILER SERRALLES",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png"],
+  "description": "Apartamento en alquiler en Serrallés, ubicado en un tercer piso, con 135 m². Cuenta con 2 habitaciones, 2.5 baños y 2 parqueos. Incluye línea blanca, aire acondicionado y acceso a área social con piscina."
+},
  
  {
   "title": "Penthouse en Bella Vista",
