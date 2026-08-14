@@ -18,6 +18,22 @@
 },
 
  {
+  "title": "Apartamento clásico en Av. Enriquillo, Los Cacicazgos",
+  "filename": "ApartamentoClasicoLosCacicazgosEnriquillo",
+  "area": "Santo Domingo",
+  "sector": "Los Cacicazgos",
+  "type": "Apartamento",
+  "location": "Av. Enriquillo, Los Cacicazgos, Distrito Nacional",
+  "price": "US$240,000",
+  "size": "180 m²",
+  "bedrooms": "3",
+  "bathrooms": "2 baños",
+  "folder": "Santo Domingo/AV ENRIQUILLO APARTAMENTO CLASICO",
+  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
+  "description": "Apartamento clásico en venta en Av. Enriquillo, Los Cacicazgos, con 180 m². Cuenta con 3 habitaciones, 2 baños, balcón, 1 parqueo, área de lavado y portón eléctrico. Una opción amplia y funcional en una ubicación privilegiada del Distrito Nacional."
+},
+
+ {
   "title": "Apartamento en alquiler en Piantini",
   "filename": "ApartamentoPiantiniAlquiler",
   "area": "Santo Domingo",
