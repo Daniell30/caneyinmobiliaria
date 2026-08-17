@@ -1,0 +1,8 @@
+caney-claude-code-brief.md
+
+# Build output and dependencies
+_site/
+node_modules/
+
+# macOS
+.DS_Store
