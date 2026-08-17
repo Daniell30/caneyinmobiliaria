@@ -100,7 +100,7 @@ module.exports = class {
     // 🔻 Solo el contenido del <body>; el layout genera <html>, <head>, SEO y header/footer
     return `
 
-<header><nav><a href="Index.html"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
+<header><nav><a href="/"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
 
 <h1>JUAN DOLIO</h1>
 

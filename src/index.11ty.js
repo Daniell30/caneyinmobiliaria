@@ -52,7 +52,7 @@ module.exports = class {
       pageCSS: "/CSS/Caneyvisual.css",
 
       // Page URL
-      permalink: "Index.html",
+      permalink: "index.html",
 
       // SEO fields consumed by the layout’s SEO macro
       pageTitle: "Inmobiliaria Caney | Propiedades en República Dominicana",
@@ -174,11 +174,11 @@ ${sliderItems}
 
   <!-- 4) CTA -->
   <div class="contact-cta">
-    <a href="https://daniell30.github.io/caney-contact-linktree/" class="btn-contact" target="_blank">Contáctanos Hoy Mismo</a>
+    <a href="/contact/" class="btn-contact">Contáctanos Hoy Mismo</a>
   </div>
 
   <footer>
-    <span>Inmobiliaria Caney 2026</span>
+    <span>Inmobiliaria Caney ${new Date().getFullYear()}</span>
   </footer>
 
   <!-- Mobile nav toggle -->

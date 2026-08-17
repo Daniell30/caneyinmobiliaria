@@ -138,7 +138,7 @@ module.exports = class {
   </main>
 
   <footer>
-    <span>Inmobiliaria Caney 2025</span>
+    <span>Inmobiliaria Caney ${new Date().getFullYear()}</span>
     <span><a href="/" class="footerbutton" rel="noopener">Ver más propiedades</a></span>
   </footer>
 

@@ -19,7 +19,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  {% from "macros/seo.njk" import tags as seo %}
+  {# "with context" is required: without it the macro cannot see the `site`
+     and `page` globals, and canonical/og:url/JSON-LD render empty. #}
+  {% from "macros/seo.njk" import tags as seo with context %}
   {{ seo(pageTitle or title or site.name, pageDesc, pageImage) }}
 
   <link rel="stylesheet" href="{{ '/CSS/Caneyvisual.css' | url }}">

@@ -34,18 +34,15 @@ module.exports = function (eleventyConfig) {
   // ---------------- Passthrough copy ----------------
   // Preserve directory structure by passing the *directory* (no globs!)
   eleventyConfig.addPassthroughCopy("src/CSS");
-  eleventyConfig.addPassthroughCopy("src/Images caney");
-  eleventyConfig.addPassthroughCopy("src/SLIDER");
 
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "src/favicon-32x32.png": "favicon-32x32.png" });
   eleventyConfig.addPassthroughCopy({ "src/favicon-16x16.png": "favicon-16x16.png" });
   eleventyConfig.addPassthroughCopy({ "src/apple-touch-icon.png": "apple-touch-icon.png" });
 
-  // If you actually have these folders under src, keep these lines.
-  // If not, you can remove them safely.
-  eleventyConfig.addPassthroughCopy("src/FONTS");
-  eleventyConfig.addPassthroughCopy("src/FONTSS");
+  // robots.txt is not a template, so it must be copied explicitly or it
+  // never reaches the publish directory.
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
   // --- Added passthrough mappings (safe, additive) ---
   // Ensure linktree.css is available at site root: /linktree.css
@@ -56,10 +53,6 @@ module.exports = function (eleventyConfig) {
 
   // ---------------- Watch targets ----------------
   eleventyConfig.addWatchTarget("src/CSS");
-  eleventyConfig.addWatchTarget("src/Images caney");
-  eleventyConfig.addWatchTarget("src/SLIDER");
-  eleventyConfig.addWatchTarget("src/FONTS");
-  eleventyConfig.addWatchTarget("src/FONTSS");
 
   // --- Added watch targets (safe, additive) ---
   eleventyConfig.addWatchTarget("src/linktree.css");

@@ -1,4 +1,31 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://caneyinmobiliaria.netlify.app/
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://caneyinmobiliaria.com/sitemap.xml

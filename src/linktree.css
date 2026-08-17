@@ -108,6 +108,17 @@
     font-size: 25px;
   }
   
+  /* —— NAP (name / address / phone) block —— */
+  .nap {
+    font-style: normal;
+    line-height: 1.7;
+    color: var(--text);
+    margin-top: 1rem;
+  }
+  .nap a {
+    color: var(--text);
+  }
+
   /* —— Footer —— */
 
   .bottombanner{
