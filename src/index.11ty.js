@@ -174,7 +174,7 @@ ${sliderItems}
 
   <!-- 4) CTA -->
   <div class="contact-cta">
-    <a href="https://daniell30.github.io/caney-contact-linktree/" class="btn-contact" target="_blank">Contáctanos Hoy Mismo</a>
+    <a href="/contact/" class="btn-contact">Contáctanos Hoy Mismo</a>
   </div>
 
   <footer>
