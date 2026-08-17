@@ -24,7 +24,7 @@
     "@type": "RealEstateAgent",
     "name": "{{ site.brand or site.name }}",
     "url": "{{ site.url }}",
-    "logo": "{{ site.url }}{{ site.logo | url }}",
+    "logo": "{{ site.url }}{{ (site.logo | url) | replace(" ", "%20") }}",
     "telephone": "{{ site.phone }}"{% if site.social and site.social.instagram %},
     "sameAs": ["{{ site.social.instagram }}"]{% endif %}
   }
