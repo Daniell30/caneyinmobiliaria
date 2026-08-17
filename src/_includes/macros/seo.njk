@@ -1,14 +1,16 @@
 {% macro tags(pageTitle, pageDesc, pageImage) %}
-  {% set imgPath = (pageImage or site.logo) | url %}
+  {# Spaces are not valid in URLs; encode them until filenames are normalized. #}
+  {% set imgPath = ((pageImage or site.logo) | url) | replace(" ", "%20") %}
+  {% set pageAbs = site.url + (page.url | replace(" ", "%20")) %}
 
   <title>{{ pageTitle | safe }}</title>
   <meta name="description" content="{{ pageDesc | striptags | truncate(160, true, '') }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ pageAbs }}">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:description" content="{{ pageDesc | striptags | truncate(200, true, '') }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:url" content="{{ pageAbs }}">
   <meta property="og:image" content="{{ site.url }}{{ imgPath }}">
 
   <meta name="twitter:card" content="summary_large_image">

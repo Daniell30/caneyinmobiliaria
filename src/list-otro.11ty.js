@@ -104,7 +104,7 @@ module.exports = class {
     // 🔻 Devolvemos SOLO el contenido del <body>; el layout pone <html>, <head>, SEO y el <header>/<footer>
     return `
 
-<header><nav><a href="Index.html"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
+<header><nav><a href="/"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
 
 <h1>OTRO</h1>
 

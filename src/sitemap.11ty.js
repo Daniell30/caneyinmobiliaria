@@ -42,7 +42,7 @@ module.exports = class {
     const urls = [];
 
     // Home
-    urls.push(`${base}/Index.html`);
+    urls.push(`${base}/`);
 
     // Area listing pages with pagination
     for (const [area, list] of Object.entries(byArea)) {

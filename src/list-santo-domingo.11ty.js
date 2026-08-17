@@ -106,7 +106,7 @@ module.exports = class {
 
     // ⚠️ Return ONLY the body markup; layout supplies <html>, <head>, SEO, and CSS link
     return `
-  <header><nav><a href="Index.html"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
+  <header><nav><a href="/"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
 
   <h1>SANTO DOMINGO</h1>
 

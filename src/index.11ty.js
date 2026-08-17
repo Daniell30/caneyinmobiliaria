@@ -52,7 +52,7 @@ module.exports = class {
       pageCSS: "/CSS/Caneyvisual.css",
 
       // Page URL
-      permalink: "Index.html",
+      permalink: "index.html",
 
       // SEO fields consumed by the layout’s SEO macro
       pageTitle: "Inmobiliaria Caney | Propiedades en República Dominicana",
