@@ -178,7 +178,7 @@ ${sliderItems}
   </div>
 
   <footer>
-    <span>Inmobiliaria Caney 2026</span>
+    <span>Inmobiliaria Caney ${new Date().getFullYear()}</span>
   </footer>
 
   <!-- Mobile nav toggle -->
