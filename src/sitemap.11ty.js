@@ -22,11 +22,11 @@ module.exports = class {
 
     // Area pages and their base filenames (match your listing pages)
     const areaFiles = {
-      "Santo Domingo": "INMUEBLES SANTO DOMINGO",
-      "Punta Cana": "INMUEBLES PUNTA CANA",
-      "Juan Dolio": "INMUEBLES JUAN DOLIO",
-      "Solares": "INMUEBLES SOLARES",
-      "Otro": "INMUEBLES OTRO"
+      "Santo Domingo": "inmuebles-santo-domingo",
+      "Punta Cana": "inmuebles-punta-cana",
+      "Juan Dolio": "inmuebles-juan-dolio",
+      "Solares": "inmuebles-solares",
+      "Otro": "inmuebles-otro"
     };
 
     // Group properties by area
@@ -46,11 +46,11 @@ module.exports = class {
     // Area listing pages with pagination
     for (const [area, list] of Object.entries(byArea)) {
       if (!areaFiles[area]) continue;
-      const baseName = areaFiles[area]; // e.g. "INMUEBLES SANTO DOMINGO"
+      const baseName = areaFiles[area]; // e.g. "inmuebles-santo-domingo"
       const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
       for (let i = 0; i < totalPages; i++) {
-        const file = i === 0 ? `${baseName}.html` : `${baseName}-${i + 1}.html`;
-        urls.push(`${base}/${encodeURI(file)}`);
+        const file = i === 0 ? baseName : `${baseName}-${i + 1}`;
+        urls.push(`${base}/${file}`);
       }
     }
 

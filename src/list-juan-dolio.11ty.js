@@ -41,8 +41,8 @@ module.exports = class {
 
       permalink: (data) => {
         const n = data.pagination.pageNumber;
-        return n === 0 ? "INMUEBLES JUAN DOLIO.html"
-                       : `INMUEBLES JUAN DOLIO-${n + 1}.html`;
+        return n === 0 ? "inmuebles-juan-dolio.html"
+                       : `inmuebles-juan-dolio-${n + 1}.html`;
       }
     };
   }
@@ -81,7 +81,7 @@ module.exports = class {
     const sectorOpts = ['<option value="">Todos los sectores</option>', ...sectors.map(s => `<option value="${s}">${s}</option>`)].join("");
     const typeOpts   = ['<option value="">Todos los tipos</option>',   ...types.map(t => `<option value="${t}">${t}</option>`)].join("");
 
-    const pageHref = (n) => (n === 0 ? "INMUEBLES JUAN DOLIO.html" : `INMUEBLES JUAN DOLIO-${n + 1}.html`);
+    const pageHref = (n) => (n === 0 ? "/inmuebles-juan-dolio" : `/inmuebles-juan-dolio-${n + 1}`);
     // ✅ Paginación calculada desde todo el set
     const totalPages = Math.ceil(all.length / PER_PAGE);
     const prev = pagination.pageNumber > 0 ? pageHref(pagination.pageNumber - 1) : null;
@@ -153,7 +153,7 @@ module.exports = class {
     const ALL = JSON.parse(document.getElementById('ALL_DATA').textContent);
 
     const lower = s => String(s||'').toLowerCase();
-    const baseHref = n => (n === 0 ? "INMUEBLES JUAN DOLIO.html" : \`INMUEBLES JUAN DOLIO-\${n + 1}.html\`);
+    const baseHref = n => (n === 0 ? "/inmuebles-juan-dolio" : \`/inmuebles-juan-dolio-\${n + 1}\`);
 
     function qsFromInputs(pageIndex){
       const qs = new URLSearchParams();

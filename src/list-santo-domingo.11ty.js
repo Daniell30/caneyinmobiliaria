@@ -42,8 +42,8 @@ module.exports = class {
       permalink: (data) => {
         const n = data.pagination.pageNumber;
         return n === 0
-          ? "INMUEBLES SANTO DOMINGO.html"
-          : `INMUEBLES SANTO DOMINGO-${n + 1}.html`;
+          ? "inmuebles-santo-domingo.html"
+          : `inmuebles-santo-domingo-${n + 1}.html`;
       }
     };
   }
@@ -89,7 +89,7 @@ module.exports = class {
     ].join("");
 
     const pageHref = (n) =>
-      (n === 0 ? "INMUEBLES SANTO DOMINGO.html" : `INMUEBLES SANTO DOMINGO-${n + 1}.html`);
+      (n === 0 ? "/inmuebles-santo-domingo" : `/inmuebles-santo-domingo-${n + 1}`);
     const totalPages = Math.ceil(all.length / PER_PAGE);
     const prev = pagination.pageNumber > 0 ? pageHref(pagination.pageNumber - 1) : null;
     const next = (pagination.pageNumber + 1) < totalPages ? pageHref(pagination.pageNumber + 1) : null;
@@ -177,7 +177,7 @@ module.exports = class {
 
       const lower = s => String(s||'').toLowerCase();
       const pageHref = (n, qs) =>
-        (n === 0 ? "INMUEBLES SANTO DOMINGO.html" : \`INMUEBLES SANTO DOMINGO-\${n + 1}.html\`) + (qs ? ('?' + qs) : '');
+        (n === 0 ? "/inmuebles-santo-domingo" : \`/inmuebles-santo-domingo-\${n + 1}\`) + (qs ? ('?' + qs) : '');
 
       function qsFromInputs(pageIndex){
         const qs = new URLSearchParams();
