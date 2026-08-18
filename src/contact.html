@@ -21,6 +21,40 @@
   <meta property="og:description" content="Contacta a Inmobiliaria Caney para comprar, vender o alquilar propiedades en Santo Domingo, Punta Cana y Juan Dolio.">
   <meta property="og:image" content="https://caneyinmobiliaria.com/caneycontactpics/caney-logo.png">
   <meta name="twitter:card" content="summary_large_image">
+  <!-- Same organization node and @id as the SEO macro emits site-wide
+       (this page has a standalone head, so it is duplicated here; keep in
+       sync with src/_includes/macros/seo.njk). streetAddress intentionally
+       absent until the owner supplies it. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "@id": "https://caneyinmobiliaria.com/#organization",
+    "name": "Inmobiliaria Caney",
+    "legalName": "Inmobiliaria Caney SRL",
+    "url": "https://caneyinmobiliaria.com/",
+    "logo": "https://caneyinmobiliaria.com/css/images-caney/general/caneylogo.png",
+    "telephone": ["+1-809-224-2769", "+1-829-380-2769"],
+    "email": "caneyinmobiliaria@yahoo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santo Domingo",
+      "addressRegion": "Distrito Nacional",
+      "addressCountry": "DO"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Santo Domingo" },
+      { "@type": "Place", "name": "Distrito Nacional" },
+      { "@type": "Place", "name": "Punta Cana" },
+      { "@type": "Place", "name": "Juan Dolio" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/caneyinmobiliaria/",
+      "https://www.facebook.com/p/Caney-Inmobiliaria-61572282710082/",
+      "https://www.corotos.com.do/shops/caney-inmobiliaria"
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="/linktree.css" />
 </head>
 <body>

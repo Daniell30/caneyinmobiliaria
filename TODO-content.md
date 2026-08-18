@@ -467,3 +467,67 @@ Escribe la frase junto a cada archivo:
 
 - [ ] Dirección física de la oficina (aparece como TODO en /contact/)
 - [ ] Horario de atención
+## 4. Coordenadas GPS (para el schema `geo`)
+
+El schema de cada propiedad omite `geo` porque no hay coordenadas en
+properties.json y no se deben inventar. Si quieres máxima precisión en
+búsquedas por zona, agrega lat/lng por propiedad (Google Maps → clic
+derecho sobre el punto → copiar coordenadas):
+
+- [ ] Proyecto residencial en Sector Honduras — lat: ____ , lng: ____
+- [ ] Apartamento clásico en Av. Enriquillo, Los Cacicazgos — lat: ____ , lng: ____
+- [ ] Apartamento en alquiler en Piantini — lat: ____ , lng: ____
+- [ ] Apartamento en alquiler en Serrallés — lat: ____ , lng: ____
+- [ ] Penthouse en Bella Vista — lat: ____ , lng: ____
+- [ ] Apartamento NUEVO en Evaristo Morales — lat: ____ , lng: ____
+- [ ] Apartamento en alquiler en Sector Quisqueya — lat: ____ , lng: ____
+- [ ] Apartamento en Los Cacicazgos, próximo a Av. Anacaona — lat: ____ , lng: ____
+- [ ] Solar + villa en Pedro Brand, Lomas Lindas — lat: ____ , lng: ____
+- [ ] Penthouse de lujo en Los Cacicazgos — lat: ____ , lng: ____
+- [ ] Apartamento de lujo en Los Cacicazgos, Av. Enriquillo — lat: ____ , lng: ____
+- [ ] Apartamento amueblado en Bella Vista — lat: ____ , lng: ____
+- [ ] Bella Vista Penthouse — lat: ____ , lng: ____
+- [ ] Apartamento con terraza en Av. Independencia Km 10 — lat: ____ , lng: ____
+- [ ] Amplio Apartamento en Bella Vista — lat: ____ , lng: ____
+- [ ] Apartamento Amueblado - Esperilla — lat: ____ , lng: ____
+- [ ] Moderno apartamento en venta en Los Cacicazgos — lat: ____ , lng: ____
+- [ ] Apartamento Amueblado en La Esperilla con Vista al Mar — lat: ____ , lng: ____
+- [ ] Penthouse con Terraza y Vista en Gazcue — lat: ____ , lng: ____
+- [ ] Apartamento Torre Caney — lat: ____ , lng: ____
+- [ ] Apartamento de Oportunidad en El Pedregal — lat: ____ , lng: ____
+- [ ] Vivienda Frente al Parque Mirador Sur — lat: ____ , lng: ____
+- [ ] Apartamento - CIUDAD MODELO (TIPO C) — lat: ____ , lng: ____
+- [ ] Apartamento - CIUDAD MODELO (TIPO B) — lat: ____ , lng: ____
+- [ ] Apartamento - CIUDAD MODELO (TIPO A) — lat: ____ , lng: ____
+- [ ] Torre en Gazcue - Frente a Bellas Artes — lat: ____ , lng: ____
+- [ ] Penthouse AMUEBLADO en San Isidro — lat: ____ , lng: ____
+- [ ] Vivienda de Lujo - La Julia (2 Niveles) — lat: ____ , lng: ____
+- [ ] Proyecto Residencial - Las Américas (SDE) — lat: ____ , lng: ____
+- [ ] Apartamento en El Millón — lat: ____ , lng: ____
+- [ ] Vivienda en Costa Verde - Santo Domingo Oeste — lat: ____ , lng: ____
+- [ ] Casa - Ciudad Modelo (2 Niveles) — lat: ____ , lng: ____
+- [ ] Local Comercial - Distrito Nacional — lat: ____ , lng: ____
+- [ ] Casa en Brisa Oriental - Santo Domingo Este — lat: ____ , lng: ____
+- [ ] Solar colindante con el Mirador Sur — lat: ____ , lng: ____
+- [ ] Solar con potencial industrial - Punta Caucedo 2 — lat: ____ , lng: ____
+- [ ] Solar con Potencial Industrial – Punta Caucedo — lat: ____ , lng: ____
+- [ ] Solar en Autopista Duarte - Santo Domingo Oeste — lat: ____ , lng: ____
+- [ ] Solares - El Higuero — lat: ____ , lng: ____
+- [ ] Solar - Sabana Grande de Palenque — lat: ____ , lng: ____
+- [ ] Solar - Juan Dolio (22,132 m²) — lat: ____ , lng: ____
+- [ ] Solar - Metro Country Club, Juan Dolio — lat: ____ , lng: ____
+- [ ] Solar - Juan Dolio (4 min de Playa Marbella) — lat: ____ , lng: ____
+- [ ] Solares - Juan Dolio — lat: ____ , lng: ____
+- [ ] Solar en Buena Vista - La Isabela — lat: ____ , lng: ____
+- [ ] Villa amueblada en Ciudad Las Canas, Cap Cana (Punta Cana) — lat: ____ , lng: ____
+- [ ] River Island – Bávaro, Punta Cana — lat: ____ , lng: ____
+- [ ] POSEIDONIA - Proyecto Cana Bay — lat: ____ , lng: ____
+- [ ] Proyecto de Villas - Cap Cana — lat: ____ , lng: ____
+- [ ] Villa Amueblada - Punta Cana — lat: ____ , lng: ____
+- [ ] Hotel Boutique - Punta Cana Wyndham Hotels & Resorts — lat: ____ , lng: ____
+- [ ] Villa - Punta Cana — lat: ____ , lng: ____
+- [ ] Villa de Lujo - Cap Cana — lat: ____ , lng: ____
+- [ ] Las Terrenas - Playa Bonita (Proyecto Residencial) — lat: ____ , lng: ____
+- [ ]  Villa Ana - Playa Nueva Romana — lat: ____ , lng: ____
+- [ ] Apartamento en Cabarete con Vista al Mar — lat: ____ , lng: ____
+
