@@ -18,15 +18,36 @@
   <meta name="twitter:description" content="{{ pageDesc | striptags | truncate(200, true, '') }}">
   <meta name="twitter:image" content="{{ site.url }}{{ imgPath }}">
 
+  {# One organization entity site-wide: every page resolves to the same @id.
+     streetAddress intentionally absent until the owner supplies it. #}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
+    "@id": "{{ site.url }}/#organization",
     "name": "{{ site.brand or site.name }}",
-    "url": "{{ site.url }}",
+    "legalName": "{{ site.legalName }}",
+    "url": "{{ site.url }}/",
     "logo": "{{ site.url }}{{ (site.logo | url) | replace(" ", "%20") }}",
-    "telephone": "{{ site.phone }}"{% if site.social and site.social.instagram %},
-    "sameAs": ["{{ site.social.instagram }}"]{% endif %}
+    "telephone": ["{{ site.phone }}", "{{ site.phone2 }}"],
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santo Domingo",
+      "addressRegion": "Distrito Nacional",
+      "addressCountry": "DO"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Santo Domingo" },
+      { "@type": "Place", "name": "Distrito Nacional" },
+      { "@type": "Place", "name": "Punta Cana" },
+      { "@type": "Place", "name": "Juan Dolio" }
+    ],
+    "sameAs": [
+      "{{ site.social.instagram }}",
+      "{{ site.social.facebook }}",
+      "{{ site.social.corotos }}"
+    ]
   }
   </script>
 {% endmacro %}
