@@ -1,14 +1,209 @@
 # TODO — contenido pendiente (para el dueño)
 
-Generado automáticamente en la Fase 1. Nada de esto lo puede inventar la
-herramienta: son datos y descripciones que solo el dueño conoce.
+Archivo generado por `scripts/generate_todo.py`. Cada punto necesita
+información que sólo Inmobiliaria Caney tiene: la herramienta no inventa
+datos, descripciones ni coordenadas.
 
-## 1. Descripciones de fotos (texto alt)
+Los campos opcionales ya existen (vacíos) en `src/_data/properties.json`:
+basta con escribir el valor entre las comillas y el sitio lo muestra en la
+ficha técnica y en los datos estructurados.
 
-Hoy cada foto lleva un alt genérico ("Vista N de …"). Para que las fotos
-sean útiles a buscadores y asistentes de IA, cada una necesita una frase que
-diga qué muestra (p. ej. «Sala del apartamento de 180 m² en Av. Enriquillo»).
-Escribe la frase junto a cada archivo:
+---
+
+## 1. Descripciones ampliadas (250–400 palabras)
+
+Es lo que más impacto tiene en respuestas de IA: la prosa es lo que un
+modelo sintetiza. Incluir distribución y terminaciones, referencias del
+sector (parques, avenidas, colegios, supermercados), para quién es la
+propiedad y detalles del edificio (ascensores, planta, cisterna, seguridad,
+mantenimiento).
+
+- [ ] **Apartamento - CIUDAD MODELO (TIPO C)** — 0 palabras, faltan ~250
+- [ ] **Villa de Lujo - Cap Cana** — 10 palabras, faltan ~240
+- [ ] **Villa Amueblada - Punta Cana** — 14 palabras, faltan ~236
+- [ ] **Solares - Juan Dolio** — 17 palabras, faltan ~233
+- [ ] **Apartamento - CIUDAD MODELO (TIPO B)** — 18 palabras, faltan ~232
+- [ ] **Apartamento - CIUDAD MODELO (TIPO A)** — 18 palabras, faltan ~232
+- [ ] **Solar - Sabana Grande de Palenque** — 23 palabras, faltan ~227
+- [ ] **Local Comercial - Distrito Nacional** — 27 palabras, faltan ~223
+- [ ] **Solar - Juan Dolio (22,132 m²)** — 27 palabras, faltan ~223
+- [ ] **Villa - Punta Cana** — 27 palabras, faltan ~223
+- [ ] **Penthouse AMUEBLADO en San Isidro** — 30 palabras, faltan ~220
+- [ ] **Solares - El Higuero** — 30 palabras, faltan ~220
+- [ ] **Proyecto de Villas - Cap Cana** — 30 palabras, faltan ~220
+- [ ] **Vivienda en Costa Verde - Santo Domingo Oeste** — 31 palabras, faltan ~219
+- [ ] **Hotel Boutique - Punta Cana Wyndham Hotels & Resorts** — 31 palabras, faltan ~219
+- [ ] **Apartamento amueblado en Bella Vista** — 32 palabras, faltan ~218
+- [ ] **Solar - Metro Country Club, Juan Dolio** — 32 palabras, faltan ~218
+- [ ] **Solar en Buena Vista - La Isabela** — 32 palabras, faltan ~218
+- [ ] **Torre en Gazcue - Frente a Bellas Artes** — 33 palabras, faltan ~217
+- [ ] **Apartamento en alquiler en Serrallés** — 34 palabras, faltan ~216
+- [ ] **Solar - Juan Dolio (4 min de Playa Marbella)** — 34 palabras, faltan ~216
+- [ ] **River Island – Bávaro, Punta Cana** — 34 palabras, faltan ~216
+- [ ] **Apartamento en alquiler en Sector Quisqueya** — 35 palabras, faltan ~215
+- [ ] **Apartamento Amueblado en La Esperilla con Vista al Mar** — 35 palabras, faltan ~215
+- [ ] **Proyecto Residencial - Las Américas (SDE)** — 36 palabras, faltan ~214
+- [ ] **Solar colindante con el Mirador Sur** — 36 palabras, faltan ~214
+- [ ] **Solar en Autopista Duarte - Santo Domingo Oeste** — 36 palabras, faltan ~214
+- [ ] **Apartamento en alquiler en Piantini** — 37 palabras, faltan ~213
+- [ ] **Vivienda Frente al Parque Mirador Sur** — 37 palabras, faltan ~213
+- [ ] **Solar con potencial industrial - Punta Caucedo 2** — 37 palabras, faltan ~213
+- [ ] **Apartamento clásico en Av. Enriquillo, Los Cacicazgos** — 39 palabras, faltan ~211
+- [ ] **Bella Vista Penthouse** — 39 palabras, faltan ~211
+- [ ] **POSEIDONIA - Proyecto Cana Bay** — 44 palabras, faltan ~206
+- [ ] **Solar + villa en Pedro Brand, Lomas Lindas** — 45 palabras, faltan ~205
+- [ ] **Apartamento de Oportunidad en El Pedregal** — 46 palabras, faltan ~204
+- [ ] **Casa - Ciudad Modelo (2 Niveles)** — 46 palabras, faltan ~204
+- [ ] **Proyecto residencial en Sector Honduras** — 48 palabras, faltan ~202
+- [ ] **Penthouse en Bella Vista** — 48 palabras, faltan ~202
+- [ ] **Moderno apartamento en venta en Los Cacicazgos** — 48 palabras, faltan ~202
+- [ ] **Solar con Potencial Industrial – Punta Caucedo** — 48 palabras, faltan ~202
+- [ ] **Apartamento Amueblado - Esperilla** — 49 palabras, faltan ~201
+- [ ] **Apartamento en El Millón** — 50 palabras, faltan ~200
+- [ ] **Apartamento en Cabarete con Vista al Mar** — 54 palabras, faltan ~196
+- [ ] **Penthouse con Terraza y Vista en Gazcue** — 56 palabras, faltan ~194
+- [ ] **Vivienda de Lujo - La Julia (2 Niveles)** — 58 palabras, faltan ~192
+- [ ] **Apartamento Torre Caney** — 59 palabras, faltan ~191
+- [ ] **Apartamento con terraza en Av. Independencia Km 10** — 66 palabras, faltan ~184
+- [ ] **Apartamento en Los Cacicazgos, próximo a Av. Anacaona** — 68 palabras, faltan ~182
+- [ ] **Apartamento NUEVO en Evaristo Morales** — 77 palabras, faltan ~173
+- [ ] **Amplio Apartamento en Bella Vista** — 86 palabras, faltan ~164
+- [ ] **Las Terrenas - Playa Bonita (Proyecto Residencial)** — 87 palabras, faltan ~163
+- [ ] **Villa amueblada en Ciudad Las Canas, Cap Cana (Punta Cana)** — 88 palabras, faltan ~162
+- [ ] ** Villa Ana - Playa Nueva Romana** — 89 palabras, faltan ~161
+- [ ] **Penthouse de lujo en Los Cacicazgos** — 92 palabras, faltan ~158
+- [ ] **Apartamento de lujo en Los Cacicazgos, Av. Enriquillo** — 93 palabras, faltan ~157
+- [ ] **Casa en Brisa Oriental - Santo Domingo Este** — 124 palabras, faltan ~126
+
+## 2. Datos de ficha técnica
+
+- [ ] **Proyecto residencial en Sector Honduras**: Metraje, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento clásico en Av. Enriquillo, Los Cacicazgos**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en alquiler en Piantini**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en alquiler en Serrallés**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Penthouse en Bella Vista**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento NUEVO en Evaristo Morales**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en alquiler en Sector Quisqueya**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en Los Cacicazgos, próximo a Av. Anacaona**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar + villa en Pedro Brand, Lomas Lindas**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Penthouse de lujo en Los Cacicazgos**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento de lujo en Los Cacicazgos, Av. Enriquillo**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento amueblado en Bella Vista**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Bella Vista Penthouse**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento con terraza en Av. Independencia Km 10**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Amplio Apartamento en Bella Vista**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento Amueblado - Esperilla**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Moderno apartamento en venta en Los Cacicazgos**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento Amueblado en La Esperilla con Vista al Mar**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Penthouse con Terraza y Vista en Gazcue**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento Torre Caney**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento de Oportunidad en El Pedregal**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Vivienda Frente al Parque Mirador Sur**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento - CIUDAD MODELO (TIPO C)**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento - CIUDAD MODELO (TIPO B)**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento - CIUDAD MODELO (TIPO A)**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Torre en Gazcue - Frente a Bellas Artes**: Metraje, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Penthouse AMUEBLADO en San Isidro**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Vivienda de Lujo - La Julia (2 Niveles)**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Proyecto Residencial - Las Américas (SDE)**: Metraje, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en El Millón**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Vivienda en Costa Verde - Santo Domingo Oeste**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Casa - Ciudad Modelo (2 Niveles)**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Local Comercial - Distrito Nacional**: Habitaciones, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Casa en Brisa Oriental - Santo Domingo Este**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar colindante con el Mirador Sur**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar con potencial industrial - Punta Caucedo 2**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar con Potencial Industrial – Punta Caucedo**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar en Autopista Duarte - Santo Domingo Oeste**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solares - El Higuero**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar - Sabana Grande de Palenque**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar - Juan Dolio (22,132 m²)**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar - Metro Country Club, Juan Dolio**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar - Juan Dolio (4 min de Playa Marbella)**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solares - Juan Dolio**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar en Buena Vista - La Isabela**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Villa amueblada en Ciudad Las Canas, Cap Cana (Punta Cana)**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **River Island – Bávaro, Punta Cana**: Metraje, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **POSEIDONIA - Proyecto Cana Bay**: Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Proyecto de Villas - Cap Cana**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Villa Amueblada - Punta Cana**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Hotel Boutique - Punta Cana Wyndham Hotels & Resorts**: Metraje, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Villa - Punta Cana**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Villa de Lujo - Cap Cana**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Las Terrenas - Playa Bonita (Proyecto Residencial)**: Metraje, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] ** Villa Ana - Playa Nueva Romana**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en Cabarete con Vista al Mar**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+
+## 3. Preguntas frecuentes por propiedad
+
+Formato en `properties.json`: `"faq": [{"q": "¿...?", "a": "..."}]`.
+Al llenarlo aparece la sección visible y el schema `FAQPage`.
+Sugerencias de preguntas reales: mantenimiento mensual, si aplica bono de
+primera vivienda, formas de pago/financiamiento, tiempo de entrega,
+si acepta mascotas, qué incluye el precio.
+
+- [ ] Proyecto residencial en Sector Honduras
+- [ ] Apartamento clásico en Av. Enriquillo, Los Cacicazgos
+- [ ] Apartamento en alquiler en Piantini
+- [ ] Apartamento en alquiler en Serrallés
+- [ ] Penthouse en Bella Vista
+- [ ] Apartamento NUEVO en Evaristo Morales
+- [ ] Apartamento en alquiler en Sector Quisqueya
+- [ ] Apartamento en Los Cacicazgos, próximo a Av. Anacaona
+- [ ] Solar + villa en Pedro Brand, Lomas Lindas
+- [ ] Penthouse de lujo en Los Cacicazgos
+- [ ] Apartamento de lujo en Los Cacicazgos, Av. Enriquillo
+- [ ] Apartamento amueblado en Bella Vista
+- [ ] Bella Vista Penthouse
+- [ ] Apartamento con terraza en Av. Independencia Km 10
+- [ ] Amplio Apartamento en Bella Vista
+- [ ] Apartamento Amueblado - Esperilla
+- [ ] Moderno apartamento en venta en Los Cacicazgos
+- [ ] Apartamento Amueblado en La Esperilla con Vista al Mar
+- [ ] Penthouse con Terraza y Vista en Gazcue
+- [ ] Apartamento Torre Caney
+- [ ] Apartamento de Oportunidad en El Pedregal
+- [ ] Vivienda Frente al Parque Mirador Sur
+- [ ] Apartamento - CIUDAD MODELO (TIPO C)
+- [ ] Apartamento - CIUDAD MODELO (TIPO B)
+- [ ] Apartamento - CIUDAD MODELO (TIPO A)
+- [ ] Torre en Gazcue - Frente a Bellas Artes
+- [ ] Penthouse AMUEBLADO en San Isidro
+- [ ] Vivienda de Lujo - La Julia (2 Niveles)
+- [ ] Proyecto Residencial - Las Américas (SDE)
+- [ ] Apartamento en El Millón
+- [ ] Vivienda en Costa Verde - Santo Domingo Oeste
+- [ ] Casa - Ciudad Modelo (2 Niveles)
+- [ ] Local Comercial - Distrito Nacional
+- [ ] Casa en Brisa Oriental - Santo Domingo Este
+- [ ] Solar colindante con el Mirador Sur
+- [ ] Solar con potencial industrial - Punta Caucedo 2
+- [ ] Solar con Potencial Industrial – Punta Caucedo
+- [ ] Solar en Autopista Duarte - Santo Domingo Oeste
+- [ ] Solares - El Higuero
+- [ ] Solar - Sabana Grande de Palenque
+- [ ] Solar - Juan Dolio (22,132 m²)
+- [ ] Solar - Metro Country Club, Juan Dolio
+- [ ] Solar - Juan Dolio (4 min de Playa Marbella)
+- [ ] Solares - Juan Dolio
+- [ ] Solar en Buena Vista - La Isabela
+- [ ] Villa amueblada en Ciudad Las Canas, Cap Cana (Punta Cana)
+- [ ] River Island – Bávaro, Punta Cana
+- [ ] POSEIDONIA - Proyecto Cana Bay
+- [ ] Proyecto de Villas - Cap Cana
+- [ ] Villa Amueblada - Punta Cana
+- [ ] Hotel Boutique - Punta Cana Wyndham Hotels & Resorts
+- [ ] Villa - Punta Cana
+- [ ] Villa de Lujo - Cap Cana
+- [ ] Las Terrenas - Playa Bonita (Proyecto Residencial)
+- [ ]  Villa Ana - Playa Nueva Romana
+- [ ] Apartamento en Cabarete con Vista al Mar
+
+## 4. Descripciones de fotos (texto alt)
+
+Hoy cada foto lleva un alt genérico («Vista N de …»). Una frase por foto
+que diga qué muestra (p. ej. «Sala del apartamento de 180 m² en Av.
+Enriquillo») las hace útiles para buscadores y asistentes de IA.
 
 ### Proyecto residencial en Sector Honduras
 - [ ] `santo-domingo/proyecto-residencial-honduras/2.png` — 
@@ -440,39 +635,32 @@ Escribe la frase junto a cada archivo:
 - [ ] `otro/cabarete/7.png` — 
 - [ ] `otro/cabarete/8.png` — 
 
-## 2. Datos faltantes en properties.json
+## 5. Contexto de mercado por zona (400–600 palabras)
 
-- [ ] **Proyecto residencial en Sector Honduras** — falta: size
-- [ ] **Apartamento - CIUDAD MODELO (TIPO C)** — falta: description
-- [ ] **Torre en Gazcue - Frente a Bellas Artes** — falta: size, bathrooms
-- [ ] **Proyecto Residencial - Las Américas (SDE)** — falta: size
-- [ ] **Local Comercial - Distrito Nacional** — falta: bedrooms
-- [ ] **Solar colindante con el Mirador Sur** — falta: bedrooms, bathrooms
-- [ ] **Solar con potencial industrial - Punta Caucedo 2** — falta: bedrooms, bathrooms
-- [ ] **Solar con Potencial Industrial – Punta Caucedo** — falta: bedrooms, bathrooms
-- [ ] **Solar en Autopista Duarte - Santo Domingo Oeste** — falta: bedrooms, bathrooms
-- [ ] **Solares - El Higuero** — falta: bedrooms, bathrooms
-- [ ] **Solar - Sabana Grande de Palenque** — falta: bedrooms, bathrooms
-- [ ] **Solar - Juan Dolio (22,132 m²)** — falta: bedrooms, bathrooms
-- [ ] **Solar - Metro Country Club, Juan Dolio** — falta: bedrooms, bathrooms
-- [ ] **Solar - Juan Dolio (4 min de Playa Marbella)** — falta: bedrooms, bathrooms
-- [ ] **Solares - Juan Dolio** — falta: bedrooms, bathrooms
-- [ ] **Solar en Buena Vista - La Isabela** — falta: bedrooms, bathrooms
-- [ ] **River Island – Bávaro, Punta Cana** — falta: size, bathrooms
-- [ ] **POSEIDONIA - Proyecto Cana Bay** — falta: bathrooms
-- [ ] **Hotel Boutique - Punta Cana Wyndham Hotels & Resorts** — falta: size, bathrooms
-- [ ] **Las Terrenas - Playa Bonita (Proyecto Residencial)** — falta: size, bathrooms
+Las páginas de zona ya tienen tabla comparativa y datos estructurados.
+Falta el texto: es la ventaja competitiva real frente a los portales, y
+por eso no se genera automáticamente. Entregar a Claude o pegarlo en el
+comentario TODO de cada página.
 
-## 3. Página de contacto
+- [ ] **Los Cacicazgos** (Santo Domingo) — 5 propiedades
+- [ ] **Bella Vista** (Santo Domingo) — 4 propiedades
+- [ ] **Ciudad Modelo** (Santo Domingo) — 4 propiedades
+- [ ] **Juan Dolio** (Juan Dolio) — 3 propiedades
+- [ ] **Cap Cana** (Punta Cana) — 3 propiedades
+- [ ] **La Esperilla** (Santo Domingo) — 2 propiedades
+- [ ] **Gazcue** (Santo Domingo) — 2 propiedades
+- [ ] **Punta Caucedo** (Solares) — 2 propiedades
+- [ ] **Punta Cana** (Punta Cana) — 2 propiedades
 
-- [ ] Dirección física de la oficina (aparece como TODO en /contact/)
+## 6. Página de contacto
+
+- [ ] Dirección física de la oficina (falta en /contact/ y en el schema de la organización)
 - [ ] Horario de atención
-## 4. Coordenadas GPS (para el schema `geo`)
 
-El schema de cada propiedad omite `geo` porque no hay coordenadas en
-properties.json y no se deben inventar. Si quieres máxima precisión en
-búsquedas por zona, agrega lat/lng por propiedad (Google Maps → clic
-derecho sobre el punto → copiar coordenadas):
+## 7. Coordenadas GPS (schema `geo`)
+
+Opcional pero útil para búsquedas por cercanía. Google Maps → clic derecho
+sobre el punto → copiar coordenadas.
 
 - [ ] Proyecto residencial en Sector Honduras — lat: ____ , lng: ____
 - [ ] Apartamento clásico en Av. Enriquillo, Los Cacicazgos — lat: ____ , lng: ____
@@ -530,4 +718,3 @@ derecho sobre el punto → copiar coordenadas):
 - [ ] Las Terrenas - Playa Bonita (Proyecto Residencial) — lat: ____ , lng: ____
 - [ ]  Villa Ana - Playa Nueva Romana — lat: ____ , lng: ____
 - [ ] Apartamento en Cabarete con Vista al Mar — lat: ____ , lng: ____
-
