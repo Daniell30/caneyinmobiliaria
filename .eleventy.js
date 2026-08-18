@@ -43,6 +43,7 @@ module.exports = function (eleventyConfig) {
   // robots.txt is not a template, so it must be copied explicitly or it
   // never reaches the publish directory.
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   // --- Added passthrough mappings (safe, additive) ---
   // Ensure linktree.css is available at site root: /linktree.css
