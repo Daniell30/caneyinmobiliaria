@@ -31,10 +31,10 @@ module.exports = class {
       // SEO for this listing page
       pageTitle: "Inmuebles en Santo Domingo | Inmobiliaria Caney",
       pageDesc: `Explora ${all.length} propiedades en Santo Domingo: apartamentos, casas y más. Filtra por precio, sector y tipo para encontrar tu próximo hogar o inversión.`,
-      pageImage: "/CSS/Images caney/GENERAL/CANEYLOGO.png",
+      pageImage: "/css/images-caney/general/caneylogo.png",
 
       // ✅ tell the layout which CSS to load (MUST be pageCSS, not pageCss)
-      pageCSS: "CSS/SantoDomingoinmuebles.css",
+      pageCSS: "/css/santodomingoinmuebles.css",
 
       // Data for rendering
       all, sectors, types,
@@ -66,7 +66,7 @@ module.exports = class {
              data-price="${priceNum(p.price)}"
              data-sector="${String(sector).toLowerCase()}"
              data-type="${typeData}">
-          <img src="CSS/Images caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
+          <img src="/css/images-caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
           <div class="property-info">
             <h2>${p.title}</h2>
             <p>Ubicación: ${p.location || ""}</p>
@@ -106,7 +106,7 @@ module.exports = class {
 
     // ⚠️ Return ONLY the body markup; layout supplies <html>, <head>, SEO, and CSS link
     return `
-  <header><nav><a href="/"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
+  <header><nav><a href="/"><img src="/css/images-caney/general/caneylogo.png" alt="CaneyLogo"></a></nav></header>
 
   <h1>SANTO DOMINGO</h1>
 
@@ -219,7 +219,7 @@ module.exports = class {
                data-price="\${p._priceNum}"
                data-sector="\${lower(p.sector)}"
                data-type="\${p._typeListLower.join('|')}">
-            <img src="CSS/Images caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
+            <img src="/css/images-caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
             <div class="property-info">
               <h2>\${p.title}</h2>
               <p>Ubicación: \${p.location || ""}</p>

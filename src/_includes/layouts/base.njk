@@ -24,7 +24,7 @@
   {% from "macros/seo.njk" import tags as seo with context %}
   {{ seo(pageTitle or title or site.name, pageDesc, pageImage) }}
 
-  <link rel="stylesheet" href="{{ '/CSS/Caneyvisual.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/caneyvisual.css' | url }}">
 
   {# Support BOTH pageCss and pageCSS so casing never bites us again #}
   {% set pageStyle = pageCss or pageCSS %}

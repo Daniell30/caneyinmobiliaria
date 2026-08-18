@@ -29,10 +29,10 @@ module.exports = class {
       // ✅ Metadatos SEO de esta sección
       pageTitle: "Solares en venta | Caney Inmobiliaria",
       pageDesc: `Terrenos y solares en venta en República Dominicana. Filtra por precio, sector y tipo. Fotos, detalles y enlaces a cada propiedad.`,
-      // pageImage: "CSS/Images caney/GENERAL/og-solares.jpg", // opcional si tienes una imagen OG
+      // pageImage: "/css/images-caney/GENERAL/og-solares.jpg", // opcional si tienes una imagen OG
 
       // ✅ CSS del listado (el layout lo incluye si existe pageCss)
-      pageCSS: "CSS/SantoDomingoinmuebles.css",
+      pageCSS: "/css/santodomingoinmuebles.css",
 
       all, sectors, types,
 
@@ -66,7 +66,7 @@ module.exports = class {
              data-price="${priceNum(p.price)}"
              data-sector="${String(sector).toLowerCase()}"
              data-type="${typeData}">
-          <img src="CSS/Images caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
+          <img src="/css/images-caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
           <div class="property-info">
             <h2>${p.title}</h2>
             <p>Ubicación: ${p.location || ""}</p>
@@ -101,7 +101,7 @@ module.exports = class {
     // 🔻 Solo contenido del <body>; el layout genera <html>, <head>, SEO, header/footer
     return `
 
-<header><nav><a href="/"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
+<header><nav><a href="/"><img src="/css/images-caney/general/caneylogo.png" alt="CaneyLogo"></a></nav></header>
 
 <h1>SOLARES</h1>
 
@@ -211,7 +211,7 @@ module.exports = class {
              data-price="\${p._priceNum}"
              data-sector="\${lower(p.sector)}"
              data-type="\${p._typeListLower.join('|')}">
-          <img src="CSS/Images caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
+          <img src="/css/images-caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
           <div class="property-info">
             <h2>\${p.title}</h2>
             <p>Ubicación: \${p.location || ""}</p>

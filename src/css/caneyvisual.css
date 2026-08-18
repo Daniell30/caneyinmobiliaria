@@ -1,9 +1,9 @@
 /* —————————————————————————————————————————————
    FONTS & RESET
    ————————————————————————————————————————————— */
-@font-face { font-family: Rubik; src: url(FONTSS/Rubik-VariableFont_wght.ttf); }
-@font-face { font-family: Poppins; src: url(FONTSS/Poppins-Thin.ttf); }
-@font-face { font-family: 'Poppins Bold'; src: url(FONTSS/Poppins-Bold.ttf); }
+@font-face { font-family: Rubik; src: url(fonts/rubik-variablefont-wght.ttf); }
+@font-face { font-family: Poppins; src: url(fonts/poppins-thin.ttf); }
+@font-face { font-family: 'Poppins Bold'; src: url(fonts/poppins-bold.ttf); }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 

@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
 
   // ---------------- Passthrough copy ----------------
   // Preserve directory structure by passing the *directory* (no globs!)
-  eleventyConfig.addPassthroughCopy("src/CSS");
+  eleventyConfig.addPassthroughCopy("src/css");
 
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "src/favicon-32x32.png": "favicon-32x32.png" });
@@ -52,7 +52,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/caneycontactpics": "caneycontactpics" });
 
   // ---------------- Watch targets ----------------
-  eleventyConfig.addWatchTarget("src/CSS");
+  eleventyConfig.addWatchTarget("src/css");
 
   // --- Added watch targets (safe, additive) ---
   eleventyConfig.addWatchTarget("src/linktree.css");

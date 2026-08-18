@@ -29,7 +29,7 @@ module.exports = class {
   }
 
   render({ p }) {
-    const base = `/CSS/Images caney/${S(p.folder)}/`;
+    const base = `/css/images-caney/${S(p.folder)}/`;
     const first = (p.images && p.images[0]) ? S(p.images[0]) : "";
     const imageSources = (p.images || []).map((img) => `${base}${S(img)}`);
     const preloadLinks = imageSources
@@ -46,7 +46,7 @@ module.exports = class {
     const pageSlug = `${slugify(S(p.title))}-${slugify(S(p.sector || p.area))}`;
     const permalink = `${pageSlug}.html`;
 
-    const primaryImg = (p.images && p.images[0]) ? `/CSS/Images caney/${S(p.folder)}/${S(p.images[0])}` : S(site.logo);
+    const primaryImg = (p.images && p.images[0]) ? `/css/images-caney/${S(p.folder)}/${S(p.images[0])}` : S(site.logo);
     const canonical  = new URL(pageSlug, S(site.url)).toString(); // extensionless canonical form
     const imgAbs     = new URL(primaryImg, S(site.url)).toString();
 
@@ -70,7 +70,7 @@ module.exports = class {
   <title>${S(p.title)} | ${S(site.name)}</title>
   <meta name="description" content="${desc}">
   <link rel="canonical" href="${canonical}">
-  <link rel="stylesheet" href="/CSS/Detalles.css">
+  <link rel="stylesheet" href="/css/detalles.css">
   ${preloadLinks}
 
   <meta property="og:type" content="product">
@@ -110,7 +110,7 @@ module.exports = class {
   </script>
 </head>
 <body>
-  <header><nav><a href="/"><img src="/CSS/Images caney/GENERAL/CANEYLOGO.png" alt="Caney Logo"></a></nav></header>
+  <header><nav><a href="/"><img src="/css/images-caney/general/caneylogo.png" alt="Caney Logo"></a></nav></header>
 
   <main>
     <div class="property-container">
