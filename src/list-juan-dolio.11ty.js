@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const slugify = require("./_utils/slugify");
+const { sectorPages } = require("./_utils/sectors");
 
 const PER_PAGE = 20;
 
@@ -48,6 +49,20 @@ module.exports = class {
   }
 
   render(data) {
+    // Phase 5: links to this area's sector aggregate pages (internal linking
+    // so they are reachable by crawlers and users).
+    const allProps = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "_data", "properties.json"), "utf-8"));
+    const areaSectors = sectorPages(allProps)
+      .filter(sp => String(sp.area || "").toLowerCase() === "juan dolio");
+    const sectorNav = areaSectors.length ? `
+  <nav class="sector-nav" aria-label="Zonas destacadas">
+    <h2>Zonas destacadas</h2>
+    <ul>
+      ${areaSectors.map(sp => `<li><a href="/${sp.slug}">${sp.h1} (${sp.items.length})</a></li>`).join("\n      ")}
+    </ul>
+  </nav>` : "";
+
     const { pageItems, all, pagination, sectors, types } = data;
     const priceNum = s => Number(String(s || "").replace(/[^\d.]/g, "") || 0);
 
@@ -103,6 +118,7 @@ module.exports = class {
 <header><nav><a href="/"><img src="/css/images-caney/general/caneylogo.png" alt="CaneyLogo"></a></nav></header>
 
 <h1>JUAN DOLIO</h1>
+  ${sectorNav}
 
 <div class="toolbar">
   <button id="toggleFilters" class="filter-toggle">Filtros</button>

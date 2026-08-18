@@ -391,3 +391,41 @@ h1 {
     font-size: 0.95rem;
   }
 }
+
+/* --- Phase 5: sector aggregate pages --- */
+.sector-nav {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  padding: 12px 18px;
+  background: #faf5ef;
+  border: 1px solid #e7ddd2;
+  border-radius: 10px;
+}
+.sector-nav h2 { font-size: 1rem; margin: 0 0 6px; }
+.sector-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.sector-nav a { color: #7f6558; text-decoration: underline; }
+
+.sector-intro { max-width: 1100px; margin: 0 auto 14px; padding: 0 18px; }
+
+.sector-table {
+  width: calc(100% - 36px);
+  max-width: 1100px;
+  margin: 0 auto 28px;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 0.95rem;
+}
+.sector-table caption {
+  text-align: left;
+  padding: 0 0 8px;
+  font-weight: bold;
+}
+.sector-table th,
+.sector-table td { border: 1px solid #e7ddd2; padding: 8px 12px; text-align: left; }
+.sector-table thead th { background: #faf5ef; }
+.sector-table tbody tr:nth-child(even) td { background: #fdfaf7; }
+.sector-table a { color: #7f6558; }
+
+@media (max-width: 700px) {
+  .sector-table { display: block; overflow-x: auto; white-space: nowrap; }
+}
