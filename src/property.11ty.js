@@ -6,6 +6,101 @@ const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json
 
 const S = v => String(v ?? ""); // <- safe string
 
+// ---------- schema.org helpers (Phase 3 migration) ----------
+// Parse, never invent: every helper returns null when the source string is
+// ambiguous (ranges like "1, 2 y 3", marketing text, empty fields), and the
+// schema then simply omits that property.
+
+const TYPE_MAP = {
+  "apartamento": "Apartment",
+  "penthouse": "Apartment",
+  "casa": "House",
+  "villa": "House",
+  "solar": "Place",           // no LandLot type in schema.org; Place + description
+  "proyecto residencial": "ApartmentComplex",
+  "hotel boutique": "Hotel"
+};
+
+function schemaTypeFor(type) {
+  const raw = S(Array.isArray(type) ? type[0] : type).trim().toLowerCase();
+  return TYPE_MAP[raw] || "Residence";
+}
+
+// Leading integer, rejected when it starts an enumeration ("1, 2 y 3").
+function parseCount(str) {
+  const s = S(str).trim();
+  const m = s.match(/^(\d+)/);
+  if (!m) return null;
+  const rest = s.slice(m[1].length).replace(/^\s+/, "");
+  if (/^([,y]|y\s)/i.test(rest)) return null; // range/list, not a single value
+  return parseInt(m[1], 10);
+}
+
+// "2.5 baños", "4 baños + 2 medios baños", "1 baño + 1/2 baño" ->
+// { full, partial } — or null when unparseable.
+function parseBathrooms(str) {
+  const s = S(str).trim();
+  const m = s.match(/^(\d+(?:\.5)?)/);
+  if (!m) return null;
+  const rest = s.slice(m[1].length).replace(/^\s+/, "");
+  if (/^([,y]|y\s)/i.test(rest)) return null;
+  const v = parseFloat(m[1]);
+  let full = Math.floor(v);
+  let partial = v % 1 ? 1 : 0;
+  const extra = s.match(/\+\s*(?:(\d+)\s*medios?\s*baños?|1\/2\s*baño)/i);
+  if (extra) partial += extra[1] ? parseInt(extra[1], 10) : 1;
+  return { full, partial };
+}
+
+// Square meters of CONSTRUCTION: prefer the figure marked "de construcción";
+// otherwise take the first figure unless it is explicitly lot area
+// ("de solar"/"de terreno") — lot size is not a building's floorSize.
+// Arrays (multi-typology projects) are ambiguous -> null.
+function parseSqm(size) {
+  if (Array.isArray(size)) return null;
+  const s = S(size);
+  const built = s.match(/([\d.,]+)\s*(?:m²|m2)\s*de\s*construcci/i);
+  const m = built || s.match(/([\d.,]+)\s*(?:m²|m2|metros)(?!\s*de\s*(?:solar|terreno))/i);
+  if (!m) return null;
+  const v = parseFloat(m[1].replace(/,/g, ""));
+  return Number.isFinite(v) && v > 0 ? v : null;
+}
+
+// First numeric token of the price string ("US$1,300,000 (venta) | US$7,500
+// (renta)" must not concatenate to 13000007500). "1.3 MILLONES" -> 1300000.
+function parsePrice(priceStr) {
+  const s = S(priceStr);
+  const m = s.match(/\d[\d.,]*/);
+  if (!m) return null;
+  let v = parseFloat(m[0].replace(/,/g, ""));
+  if (!Number.isFinite(v)) return null;
+  if (/millones|millón|millon/i.test(s) && v < 100) v = Math.round(v * 1e6);
+  return v;
+}
+
+const isPerSquareMeter = s => /(por|x\s*cada|\/)\s*(cada\s*)?m/i.test(S(s));
+const isLease = s => !/venta/i.test(S(s)) && /alquiler|renta/i.test(S(s));
+
+// Province from the free-text location; only unambiguous markers.
+function parseRegion(loc) {
+  const s = S(loc);
+  if (/Distrito Nacional/i.test(s)) return "Distrito Nacional";
+  if (/Santo Domingo\s+(Este|Norte|Oeste)|Pedro Brand/i.test(s)) return "Santo Domingo";
+  if (/San Pedro de Macor/i.test(s)) return "San Pedro de Macorís";
+  if (/La Romana/i.test(s)) return "La Romana";
+  if (/Puerto Plata/i.test(s)) return "Puerto Plata";
+  if (/San Crist(o|ó)bal/i.test(s)) return "San Cristóbal";
+  if (/Punta Cana|Cap Cana|Bávaro|Bavaro/i.test(s)) return "La Altagracia";
+  if (/Las Terrenas|Saman(a|á)/i.test(s)) return "Samaná";
+  return null;
+}
+
+// Street only when the location visibly starts with one.
+function parseStreet(loc) {
+  const first = S(loc).split(",")[0].trim();
+  return /^(Av\.?|Ave\.?|Avenida|Calle|Autopista|Carretera|Res\.)\s/i.test(first) ? first : null;
+}
+
 module.exports = class {
   data() {
     const p = path.join(__dirname, "_data", "properties.json");
@@ -49,6 +144,96 @@ module.exports = class {
     const descRaw = S(p.description) || `${S(p.type)} en ${S(p.location)} — ${S(p.size)} ${S(p.price)}`;
     const desc    = descRaw.trim().slice(0, 155);
 
+    // ---------- structured data: RealEstateListing @graph ----------
+    // Replaces the old Product block (never both: two overlapping JSON-LD
+    // graphs on one page can be discounted by crawlers). Carried over from
+    // Product per the migration notes: sku -> identifier, price/currency/
+    // availability -> Offer (price as a number now), name/description.
+    const ORG_ID = `${S(site.url)}/#organization`;
+    const imagesAbs = imageSources.map((src) => new URL(src, S(site.url)).toString());
+    const schemaType = schemaTypeFor(p.type);
+
+    const addr = { "@type": "PostalAddress", "addressCountry": "DO" };
+    const street = parseStreet(p.location);
+    if (street) addr.streetAddress = street;
+    if (p.sector) addr.addressLocality = S(p.sector);
+    const region = parseRegion(p.location);
+    if (region) addr.addressRegion = region;
+
+    const residence = {
+      "@type": schemaType,
+      "@id": `${canonical}#residence`,
+      "name": S(p.title),
+      "address": addr
+      // geo intentionally absent: no per-property coordinates in the data
+      // source and they must not be fabricated (see TODO-content.md)
+    };
+    const bedrooms = parseCount(p.bedrooms);
+    if (bedrooms !== null) {
+      residence.numberOfBedrooms = bedrooms;
+      residence.numberOfRooms = bedrooms;
+    }
+    const baths = parseBathrooms(p.bathrooms);
+    if (baths) {
+      residence.numberOfFullBathrooms = baths.full;
+      if (baths.partial) residence.numberOfPartialBathrooms = baths.partial;
+      residence.numberOfBathroomsTotal = baths.full + baths.partial;
+    }
+    const sqm = parseSqm(p.size);
+    if (sqm !== null && schemaType !== "Place") {
+      residence.floorSize = { "@type": "QuantitativeValue", "value": sqm, "unitCode": "MTK", "unitText": "m²" };
+    } else if (S(p.size).trim()) {
+      residence.additionalProperty = [
+        { "@type": "PropertyValue", "name": "Superficie", "value": Array.isArray(p.size) ? p.size.map(S).join(" / ") : S(p.size) }
+      ];
+    }
+
+    const offer = {
+      "@type": "Offer",
+      "@id": `${canonical}#offer`,
+      "priceCurrency": S(p.price).includes("RD$") ? "DOP" : "USD",
+      "availability": "https://schema.org/InStock",
+      "businessFunction": isLease(p.price)
+        ? "http://purl.org/goodrelations/v1#LeaseOut"
+        : "http://purl.org/goodrelations/v1#Sell",
+      "url": canonical,
+      "itemOffered": { "@id": `${canonical}#residence` },
+      "seller": { "@id": ORG_ID }
+    };
+    const priceNum = parsePrice(p.price);
+    if (priceNum !== null) {
+      if (isPerSquareMeter(p.price)) {
+        // per-m² pricing (solares): a flat price would be misleading
+        offer.priceSpecification = {
+          "@type": "UnitPriceSpecification",
+          "price": priceNum,
+          "priceCurrency": offer.priceCurrency,
+          "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MTK", "unitText": "m²" }
+        };
+      } else {
+        offer.price = priceNum;
+      }
+    }
+
+    const listing = {
+      "@type": "RealEstateListing",
+      "@id": `${canonical}#listing`,
+      "url": canonical,
+      "name": S(p.title),
+      "description": descRaw.trim(),
+      "inLanguage": S(site.lang) || "es-DO",
+      "identifier": S(p.filename),
+      "image": imagesAbs,
+      "provider": { "@id": ORG_ID },
+      "mainEntity": { "@id": `${canonical}#residence` },
+      "offers": { "@id": `${canonical}#offer` }
+    };
+
+    const schemaJson = JSON.stringify(
+      { "@context": "https://schema.org", "@graph": [listing, residence, offer] },
+      null, 2
+    );
+
     return `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -77,32 +262,7 @@ module.exports = class {
   <link rel="alternate" hreflang="${S(site.lang)}" href="${canonical}">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "${S(p.title)}",
-    "description": "${desc.replace(/"/g, '\\"')}",
-    "image": ["${imgAbs}"],
-    "sku": "${S(p.filename)}",
-    "brand": {"@type":"Brand","name":"Inmobiliaria Caney"},
-    "category": "Real Estate",
-    "url": "${canonical}",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "${S(p.price).includes("RD$") ? "DOP" : "USD"}",
-      "price": "${S(p.price).replace(/[^0-9.]/g, "")}",
-      "availability": "https://schema.org/InStock",
-      "url": "${canonical}"
-    },
-    "additionalProperty": [
-      {"@type":"PropertyValue","name":"Área","value":"${S(p.area)}"},
-      {"@type":"PropertyValue","name":"Sector","value":"${S(p.sector)}"},
-      {"@type":"PropertyValue","name":"Tipo","value":"${Array.isArray(p.type) ? p.type.map(S).join(", ") : S(p.type)}"},
-      {"@type":"PropertyValue","name":"Metraje","value":"${S(p.size)}"},
-      {"@type":"PropertyValue","name":"Habitaciones","value":"${S(p.bedrooms)}"},
-      {"@type":"PropertyValue","name":"Baños","value":"${S(p.bathrooms)}"}
-    ]
-  }
+${schemaJson}
   </script>
 </head>
 <body>
