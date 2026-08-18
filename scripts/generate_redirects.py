@@ -80,12 +80,18 @@ def main():
         slug = f"{slugify(p['title'])}-{slugify(p.get('sector') or p.get('area') or '')}"
         lines.append(f"/{slug}.html  /{slug}  301!")
 
-    lines += ["", "# Renamed assets (spaces/parens removed); case-only renames",
-              "# are omitted because Netlify matches redirects case-insensitively"]
+    lines += ["", "# Renamed assets (spaces/parens removed). Netlify SERVES files",
+              "# case-insensitively (case-only renames need no rule) but MATCHES",
+              "# redirect sources case-sensitively — so each rule is emitted both",
+              "# in the on-disk casing and in the 'Images caney' casing that the",
+              "# old templates actually put into og:image/HTML."]
     for old, new in sorted(rename_map.items()):
         if old.lower() == new.lower():
             continue
-        lines.append(f"{enc(old)}  {enc(new)}  301")
+        variants = {old}
+        variants.add(old.replace("/CSS/Images Caney/", "/CSS/Images caney/"))
+        for v in sorted(variants):
+            lines.append(f"{enc(v)}  {enc(new)}  301")
 
     out = os.path.join(ROOT, "src/_redirects")
     with open(out, "w") as fh:
