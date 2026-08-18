@@ -1,5 +1,3 @@
-
-
 [
  {
   "title": "Proyecto residencial en Sector Honduras",
@@ -12,11 +10,19 @@
   "size": "",
   "bedrooms": "2",
   "bathrooms": "2.5 baños",
-  "folder": "Santo Domingo/PROYECTO RESIDENCIAL HONDURAS",
-  "images": ["2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
+  "folder": "santo-domingo/proyecto-residencial-honduras",
+  "images": [
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png"
+  ],
   "description": "Proyecto residencial en el Sector Honduras, Distrito Nacional, con apartamentos de 2 habitaciones y 2.5 baños desde US$156,000. El proyecto contará con terminaciones de primera, preinstalación de aire acondicionado, área social amueblada con bar y jacuzzi, gimnasio amueblado y planta eléctrica full. Entrega prevista para diciembre de 2027."
-},
-
+ },
  {
   "title": "Apartamento clásico en Av. Enriquillo, Los Cacicazgos",
   "filename": "ApartamentoClasicoLosCacicazgosEnriquillo",
@@ -28,11 +34,20 @@
   "size": "180 m²",
   "bedrooms": "3",
   "bathrooms": "2 baños",
-  "folder": "Santo Domingo/AV ENRIQUILLO APARTAMENTO CLASICO",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
+  "folder": "santo-domingo/av-enriquillo-apartamento-clasico",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png"
+  ],
   "description": "Apartamento clásico en venta en Av. Enriquillo, Los Cacicazgos, con 180 m². Cuenta con 3 habitaciones, 2 baños, balcón, 1 parqueo, área de lavado y portón eléctrico. Una opción amplia y funcional en una ubicación privilegiada del Distrito Nacional."
-},
-
+ },
  {
   "title": "Apartamento en alquiler en Piantini",
   "filename": "ApartamentoPiantiniAlquiler",
@@ -44,11 +59,17 @@
   "size": "124 m²",
   "bedrooms": "3",
   "bathrooms": "2 baños",
-  "folder": "Santo Domingo/ALQUILER PIANTINI",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png"],
+  "folder": "santo-domingo/alquiler-piantini",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
   "description": "Apartamento en alquiler en Piantini, Distrito Nacional, con 124 m². Cuenta con 3 habitaciones, 2 baños y 1 parqueo. Incluye sala y comedor, cuarto de servicio y área de lavado. Precio de alquiler: US$1,000 con mantenimiento incluido."
-},
-
+ },
  {
   "title": "Apartamento en alquiler en Serrallés",
   "filename": "ApartamentoSerrallesAlquiler",
@@ -60,11 +81,17 @@
   "size": "135 m²",
   "bedrooms": "2",
   "bathrooms": "2.5 baños",
-  "folder": "Santo Domingo/ALQUILER SERRALLES",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png"],
+  "folder": "santo-domingo/alquiler-serralles",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
   "description": "Apartamento en alquiler en Serrallés, ubicado en un tercer piso, con 135 m². Cuenta con 2 habitaciones, 2.5 baños y 2 parqueos. Incluye línea blanca, aire acondicionado y acceso a área social con piscina."
-},
- 
+ },
  {
   "title": "Penthouse en Bella Vista",
   "filename": "PenthouseBellaVista",
@@ -76,12 +103,19 @@
   "size": "650 m² total (contando parqueo y terraza)",
   "bedrooms": "4",
   "bathrooms": "4.5",
-  "folder": "Santo Domingo/Bella Vista Penthouse 2",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+  "folder": "santo-domingo/bella-vista-penthouse-2",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png"
+  ],
   "description": "Penthouse en Bella Vista (Distrito Nacional) con 550 m² de construcción más 80 m² de terraza. Cuenta con 4 habitaciones (cada una con su baño y walk-in closet), 4.5 baños, 3 parqueos, ascensor y cocina fría y caliente. Amplios espacios sociales y distribución ideal para comodidad y entretenimiento."
-},
- 
-
+ },
  {
   "title": "Apartamento NUEVO en Evaristo Morales",
   "filename": "ApartamentoEvaristoMorales",
@@ -93,11 +127,18 @@
   "size": "79.49 m²",
   "bedrooms": "1",
   "bathrooms": "1 baño + 1/2 baño",
-  "folder": "Santo Domingo/APARTAMENTO EVARISTO MORALES",
-  "images": ["1.png","2.png","4.png","5.png","6.png","7.png","8.png"],
+  "folder": "santo-domingo/apartamento-evaristo-morales",
+  "images": [
+   "1.png",
+   "2.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png"
+  ],
   "description": "Apartamento nuevo a estrenar en torre nueva de entrega 2026, ubicado en piso 8, en Evaristo Morales, a dos esquinas de la Av. Winston Churchill y en la Calle Rafael Augusto Sánchez. Distribución moderna con sala, comedor y cocina integrada, habitación principal con walk-in closet y baño, medio baño de visita, área de lavado y amplio parqueo. Amenidades del edificio: lobby climatizado, 2 ascensores, gym equipado, área de niños, salón de eventos, área social, piscina y BBQ."
-},
- 
+ },
  {
   "title": "Apartamento en alquiler en Sector Quisqueya",
   "filename": "ApartamentoQuisqueyaAlquiler",
@@ -109,12 +150,17 @@
   "size": "90 m²",
   "bedrooms": "1",
   "bathrooms": "2 baños",
-  "folder": "Santo Domingo/Sector Quisqueya Alquiler",
-  "images": ["1.png","2.png","3.png","4.png","5.png"],
+  "folder": "santo-domingo/sector-quisqueya-alquiler",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png"
+  ],
   "description": "Apartamento en alquiler en el Sector Quisqueya (Distrito Nacional) con 90 m². Cuenta con 1 habitación, 2 baños y 1 parqueo. Incluye sala, comedor y cocina. Amenidades del edificio: área social con jacuzzi y terraza."
-},
-
-{
+ },
+ {
   "title": "Apartamento en Los Cacicazgos, próximo a Av. Anacaona",
   "filename": "ApartamentoLosCacicazgosAnacaona",
   "area": "Santo Domingo",
@@ -125,11 +171,21 @@
   "size": "339.20 m²",
   "bedrooms": "3",
   "bathrooms": "3.5",
-  "folder": "Santo Domingo/Apartamento Los Cacicazgos Anacaona",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"],
+  "folder": "santo-domingo/apartamento-los-cacicazgos-anacaona",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png",
+   "10.png"
+  ],
   "description": "Apartamento ubicado en piso 6 con 339.20 m². Cuenta con 3 habitaciones (cada una con su baño; 2 con walk-in closet), 2 salas, comedor, family, cocina fría y caliente, balcón tipo terraza, cuarto de servicio, área de lavado, 3 parqueos, lobby y locker. Edificio con 2 ascensores de última generación, planta full, vigilancia 24 horas, sistema de cámaras y gas común. Amenidades: área social, gimnasio, terraza y jacuzzi."
-},
-
+ },
  {
   "title": "Solar + villa en Pedro Brand, Lomas Lindas",
   "filename": "SolarVillaPedroBrandLomasLindas",
@@ -141,28 +197,43 @@
   "size": "5,700 m² de solar",
   "bedrooms": "2",
   "bathrooms": "1 baño",
-  "folder": "Santo Domingo/SOLAR Y VILLA PEDRO BRAND LOMAS LINDAS",
-  "images": ["1.png","2.png","3.png","4.png"],
+  "folder": "santo-domingo/solar-y-villa-pedro-brand-lomas-lindas",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png"
+  ],
   "description": "Solar + villa en venta en Pedro Brand, Lomas Lindas. Cuenta con 5,700 m² de terreno y una villa con 2 habitaciones, 1 baño, sala y cocina. Incluye área de parqueo y planta eléctrica. Ideal para quienes buscan amplitud, tranquilidad y contacto con la naturaleza."
-},
-
-  {
+ },
+ {
   "title": "Penthouse de lujo en Los Cacicazgos",
   "filename": "PenthouseLosCacicazgos",
   "area": "Santo Domingo",
   "sector": "Los Cacicazgos",
   "type": "Penthouse",
   "location": "Los Cacicazgos, Distrito Nacional",
-  "price": "US$750,000 REBAJADO" ,
+  "price": "US$750,000 REBAJADO",
   "size": "420 m² de construcción",
   "bedrooms": "4",
   "bathrooms": "4 baños + 2 medios baños",
-  "folder": "Santo Domingo/Penthouse Los Cascicazgos",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png"],
+  "folder": "santo-domingo/penthouse-los-cascicazgos",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png",
+   "10.png",
+   "11.png"
+  ],
   "description": "Penthouse de dos niveles con distribución pensada para el confort, lujo y privacidad. 4 habitaciones (cada una con walk-in closet), 4 baños, 2 medios baños para visitas, 3 parqueos, cuarto de servicio con baño, área de lavado y lockers para almacenamiento adicional. Diseño moderno: sala, comedor, cocina fría y caliente y amplia área social privada con jacuzzi; balcón con vista al mar. Acabados de primera: pisos en mármol, ventanales con gran iluminación natural, aire central y terminaciones de lujo; edificio con ascensores de carga y de visita y 3 parqueos techados exclusivos."
-},
-
-{
+ },
+ {
   "title": "Apartamento de lujo en Los Cacicazgos, Av. Enriquillo",
   "filename": "ApartamentoLosCacicazgosEnriquillo450",
   "area": "Santo Domingo",
@@ -173,13 +244,21 @@
   "size": "450 m²",
   "bedrooms": "4",
   "bathrooms": "4.5 baños",
-  "folder": "Santo Domingo/Av Enriquillo Los Cacicazgos",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
+  "folder": "santo-domingo/av-enriquillo-los-cacicazgos",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png"
+  ],
   "description": "Apartamento de alto nivel en Av. Enriquillo, Los Cacicazgos, con 450 m². Cuenta con 4 habitaciones y 4.5 baños, 4 parqueos techados y balcón terraza con vista al mar. Incluye sala, recibidor, comedor, estudio, cocina fría y caliente, clóset de ropa blanca, área de lavado y cuarto de servicio. Torre con amenidades premium: piscina, gym, área de bar, área de masajes, sauna y ducha para sauna, estar de choferes, salón de reuniones, lobby climatizado, 3 ascensores, planta full y gas común. 1 apartamento por nivel (16 familias). Agenda tu visita: 809-224-2769 / 829-380-2769."
-},
-
-
-  {
+ },
+ {
   "title": "Apartamento amueblado en Bella Vista",
   "filename": "ApartamentoBellaVistaAmueblado",
   "area": "Santo Domingo",
@@ -190,29 +269,41 @@
   "size": "150 m²",
   "bedrooms": "2",
   "bathrooms": "2 baños",
-  "folder": "Santo Domingo/Apartamento BELLA VISTA AMUEBLADO",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png"],
+  "folder": "santo-domingo/apartamento-bella-vista-amueblado",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png"
+  ],
   "description": "Apartamento amueblado en Bella Vista (Distrito Nacional) con 150 m². Cuenta con 2 habitaciones con walk-in closet, 2 baños, 2 parqueos, ascensor y aire acondicionado. Espacios sociales amplios y listos para mudarse."
-},
-
-  
-{
-"title": "Bella Vista Penthouse",
-"filename": "BellaVistaPenthouse",
-"area": "Santo Domingo",
-"sector": "Bella Vista",
-"type": "Penthouse",
-"location": "Distrito Nacional, Bella Vista",
-"price": "US$337,000",
-"size": "292 m2 de construcción",
-"bedrooms": "3",
-"bathrooms": "3.5",
-"folder": "Santo Domingo/Bella Vista Penthouse",
-"images": ["1.png","2.png","3.png","4.png","5.png","6.png"],
-"description": "Exclusivo penthouse de 292 m2 en Bella Vista, a pasos del centro comercial Downtown Center con amplias áreas sociales, estudio, terraza techada, 2 parqueos y cuarto de servicio, a pasos de Downtown Center y en torre con planta eléctrica."
-},
-
-{
+ },
+ {
+  "title": "Bella Vista Penthouse",
+  "filename": "BellaVistaPenthouse",
+  "area": "Santo Domingo",
+  "sector": "Bella Vista",
+  "type": "Penthouse",
+  "location": "Distrito Nacional, Bella Vista",
+  "price": "US$337,000",
+  "size": "292 m2 de construcción",
+  "bedrooms": "3",
+  "bathrooms": "3.5",
+  "folder": "santo-domingo/bella-vista-penthouse",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
+  "description": "Exclusivo penthouse de 292 m2 en Bella Vista, a pasos del centro comercial Downtown Center con amplias áreas sociales, estudio, terraza techada, 2 parqueos y cuarto de servicio, a pasos de Downtown Center y en torre con planta eléctrica."
+ },
+ {
   "title": "Apartamento con terraza en Av. Independencia Km 10",
   "filename": "ApartamentoIndependenciaKM10",
   "area": "Santo Domingo",
@@ -223,44 +314,67 @@
   "size": "82 m² de construcción + 40 m² de terraza",
   "bedrooms": "3",
   "bathrooms": "2.5 baños",
-  "folder": "Santo Domingo/Independencia KM10",
-  "images": ["1.png","2.png","3.png","4.png"],
+  "folder": "santo-domingo/independencia-km10",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png"
+  ],
   "description": "Tu próximo hogar en Av. Independencia KM 10 Apartamento amplio y funcional en Distrito Nacional, ideal para vivir cómodo o invertir con seguridad. Cuenta con 82 m² de construcción + 40 m² de terraza, perfectos para disfrutar en familia o crear tu propio espacio al aire libre. Ubicación estratégica, espacios bien distribuidos y una terraza que marca la diferencia. Escríbenos y agenda tu visita hoy mismo."
-},
-
-  {
-"title": "Amplio Apartamento en Bella Vista",
-"filename": "AptoBellaVista",
-"area": "Santo Domingo",
-"sector": "Bella Vista",
-"type": "Apartamento",
-"location": "Bella Vista, Distrito Nacional",
-"price": "US298,000",
-"size": "303 m²",
-"bedrooms": "3",
-"bathrooms": "3.5",
-"folder": "Santo Domingo/Bella Vista Torre Gaspar Polanco",
-"images": ["1.png","3.png","4.png","5.png","6.png","7.png","8.png"],
-"description": "Vive en uno de los sectores más exclusivos del Distrito Nacional con este impresionante apartamento de 303 m² que combina amplitud y una ubicación privilegiada. Cuenta con 3 habitaciones, incluyendo una principal con baño y vestidor, 3.5 baños, recibidor, sala y estar familiar, balcón/terraza, cocina con desayunador, closet de ropa blanca, cuarto de servicio y 3 parqueos. Su terminación de primera incluye madera preciosa, pisos de porcelanato italiano y detalles en mármol, creando un ambiente sofisticado y acogedor. 💰 Precio: US$298,000 📍 Bella Vista, Distrito Nacional"
-},
-
-{
-"title": "Apartamento Amueblado - Esperilla",
-"filename": "ApartamentoAmuebladoEsperilla",
-"area": "Santo Domingo",
-"sector": "La Esperilla",
-"type": "Apartamento",
-"location": "Esperilla, Distrito Nacional",
-"price": "ALQUILER US$2,200 incluye mantenimiento",
-"size": "110 metros",
-"bedrooms": "2 habitaciones c/ walk-in closet",
-"bathrooms": "2.5 baños",
-"folder": "Santo Domingo/Esperilla Apartamento ALQUILER AMUEBLADO",
-"images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png"],
-"description": "FINAMENTE AMUEBLADO Y DECORADO. 2 parqueos; cocina con desayunador; comedor; sala; balcon; aires acondicionados; planta full; Portón Eléctrico. Áreas sociales: Piscina techada; Bbq; Area de juegos de niños; Gimnasio; Salón multiuso. Características: Techo de concreto; Pisos de porcelanato; Marcos de roble; Gabinetes de roble; Puertas de roble; Excelente ubicacion."
-},
-
-{
+ },
+ {
+  "title": "Amplio Apartamento en Bella Vista",
+  "filename": "AptoBellaVista",
+  "area": "Santo Domingo",
+  "sector": "Bella Vista",
+  "type": "Apartamento",
+  "location": "Bella Vista, Distrito Nacional",
+  "price": "US298,000",
+  "size": "303 m²",
+  "bedrooms": "3",
+  "bathrooms": "3.5",
+  "folder": "santo-domingo/bella-vista-torre-gaspar-polanco",
+  "images": [
+   "1.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png"
+  ],
+  "description": "Vive en uno de los sectores más exclusivos del Distrito Nacional con este impresionante apartamento de 303 m² que combina amplitud y una ubicación privilegiada. Cuenta con 3 habitaciones, incluyendo una principal con baño y vestidor, 3.5 baños, recibidor, sala y estar familiar, balcón/terraza, cocina con desayunador, closet de ropa blanca, cuarto de servicio y 3 parqueos. Su terminación de primera incluye madera preciosa, pisos de porcelanato italiano y detalles en mármol, creando un ambiente sofisticado y acogedor. 💰 Precio: US$298,000 📍 Bella Vista, Distrito Nacional"
+ },
+ {
+  "title": "Apartamento Amueblado - Esperilla",
+  "filename": "ApartamentoAmuebladoEsperilla",
+  "area": "Santo Domingo",
+  "sector": "La Esperilla",
+  "type": "Apartamento",
+  "location": "Esperilla, Distrito Nacional",
+  "price": "ALQUILER US$2,200 incluye mantenimiento",
+  "size": "110 metros",
+  "bedrooms": "2 habitaciones c/ walk-in closet",
+  "bathrooms": "2.5 baños",
+  "folder": "santo-domingo/esperilla-apartamento-alquiler-amueblado",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png",
+   "10.png",
+   "11.png",
+   "12.png"
+  ],
+  "description": "FINAMENTE AMUEBLADO Y DECORADO. 2 parqueos; cocina con desayunador; comedor; sala; balcon; aires acondicionados; planta full; Portón Eléctrico. Áreas sociales: Piscina techada; Bbq; Area de juegos de niños; Gimnasio; Salón multiuso. Características: Techo de concreto; Pisos de porcelanato; Marcos de roble; Gabinetes de roble; Puertas de roble; Excelente ubicacion."
+ },
+ {
   "title": "Moderno apartamento en venta en Los Cacicazgos",
   "filename": "AptoLosCacicazgos",
   "area": "Santo Domingo",
@@ -271,12 +385,18 @@
   "size": "95 m²",
   "bedrooms": "2",
   "bathrooms": "2",
-  "folder": "Santo Domingo/Apartamento Los Cacicazgos",
-  "images": ["1.png","3.png","5.png","8.png","7.png","11.png"],
+  "folder": "santo-domingo/apartamento-los-cacicazgos",
+  "images": [
+   "1.png",
+   "3.png",
+   "5.png",
+   "8.png",
+   "7.png",
+   "11.png"
+  ],
   "description": "Confort, estilo y ubicación privilegiada. Apartamento de 95 m² en torre moderna con ascensor, planta eléctrica y áreas sociales. 2 habitaciones, 2 baños completos, ventanas panorámicas con excelente iluminación, 1 parqueo techado, acceso a terraza y jacuzzi en área común, sala espaciosa y bien distribuida, planta eléctrica total."
-},
-
-{
+ },
+ {
   "title": "Apartamento Amueblado en La Esperilla con Vista al Mar",
   "filename": "AptoLaEsperillaVistaMar",
   "area": "Santo Domingo",
@@ -287,15 +407,19 @@
   "size": "85.3 m²",
   "bedrooms": "1",
   "bathrooms": "1.5",
-  "folder": "Santo Domingo/Esperilla Apartamento AMUEBLADO",
-  "images": ["1.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+  "folder": "santo-domingo/esperilla-apartamento-amueblado",
+  "images": [
+   "1.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png"
+  ],
   "description": "Comodidad y estilo en elegante apartamento amueblado de 85.3 m². Características: 1 habitación, 1.5 baños, cuarto de servicio, amueblado y listo para mudarte, aire acondicionado, vista al mar y acceso a Piscina Infinity (área común)."
-},
-
-
-
-
-{
+ },
+ {
   "title": "Penthouse con Terraza y Vista en Gazcue",
   "filename": "PenthouseGazcue",
   "area": "Santo Domingo",
@@ -306,12 +430,21 @@
   "size": "300 m²",
   "bedrooms": "4",
   "bathrooms": "3.5",
-  "folder": "Santo Domingo/Gazcue Penthouse",
-  "images": ["1.png","4.png","6.png","8.png","10.png","12.png","14.png","16.png","18.png"],
+  "folder": "santo-domingo/gazcue-penthouse",
+  "images": [
+   "1.png",
+   "4.png",
+   "6.png",
+   "8.png",
+   "10.png",
+   "12.png",
+   "14.png",
+   "16.png",
+   "18.png"
+  ],
   "description": "Penthouse en piso 8 de 300 m² con 4 habitaciones + cuarto de servicio y 3.5 baños + baño de servicio. Sala, comedor, cocina, área de lavado, 2 terrazas, 2 parqueos (1 techado y 1 destechado), lobby, ascensor, video portero e interfon. Extras: walk-in closet, calentador de gas, gas común, rejas, shutters y toldos, pet friendly."
-},
-
-{
+ },
+ {
   "title": "Apartamento Torre Caney",
   "filename": "ApartamentoTorreCaney",
   "area": "Santo Domingo",
@@ -322,15 +455,21 @@
   "size": "854m2",
   "bedrooms": "4",
   "bathrooms": "5.5",
-  "folder": "Santo Domingo/Torrecaney",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
+  "folder": "santo-domingo/torrecaney",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png"
+  ],
   "description": "Exclusivo apartamento en piso alto de la Torre Caney con 4 habitaciones con walk-in closets, 5.5 baños, 2 cocinas, sala formal, estudio, family, comedor formal e informal, oficina, área de servicio, balcón frontal con vista al mar y múltiples espacios sociales (piscinas, gimnasio, canchas, jacuzzi, sauna, salones, jardines, entre otros). Incluye 5 parqueos techados, 8 de visita y locker."
-},
-
-
-  
-
-  {
+ },
+ {
   "title": "Apartamento de Oportunidad en El Pedregal",
   "filename": "AptoElPedregal",
   "area": "Santo Domingo",
@@ -341,45 +480,60 @@
   "size": "130 m² de construcción en el 6to nivel",
   "bedrooms": "3",
   "bathrooms": "2 baños + 1/2 baño",
-  "folder": "Santo Domingo/EL PEDREGAL (4)",
-  "images": ["1.png","3.png","4.png","5.png","6.png"],
+  "folder": "santo-domingo/el-pedregal-4",
+  "images": [
+   "1.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
   "description": "Residencial cerrado con seguridad 24/7 en Av. Independencia. 3 habitaciones, 2 baños + 1/2 baño, 2 parqueos techados paralelos. Amenidades: piscina y terraza común, parque infantil y área de recreación, ascensor y gas común, portón eléctrico y vigilancia 24H, cuarto de servicio y área de lavado."
-},
-
-{
-"title": "Vivienda Frente al Parque Mirador Sur",
-"filename": "ViviendaMiradorSur",
-"area": "Santo Domingo",
-"sector": "Mirador Sur",
-"type": "Casa",
-"location": "Res. Alexandra, Ave. Cayetano Germosén, Mirador Sur, Distrito Nacional",
-"price": "US$420,000",
-"size": "336 m² de solar y 250 m² de construcción",
-"bedrooms": "3",
-"bathrooms": "2.5",
-"folder": "Santo Domingo/Calletano Germosen Casa",
-"images": ["5.png","4.png","6.png","7.png","8.png","9.png"],
-"description": "Vivienda con ubicación privilegiada frente al Parque Mirador Sur. 3 habitaciones + cuarto de servicio, 2.5 baños, sala espaciosa, patio/jardín, marquesina doble, área de lavado y dos niveles. 336 m² de solar y 250 m² de construcción."
-},
-
-
-{
-    "slug": "ciudad-modelo-tipo-c",
-    "filename": "TerrazasC",
-    "title": "Apartamento - CIUDAD MODELO (TIPO C)",
-    "sector": "Ciudad Modelo",
-    "type": "Apartamento",
-    "area": "Santo Domingo",
-    "location": "Av. Jacobo Majluta, Santo Domingo Norte",
-    "price": "US$ 67,000",
-    "size": "68m2",
-    "bedrooms": "3",
-    "bathrooms": "2",
-    "folder": "Santo Domingo/TERRAZAS DEL ARROYO (3)",
-    "images": ["3.png","4.png","5.png","9.png","10.png"]
-  },
-
-  {
+ },
+ {
+  "title": "Vivienda Frente al Parque Mirador Sur",
+  "filename": "ViviendaMiradorSur",
+  "area": "Santo Domingo",
+  "sector": "Mirador Sur",
+  "type": "Casa",
+  "location": "Res. Alexandra, Ave. Cayetano Germosén, Mirador Sur, Distrito Nacional",
+  "price": "US$420,000",
+  "size": "336 m² de solar y 250 m² de construcción",
+  "bedrooms": "3",
+  "bathrooms": "2.5",
+  "folder": "santo-domingo/calletano-germosen-casa",
+  "images": [
+   "5.png",
+   "4.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png"
+  ],
+  "description": "Vivienda con ubicación privilegiada frente al Parque Mirador Sur. 3 habitaciones + cuarto de servicio, 2.5 baños, sala espaciosa, patio/jardín, marquesina doble, área de lavado y dos niveles. 336 m² de solar y 250 m² de construcción."
+ },
+ {
+  "slug": "ciudad-modelo-tipo-c",
+  "filename": "TerrazasC",
+  "title": "Apartamento - CIUDAD MODELO (TIPO C)",
+  "sector": "Ciudad Modelo",
+  "type": "Apartamento",
+  "area": "Santo Domingo",
+  "location": "Av. Jacobo Majluta, Santo Domingo Norte",
+  "price": "US$ 67,000",
+  "size": "68m2",
+  "bedrooms": "3",
+  "bathrooms": "2",
+  "folder": "santo-domingo/terrazas-del-arroyo-3",
+  "images": [
+   "3.png",
+   "4.png",
+   "5.png",
+   "9.png",
+   "10.png"
+  ]
+ },
+ {
   "title": "Apartamento - CIUDAD MODELO (TIPO B)",
   "filename": "AptoCiudadModeloTipoB",
   "area": "Santo Domingo",
@@ -390,13 +544,16 @@
   "size": "79.32m2",
   "bedrooms": "3",
   "bathrooms": "2",
-  "folder": "Santo Domingo/TERRAZAS DEL ARROYO (3)",
-  "images": ["7.png","8.png","9.png","10.png"],
+  "folder": "santo-domingo/terrazas-del-arroyo-3",
+  "images": [
+   "7.png",
+   "8.png",
+   "9.png",
+   "10.png"
+  ],
   "description": "Apartamento TIPO B en Ciudad Modelo. Ubicación: Av. Jacobo Majluta, Santo Domingo Norte. Metraje: 79.32m2. Precio: US$ 78,000."
-},
-
-
-{
+ },
+ {
   "title": "Apartamento - CIUDAD MODELO (TIPO A)",
   "filename": "AptoCiudadModeloTipoA",
   "area": "Santo Domingo",
@@ -407,12 +564,16 @@
   "size": "90.5m2",
   "bedrooms": "3",
   "bathrooms": "2",
-  "folder": "Santo Domingo/TERRAZAS DEL ARROYO (3)",
-  "images": ["5.png","6.png","9.png","10.png"],
+  "folder": "santo-domingo/terrazas-del-arroyo-3",
+  "images": [
+   "5.png",
+   "6.png",
+   "9.png",
+   "10.png"
+  ],
   "description": "Apartamento TIPO A en Ciudad Modelo. Ubicación: Av. Jacobo Majluta, Santo Domingo Norte. Metraje: 90.5m2. Precio: US$ 90,000."
-},
-
-{
+ },
+ {
   "title": "Torre en Gazcue - Frente a Bellas Artes",
   "filename": "TorreGazcueBellasArtes",
   "area": "Santo Domingo",
@@ -423,13 +584,18 @@
   "size": "",
   "bedrooms": "1 y 2",
   "bathrooms": "",
-  "folder": "Santo Domingo/JARDINES DE BELLAS ARTES",
-  "images": ["1.png","4.png","5.png","6.png","7.png","8.png"],
+  "folder": "santo-domingo/jardines-de-bellas-artes",
+  "images": [
+   "1.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png"
+  ],
   "description": "Apartamentos amueblados de 1 y 2 habitaciones con diseño vanguardista. Amenidades: estudio, vista al mar, piscina infinity, rooftop con sky bar, gimnasio, restaurante & hotel boutique, área de mascotas y salón & spa."
-},
-
-
-{
+ },
+ {
   "title": "Penthouse AMUEBLADO en San Isidro",
   "filename": "PenthouseSanIsidro",
   "area": "Santo Domingo",
@@ -440,12 +606,18 @@
   "size": "224 m² de construcción",
   "bedrooms": "3",
   "bathrooms": "3",
-  "folder": "Santo Domingo/SAN ISIDRO penthouse main",
-  "images": ["1.png","4.png","5.png","6.png","7.png","8.png"],
+  "folder": "santo-domingo/san-isidro-penthouse-main",
+  "images": [
+   "1.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png"
+  ],
   "description": "Penthouse amueblado con 224 m². 3 habitaciones, 3 baños, cocina equipada, área de lavado, jacuzzi privado, terraza amplia y vista panorámica. Incluye 2 parqueos. También disponible SIN amueblar por US$169,000."
-},
-
-{
+ },
+ {
   "title": "Vivienda de Lujo - La Julia (2 Niveles)",
   "filename": "CasaLaJulia",
   "area": "Santo Domingo",
@@ -456,12 +628,17 @@
   "size": "463.84 m² de construcción",
   "bedrooms": "4",
   "bathrooms": "5 baños + 2 medios baños",
-  "folder": "Santo Domingo/La Julia",
-  "images": ["1.png","2.jpg","3.jpg","4.jpg","5.jpg"],
+  "folder": "santo-domingo/la-julia",
+  "images": [
+   "1.png",
+   "2.jpg",
+   "3.jpg",
+   "4.jpg",
+   "5.jpg"
+  ],
   "description": "Exclusiva vivienda de dos pisos. Nivel 1: recibidor, estudio, sala, terraza, comedor, cocina fría y caliente, dormitorio de visitas con baño y clóset, área de lavado, área y baño de servicio, medio baño, marquesina, piscina, área y ducha de piscina, patio lateral, jardín y acceso peatonal. Nivel 2: family room, estudio y 3 dormitorios con baño y vestidor."
-},
-
-{
+ },
+ {
   "title": "Proyecto Residencial - Las Américas (SDE)",
   "filename": "AptLasAmericas",
   "area": "Santo Domingo",
@@ -472,12 +649,16 @@
   "size": "",
   "bedrooms": "3",
   "bathrooms": "1 y 2",
-  "folder": "Santo Domingo/Las Americas",
-  "images": ["1.png","2.png","3.png","4.png"],
+  "folder": "santo-domingo/las-americas",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png"
+  ],
   "description": "Complejo de apartamentos de 3 habitaciones frente al Mar Caribe, con amplias áreas verdes, sociales y deportivas. Proyecto dividido en reserva natural, residencias y área comercial, conectado por avenidas internas. Aplica para bono de primera vivienda."
-},
-
-{
+ },
+ {
   "title": "Apartamento en El Millón",
   "filename": "AptoElMillon",
   "area": "Santo Domingo",
@@ -488,12 +669,18 @@
   "size": "120.5 m² (98 m² netos sin contar parqueos)",
   "bedrooms": "2",
   "bathrooms": "2.5",
-  "folder": "Santo Domingo/EL MILLON 1",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png"],
+  "folder": "santo-domingo/el-millon-1",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
   "description": "Sala-comedor con balcón integrado, 2 habitaciones con baños privados (principal con walk-in closet), medio baño de visitas, cocina moderna con desayunador y gabinetes de roble, área de lavado y habitación de servicio con baño. 2 parqueos techados lineales (capacidad para 3 vehículos). Gas común con medidor, calentador, cisterna y seguridad."
-},
-
-{
+ },
+ {
   "title": "Vivienda en Costa Verde - Santo Domingo Oeste",
   "filename": "CostaVerde",
   "area": "Santo Domingo",
@@ -504,14 +691,18 @@
   "size": "600 m² de terreno y 384 m² de construcción",
   "bedrooms": "3",
   "bathrooms": "2.5",
-  "folder": "Santo Domingo/Costa Verde",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png"],
+  "folder": "santo-domingo/costa-verde",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
   "description": "Amplia y acogedora vivienda de dos niveles en Costa Verde, Santo Domingo Oeste. Cuenta con 3 habitaciones, 2.5 baños, sala y estar, patio/jardín, cocina amplia, marquesina doble y cuarto de servicio."
-},
-
-
-
-{
+ },
+ {
   "title": "Casa - Ciudad Modelo (2 Niveles)",
   "filename": "CasaCiudadModelo",
   "area": "Santo Domingo",
@@ -522,12 +713,16 @@
   "size": "155 m² de construcción",
   "bedrooms": "3",
   "bathrooms": "2.5",
-  "folder": "Santo Domingo/CIUDAD MODELO Casas",
-  "images": ["1.png","2.png","3.png","4.png"],
+  "folder": "santo-domingo/ciudad-modelo-casas",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png"
+  ],
   "description": "Propiedad válida para BONO de RD$50,000 al completar la separación. Casa de 2 niveles con 3 habitaciones (principal con baño y walk-in closet), 2.5 baños, sala, comedor y cocina, balcón y terraza, área de lavado, estar familiar, 2 parqueos y acceso al techo para usos diversos."
-},
-
-{
+ },
+ {
   "title": "Local Comercial - Distrito Nacional",
   "filename": "LocalComercialDistritoNacional",
   "area": "Santo Domingo",
@@ -538,13 +733,16 @@
   "size": "112m2",
   "bedrooms": "",
   "bathrooms": "2",
-  "folder": "Santo Domingo/LOCAL COMERCIAL 27 febrero",
-  "images": ["1.png","4.png","5.png","7.png"],
+  "folder": "santo-domingo/local-comercial-27-febrero",
+  "images": [
+   "1.png",
+   "4.png",
+   "5.png",
+   "7.png"
+  ],
   "description": "Local comercial ubicado en la Avenida 27 de Febrero esquina Calle Barahona, Distrito Nacional. Cuenta con 112 m² de construcción. Ideal para negocio o inversión. Precio negociable."
-},
-
-
-{
+ },
+ {
   "title": "Casa en Brisa Oriental - Santo Domingo Este",
   "filename": "CasaBrisaOriental",
   "area": "Santo Domingo",
@@ -555,29 +753,16 @@
   "size": "212 m² de construcción",
   "bedrooms": "3",
   "bathrooms": "2.5",
-  "folder": "Santo Domingo/BRISA ORIENTAL CASAS",
-  "images": ["2.png","3.png","4.png","5.png"],
+  "folder": "santo-domingo/brisa-oriental-casas",
+  "images": [
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png"
+  ],
   "description": "Tu hogar soñado está aquí. Propiedad válida para BONO de RD$50,000 al completar la separación del apartamento a través de Inmobiliaria Caney. Casa de 212 m² de construcción diseñada para tu comodidad y estilo de vida. NIVEL 1: Sala, comedor y cocina con desayunador, terraza techada, habitación de servicio con baño, medio baño para visitas, marquesina para 2 vehículos, galería, jardín y espacio para la basura. NIVEL 2: Habitación principal con baño, walk-in closet y balcón en forma de L, 2 habitaciones secundarias con closet, sala familiar con balcón, baño para habitaciones secundarias. Detalles: pisos en porcelanato, gabinetes en hidrófuga y tope en granito/cuarzo, ventanas corredizas y mamparas en baños, preinstalaciones para aire, inversor y tinaco, cisterna, pozo tubular y acceso a la azotea."
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
+ },
+ {
   "title": "Solar colindante con el Mirador Sur",
   "filename": "SolarMiradorSurJoseContreras",
   "area": "Solares",
@@ -588,12 +773,12 @@
   "size": "227 m² de solar",
   "bedrooms": "",
   "bathrooms": "",
-  "folder": "Solares/Solar Mirador Sur y Jose Contreras",
-  "images": ["1.png"],
+  "folder": "solares/solar-mirador-sur-y-jose-contreras",
+  "images": [
+   "1.png"
+  ],
   "description": "Solar de 227 m² colindante con el Mirador Sur, con acceso por Av. José Contreras. Excelente oportunidad para desarrollo o inversión en una zona céntrica del Distrito Nacional, cerca de puntos de referencia y vías principales."
-},
-
-
+ },
  {
   "title": "Solar con potencial industrial - Punta Caucedo 2",
   "filename": "SolarPuntaCaucedoIndustrial",
@@ -605,15 +790,15 @@
   "size": "23,736 m² de solar",
   "bedrooms": "",
   "bathrooms": "",
-   "folder": "Solares/PUNTA CAUCEDO SOLAR 2",
-  "images": ["1.png","2.png","3.png"],
+  "folder": "solares/punta-caucedo-solar-2",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png"
+  ],
   "description": "Solar nivelado y aplanado con potencial industrial en Punta Caucedo. Cuenta con 23,736 m² y precio de US$1.50 por m². Ubicación estratégica cerca del Aeropuerto Internacional de Las Américas, con acceso a vías principales y zona logística/portuaria."
-},
-
-
-
-
-{
+ },
+ {
   "title": "Solar con Potencial Industrial – Punta Caucedo",
   "filename": "PuntaCaucedoSolar",
   "area": "Solares",
@@ -624,12 +809,16 @@
   "size": "75,264.63 m²",
   "bedrooms": "",
   "bathrooms": "",
-  "folder": "Solares/PUNTA CAUCEDO",
-  "images": ["1.png","3.png","4.png", "5.png"],
+  "folder": "solares/punta-caucedo",
+  "images": [
+   "1.png",
+   "3.png",
+   "4.png",
+   "5.png"
+  ],
   "description": "Oportunidad única para desarrollo logístico o industrial. Este terreno de 75,264.63 m² está estratégicamente ubicado cerca del Aeropuerto Internacional de Las Américas, el Puerto Multimodal Caucedo y AES Andrés, lo que garantiza conectividad privilegiada para operaciones de gran escala. Ideal para almacenes, centros de distribución o zonas francas."
-},
-
-{
+ },
+ {
   "title": "Solar en Autopista Duarte - Santo Domingo Oeste",
   "filename": "SolarAutopistaDuarte",
   "area": "Solares",
@@ -640,12 +829,15 @@
   "size": "9,968 m²",
   "bedrooms": "",
   "bathrooms": "",
-  "folder": "Solares/Autopista Duarte Solar",
-  "images": ["1.png","2.png","3.png"],
+  "folder": "solares/autopista-duarte-solar",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png"
+  ],
   "description": "Solar de 9,968 m² estratégicamente ubicado en la Autopista Duarte, próximo al nuevo peaje y al Residencial Lomas Lindas. Ideal para desarrollos industriales, comerciales o residenciales con acceso rápido a las principales vías de la ciudad."
-},
-
-{
+ },
+ {
   "title": "Solares - El Higuero",
   "filename": "SolaresElHiguero",
   "area": "Solares",
@@ -656,15 +848,18 @@
   "size": "750 m² cada uno",
   "bedrooms": "N/A",
   "bathrooms": "N/A",
-  "folder": "Solares/Solares en El Higuero",
-  "images": ["1.png","2.png","3.png","4.png", "5.png","6.png"],
+  "folder": "solares/solares-en-el-higuero",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
   "description": "A pasos de la Ave. Circunvalación, disponibles 2 solares de 750 m² cada uno con calles afirmadas, electrificación primaria y acceso al Río Higuamo. Zona con gran potencial de desarrollo."
-},
-
-
-
-
-{
+ },
+ {
   "title": "Solar - Sabana Grande de Palenque",
   "filename": "SolarSabanaGrandePalenque",
   "area": "Solares",
@@ -675,13 +870,13 @@
   "size": "32,293 m² de área",
   "bedrooms": "N/A",
   "bathrooms": "N/A",
-  "folder": "Solares/San Cristobal Solar",
-  "images": ["1.png"],
+  "folder": "solares/san-cristobal-solar",
+  "images": [
+   "1.png"
+  ],
   "description": "Finca/solar ubicado en Sabana Grande de Palenque, Provincia San Cristóbal, con vista al mar y a 1 km de la Playa de Najayo."
-},
-
-
-{
+ },
+ {
   "title": "Solar - Juan Dolio (22,132 m²)",
   "filename": "SolarJuanDolio3",
   "area": "Juan Dolio",
@@ -692,15 +887,13 @@
   "size": "22,132 m² de área",
   "bedrooms": "N/A",
   "bathrooms": "N/A",
-  "folder": "Solares/Juan Dolio Solar 3",
-  "images": ["1.png"],
+  "folder": "solares/juan-dolio-solar-3",
+  "images": [
+   "1.png"
+  ],
   "description": "Solar ubicado en Juan Dolio próximo a la Auto Vía del Este, ideal para desarrollar el proyecto de tus sueños. 22,132 m² a US$50 por metro cuadrado."
-},
-
-
-
-
-  {
+ },
+ {
   "title": "Solar - Metro Country Club, Juan Dolio",
   "filename": "SolarMetroCountryClubJuanDolio",
   "area": "Juan Dolio",
@@ -711,12 +904,14 @@
   "size": "1,227 m²",
   "bedrooms": "N/A",
   "bathrooms": "N/A",
-  "folder": "Juan Dolio/Juan Dolio Solar 1",
-  "images": ["1.png","2.png"],
+  "folder": "juan-dolio/juan-dolio-solar-1",
+  "images": [
+   "1.png",
+   "2.png"
+  ],
   "description": "Construye la casa de tus sueños en este terreno de 1,227 m² ubicado en el prestigioso Metro Country Club, rodeado de tranquilidad, seguridad y todas las comodidades que ofrece este exclusivo complejo."
-},
-
-{
+ },
+ {
   "title": "Solar - Juan Dolio (4 min de Playa Marbella)",
   "filename": "SolarJuanDolioPlayaMarbella",
   "area": "Juan Dolio",
@@ -727,12 +922,13 @@
   "size": "3,185 m²",
   "bedrooms": "N/A",
   "bathrooms": "N/A",
-  "folder": "Juan Dolio/Juan Dolio Solar 1",
-  "images": ["1.png"],
+  "folder": "juan-dolio/juan-dolio-solar-1",
+  "images": [
+   "1.png"
+  ],
   "description": "¡Invierte donde todos quieren estar! Solar en Juan Dolio, a solo 4 minutos de Playa Marbella. 3,185 m² de terreno a US$180/m², ideal para desarrollo turístico o residencial. Ubicación privilegiada, alto potencial de valorización."
-},
-
-{
+ },
+ {
   "title": "Solares - Juan Dolio",
   "filename": "SolaresJuanDolio2",
   "area": "Juan Dolio",
@@ -743,59 +939,31 @@
   "size": "4,462 m2 de área",
   "bedrooms": "",
   "bathrooms": "",
-  "folder": "Juan Dolio/Juan Dolio Solares",
-  "images": ["1.png","2.png"],
+  "folder": "juan-dolio/juan-dolio-solares",
+  "images": [
+   "1.png",
+   "2.png"
+  ],
   "description": "Dos solares disponibles en Juan Dolio, San Pedro de Macorís. Cada uno: 4,462 m2. US$150 por metro2."
-},
-
-
-{
-"title": "Solar en Buena Vista - La Isabela",
-"filename": "SolarBuenaVistaLaIsabela",
-"area": "Solares",
-"sector": "Buena Vista, La Isabela",
-"type": "Solar",
-"location": "Buena Vista, La Isabela, Santo Domingo",
-"price": "RD$4,000,000",
-"size": "696 m²",
-"bedrooms": "",
-"bathrooms": "",
-"folder": "Solares/Buenavista Solar",
-"images": ["1.png"],
-"description": "Solar en zona tranquila y en crecimiento, ideal para vivienda o proyecto turístico. Superficie de 696 m². Precio RD$4,000,000. Aire puro y entorno natural característicos de La Isabela. Contacto: 809-224-2769 | 829-380-2769."
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-{
+ },
+ {
+  "title": "Solar en Buena Vista - La Isabela",
+  "filename": "SolarBuenaVistaLaIsabela",
+  "area": "Solares",
+  "sector": "Buena Vista, La Isabela",
+  "type": "Solar",
+  "location": "Buena Vista, La Isabela, Santo Domingo",
+  "price": "RD$4,000,000",
+  "size": "696 m²",
+  "bedrooms": "",
+  "bathrooms": "",
+  "folder": "solares/buenavista-solar",
+  "images": [
+   "1.png"
+  ],
+  "description": "Solar en zona tranquila y en crecimiento, ideal para vivienda o proyecto turístico. Superficie de 696 m². Precio RD$4,000,000. Aire puro y entorno natural característicos de La Isabela. Contacto: 809-224-2769 | 829-380-2769."
+ },
+ {
   "title": "Villa amueblada en Ciudad Las Canas, Cap Cana (Punta Cana)",
   "filename": "VillaCiudadLasCanasCapCanaAmueblada",
   "area": "Punta Cana",
@@ -806,15 +974,23 @@
   "size": "860 m² de construcción (877 m² de terreno)",
   "bedrooms": "4",
   "bathrooms": "5 baños",
-  "folder": "Punta Cana/CIUDAD LAS CANAS CAP CANA CASA",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png"],
+  "folder": "punta-cana/ciudad-las-canas-cap-cana-casa",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png",
+   "10.png",
+   "11.png"
+  ],
   "description": "Dream House Villa en Cap Cana, Punta Cana (Solar 45, Ciudad Las Canas). Residencia de 2 niveles totalmente amueblada y equipada, con 4 habitaciones (todas con walk-in closet y baño), 5 baños, marquesina/área de parqueo para 4 vehículos y piscina. Incluye gazebo, terraza y área de BBQ. Cuenta con estudio/oficina privada, 2 living rooms + antesala, línea blanca de primera, aires acondicionados en todas las áreas, cocina en alto brillo con topes de cuarzo blanco, puertas en maderas preciosas, ventanales europeos anticiclónicos y escalera completa en cuarzo blanco."
-},
-
-
-
-
-{
+ },
+ {
   "title": "River Island – Bávaro, Punta Cana",
   "filename": "RiverIslandBavaro",
   "area": "Punta Cana",
@@ -825,29 +1001,51 @@
   "size": "",
   "bedrooms": "1, 2 y 3",
   "bathrooms": "",
-  "folder": "Punta Cana/RIVER ISLAND",
-  "images": ["1.png","8.png","9.png","10.png","11.png","12.png"],
+  "folder": "punta-cana/river-island",
+  "images": [
+   "1.png",
+   "8.png",
+   "9.png",
+   "10.png",
+   "11.png",
+   "12.png"
+  ],
   "description": "Proyecto residencial con diseño rodeado de agua, jardines y arquitectura vanguardista. Amenidades: restaurantes, 16 piscinas, gimnasio, centro comercial, teatro, club de playa, zona deportiva y áreas sociales. Inversión segura con alto potencial de rentabilidad."
-},
-
-{
-    "title": "POSEIDONIA - Proyecto Cana Bay",
-    "filename": "CanaBayPoseidonia",
-    "area": "Punta Cana",
-    "sector": "Cana Bay",
-    "type": ["Villa", "Apartamento"],
-    "location": "Cana Bay, Punta Cana",
-    "price": "Desde USD$169,000",
-    "size": ["51m2","286m2"],
-    "bedrooms": ["1", "2","3"],
-    "bathrooms": "",
-    "folder": "Punta Cana/CANA BAY POSEIDONIA (2)",
-    "images": ["2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
-    "description": "Descubre una oportunidad única de inversión en un concepto innovador que fusiona la esencia del Caribe con la elegancia del estilo clásico romano. Disfruta de espacios exclusivos, de alta gama y con mobiliario europeo incluido, diseñados para brindarte el lujo y confort que mereces."
-  },
-
-
-{
+ },
+ {
+  "title": "POSEIDONIA - Proyecto Cana Bay",
+  "filename": "CanaBayPoseidonia",
+  "area": "Punta Cana",
+  "sector": "Cana Bay",
+  "type": [
+   "Villa",
+   "Apartamento"
+  ],
+  "location": "Cana Bay, Punta Cana",
+  "price": "Desde USD$169,000",
+  "size": [
+   "51m2",
+   "286m2"
+  ],
+  "bedrooms": [
+   "1",
+   "2",
+   "3"
+  ],
+  "bathrooms": "",
+  "folder": "punta-cana/cana-bay-poseidonia-2",
+  "images": [
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png"
+  ],
+  "description": "Descubre una oportunidad única de inversión en un concepto innovador que fusiona la esencia del Caribe con la elegancia del estilo clásico romano. Disfruta de espacios exclusivos, de alta gama y con mobiliario europeo incluido, diseñados para brindarte el lujo y confort que mereces."
+ },
+ {
   "title": "Proyecto de Villas - Cap Cana",
   "filename": "VillaCapCana",
   "area": "Punta Cana",
@@ -858,32 +1056,38 @@
   "size": "270m2",
   "bedrooms": "3",
   "bathrooms": "3.5",
-  "folder": "Punta Cana/Cap Cana Proyecto",
-  "images": ["1.png","2.png","3.png","4.png"],
+  "folder": "punta-cana/cap-cana-proyecto",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png"
+  ],
   "description": "Proyecto exclusivo de villas en Cap Cana con acceso a todas las amenidades, incluye 2 parqueos, piscina, área de BBQ, cuarto de servicio, cocina fría y caliente, terraza y más."
-},
-
-
-
-
-   
-  {
-    "title": "Villa Amueblada - Punta Cana",
-    "filename": "PuntaCanaVillage",
-    "area": "Punta Cana",
-    "sector": "Cap Cana",
-    "type": "Villa",
-    "location": "Punta Cana",
-    "price": "USD$1,200,000",
-    "size": "424m2 de construcción, 600m2 de terreno",
-    "bedrooms": "4",
-    "bathrooms": "4.5",
-    "folder": "Punta Cana/PUNTA CANA VILLAGE (2)",
-    "images": ["1.png","3.png","4.png","5.png","6.png","7.png"],
-    "description": "Villa amueblada en Punta Cana Village con 424m2 de construcción y 600m2 de terreno."
-  },
-
-  {
+ },
+ {
+  "title": "Villa Amueblada - Punta Cana",
+  "filename": "PuntaCanaVillage",
+  "area": "Punta Cana",
+  "sector": "Cap Cana",
+  "type": "Villa",
+  "location": "Punta Cana",
+  "price": "USD$1,200,000",
+  "size": "424m2 de construcción, 600m2 de terreno",
+  "bedrooms": "4",
+  "bathrooms": "4.5",
+  "folder": "punta-cana/punta-cana-village-2",
+  "images": [
+   "1.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png"
+  ],
+  "description": "Villa amueblada en Punta Cana Village con 424m2 de construcción y 600m2 de terreno."
+ },
+ {
   "title": "Hotel Boutique - Punta Cana Wyndham Hotels & Resorts",
   "filename": "HotelBoutiquePuntaCana",
   "area": "Punta Cana",
@@ -894,12 +1098,18 @@
   "size": "",
   "bedrooms": "Contáctanos para saber mas sobre las diferentes tipologías disponibles",
   "bathrooms": "",
-  "folder": "Punta Cana/OCEANA HOTEL BOUTIQUE",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png"],
+  "folder": "punta-cana/oceana-hotel-boutique",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
   "description": "Proyecto tipo condo-hotel respaldado por Wyndham con amenidades: piscina de 9,000 m2, club de playa privado, restaurante & bar, mercado gastronómico, spa y gym, dinner theater, centro de negocios y supermercado."
-},
-
-{
+ },
+ {
   "title": "Villa - Punta Cana",
   "filename": "VillaPuntaCana",
   "area": "Punta Cana",
@@ -910,35 +1120,37 @@
   "size": "127m2 de construcción",
   "bedrooms": "3",
   "bathrooms": "2.5",
-  "folder": "Punta Cana/DEIVI 1 (3)",
-  "images": ["1.png","6.png","7.png","8.png","9.png"],
+  "folder": "punta-cana/deivi-1-3",
+  "images": [
+   "1.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png"
+  ],
   "description": "Villa lista para entrega con 2 parqueos, patio trasero, piscina y gazebo común, seguridad con portón y garita, ebanistería en roble y cocina modular, terminaciones en porcelanato."
-},
-
-
-  {
-    "title": "Villa de Lujo - Cap Cana",
-    "filename": "CapCanaVillaLujo",
-    "area": "Punta Cana",
-    "sector": "Cap Cana",
-    "type": "Villa",
-    "location": "Cap Cana, Punta Cana",
-    "price": "USD$3,500,000",
-    "size": "747m2",
-    "bedrooms": "6",
-    "bathrooms": "6",
-    "folder": "Punta Cana/Villa Lujo CAP CANA",
-    "images": ["1.png","3.png","4.png","5.png"],
-    "description": "Villa de lujo en Cap Cana con 747m2 de construcción."
-  },
-  
-
-
-
-
-
-
-  {
+ },
+ {
+  "title": "Villa de Lujo - Cap Cana",
+  "filename": "CapCanaVillaLujo",
+  "area": "Punta Cana",
+  "sector": "Cap Cana",
+  "type": "Villa",
+  "location": "Cap Cana, Punta Cana",
+  "price": "USD$3,500,000",
+  "size": "747m2",
+  "bedrooms": "6",
+  "bathrooms": "6",
+  "folder": "punta-cana/villa-lujo-cap-cana",
+  "images": [
+   "1.png",
+   "3.png",
+   "4.png",
+   "5.png"
+  ],
+  "description": "Villa de lujo en Cap Cana con 747m2 de construcción."
+ },
+ {
   "title": "Las Terrenas - Playa Bonita (Proyecto Residencial)",
   "filename": "LasTerrenasPlayaBonita",
   "area": "Otro",
@@ -949,12 +1161,21 @@
   "size": "",
   "bedrooms": "1, 2 y 3 habitaciones",
   "bathrooms": "",
-  "folder": "Otro/Las Terrenas The Reef",
-  "images": ["1.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png"],
+  "folder": "otro/las-terrenas-the-reef",
+  "images": [
+   "1.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png",
+   "10.png",
+   "11.png",
+   "12.png"
+  ],
   "description": "Lo NUEVO en Las Terrenas: un destino reinventado. Un exclusivo proyecto residencial que equilibra arquitectura vanguardista y sostenibilidad, integrándose con el entorno natural de Playa Bonita. Disfruta de 5 piscinas, hotel boutique, beach club, senderos naturales, zona comercial y deportiva, en un diseño que armoniza con la belleza del Caribe. Ubicación privilegiada en una de las zonas más cotizadas y de rápido crecimiento del Caribe. Desde US$245,000. Opciónes de 1, 2 y 3 habitaciónes. Una inversión única en el destino turístico del futuro. Contáctanos: 809.224.2769 & 829.380.2769."
-},
-
-{
+ },
+ {
   "title": " Villa Ana - Playa Nueva Romana",
   "filename": "VillaAnaPlayaNuevaRomana",
   "area": "Otro",
@@ -965,13 +1186,20 @@
   "size": "437 m² de terreno | 328 m² de construcción",
   "bedrooms": "3",
   "bathrooms": "3",
-  "folder": "Otro/Playa Nueva Romana",
-  "images": ["1.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"],
+  "folder": "otro/playa-nueva-romana",
+  "images": [
+   "1.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png"
+  ],
   "description": "Vive la experiencia del lujo junto al mar en una de las zonas más exclusivas de La Romana. Villa de diseño contemporáneo con acceso a playa privada, rodeada de campos de golf de clase mundial (incluyendo uno certificado por la PGA). Características destacadas: 3 habitaciones con walk-in closet y baño privado; piscina privada + área de fogata; sala y lobby de doble altura; cocina estilo chef; balcón y terraza techada con vistas panorámicas. Ubicación estratégica: a minutos de la Cueva de las Maravillas, Altos de Chavón y aeropuertos internacionales."
-},
-
-
-{
+ },
+ {
   "title": "Apartamento en Cabarete con Vista al Mar",
   "filename": "ApartamentoCabareteVistaMar",
   "area": "Otro",
@@ -982,48 +1210,17 @@
   "size": "60 m² de construcción",
   "bedrooms": "1",
   "bathrooms": "1",
-  "folder": "Otro/Cabarete",
-  "images": ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],
+  "folder": "otro/cabarete",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png"
+  ],
   "description": "Despierta con vista al mar en Cabarete. Descubre este hermoso apartamento de 1 habitación en un residencial exclusivo con piscina común, acceso controlado y un ambiente de total tranquilidad. Con 60 m² de construcción, cocina equipada, closet amplio, y una ubicación privilegiada en Puerto Plata, este oasis es perfecto para vivir, vacacionar o invertir."
-}
-
-
-
+ }
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

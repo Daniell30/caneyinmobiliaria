@@ -31,10 +31,10 @@ module.exports = class {
       // SEO for this listing page
       pageTitle: "Inmuebles en Santo Domingo | Inmobiliaria Caney",
       pageDesc: `Explora ${all.length} propiedades en Santo Domingo: apartamentos, casas y más. Filtra por precio, sector y tipo para encontrar tu próximo hogar o inversión.`,
-      pageImage: "/CSS/Images caney/GENERAL/CANEYLOGO.png",
+      pageImage: "/css/images-caney/general/caneylogo.png",
 
       // ✅ tell the layout which CSS to load (MUST be pageCSS, not pageCss)
-      pageCSS: "CSS/SantoDomingoinmuebles.css",
+      pageCSS: "/css/santodomingoinmuebles.css",
 
       // Data for rendering
       all, sectors, types,
@@ -42,8 +42,8 @@ module.exports = class {
       permalink: (data) => {
         const n = data.pagination.pageNumber;
         return n === 0
-          ? "INMUEBLES SANTO DOMINGO.html"
-          : `INMUEBLES SANTO DOMINGO-${n + 1}.html`;
+          ? "inmuebles-santo-domingo.html"
+          : `inmuebles-santo-domingo-${n + 1}.html`;
       }
     };
   }
@@ -59,14 +59,14 @@ module.exports = class {
       const typeLabel = Array.isArray(p.type) ? p.type.join(", ") : (p.type || "");
       const typeData = (Array.isArray(p.type) ? p.type : [p.type || ""])
         .map(t => String(t).toLowerCase()).filter(Boolean).join("|");
-      const href = `${slugify(p.title)}-${slugify(p.sector || p.area || "")}.html`;
+      const href = `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`;
 
       return `
         <div class="property-item"
              data-price="${priceNum(p.price)}"
              data-sector="${String(sector).toLowerCase()}"
              data-type="${typeData}">
-          <img src="CSS/Images caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
+          <img src="/css/images-caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
           <div class="property-info">
             <h2>${p.title}</h2>
             <p>Ubicación: ${p.location || ""}</p>
@@ -89,7 +89,7 @@ module.exports = class {
     ].join("");
 
     const pageHref = (n) =>
-      (n === 0 ? "INMUEBLES SANTO DOMINGO.html" : `INMUEBLES SANTO DOMINGO-${n + 1}.html`);
+      (n === 0 ? "/inmuebles-santo-domingo" : `/inmuebles-santo-domingo-${n + 1}`);
     const totalPages = Math.ceil(all.length / PER_PAGE);
     const prev = pagination.pageNumber > 0 ? pageHref(pagination.pageNumber - 1) : null;
     const next = (pagination.pageNumber + 1) < totalPages ? pageHref(pagination.pageNumber + 1) : null;
@@ -97,7 +97,7 @@ module.exports = class {
     // Minimal dataset for client-side filtering across ALL items
     const ALL_FOR_CLIENT = all.map(p => ({
       ...p,
-      _href: `${slugify(p.title)}-${slugify(p.sector || p.area || "")}.html`,
+      _href: `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`,
       _priceNum: priceNum(p.price),
       _sectorLower: String(p.sector || "").toLowerCase(),
       _typeListLower: (Array.isArray(p.type) ? p.type : (p.type ? [p.type] : []))
@@ -106,7 +106,7 @@ module.exports = class {
 
     // ⚠️ Return ONLY the body markup; layout supplies <html>, <head>, SEO, and CSS link
     return `
-  <header><nav><a href="/"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
+  <header><nav><a href="/"><img src="/css/images-caney/general/caneylogo.png" alt="CaneyLogo"></a></nav></header>
 
   <h1>SANTO DOMINGO</h1>
 
@@ -177,7 +177,7 @@ module.exports = class {
 
       const lower = s => String(s||'').toLowerCase();
       const pageHref = (n, qs) =>
-        (n === 0 ? "INMUEBLES SANTO DOMINGO.html" : \`INMUEBLES SANTO DOMINGO-\${n + 1}.html\`) + (qs ? ('?' + qs) : '');
+        (n === 0 ? "/inmuebles-santo-domingo" : \`/inmuebles-santo-domingo-\${n + 1}\`) + (qs ? ('?' + qs) : '');
 
       function qsFromInputs(pageIndex){
         const qs = new URLSearchParams();
@@ -219,7 +219,7 @@ module.exports = class {
                data-price="\${p._priceNum}"
                data-sector="\${lower(p.sector)}"
                data-type="\${p._typeListLower.join('|')}">
-            <img src="CSS/Images caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
+            <img src="/css/images-caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
             <div class="property-info">
               <h2>\${p.title}</h2>
               <p>Ubicación: \${p.location || ""}</p>

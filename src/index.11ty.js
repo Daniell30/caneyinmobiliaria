@@ -33,9 +33,9 @@ module.exports = class {
         const key = String(s.refFilename || s.reffilename || "").trim();
         if (key && byFilename.has(key)) {
           const p = byFilename.get(key);
-          const href = `${slugify(p.title || "")}-${slugify(
+          const href = `/${slugify(p.title || "")}-${slugify(
             p.sector || p.area || ""
-          )}.html`;
+          )}`;
           return { ...s, href };
         }
 
@@ -49,7 +49,7 @@ module.exports = class {
       layout: "layouts/base.njk",
 
       // Load this page's stylesheet through the layout
-      pageCSS: "/CSS/Caneyvisual.css",
+      pageCSS: "/css/caneyvisual.css",
 
       // Page URL
       permalink: "index.html",
@@ -58,7 +58,7 @@ module.exports = class {
       pageTitle: "Inmobiliaria Caney | Propiedades en República Dominicana",
       pageDesc:
         "Compra y venta de apartamentos, villas, solares y proyectos inmobiliarios en todo el país. Experiencia y confianza en Santo Domingo, Punta Cana, Juan Dolio y más.",
-      pageImage: "/CSS/Images caney/GENERAL/CANEYLOGO.png",
+      pageImage: "/css/images-caney/general/caneylogo.png",
 
       // Page data
       slidesResolved,
@@ -70,11 +70,11 @@ module.exports = class {
     const sliderItems = (slidesResolved && slidesResolved.length
       ? slidesResolved
       : [
-          { image: "CSS/SLIDER/CaneyGroupbanner.png", alt: "Slide 1", href: "" },
-          { image: "CSS/SLIDER/4.png", alt: "Slide 2", href: "" },
-          { image: "CSS/SLIDER/1.png", alt: "Slide 3", href: "" },
-          { image: "CSS/SLIDER/2.png", alt: "Slide 4", href: "" },
-          { image: "CSS/SLIDER/3.png", alt: "Slide 5", href: "" },
+          { image: "/css/slider/caneygroupbanner.png", alt: "Slide 1", href: "" },
+          { image: "/css/slider/4.png", alt: "Slide 2", href: "" },
+          { image: "/css/slider/1.png", alt: "Slide 3", href: "" },
+          { image: "/css/slider/2.png", alt: "Slide 4", href: "" },
+          { image: "/css/slider/3.png", alt: "Slide 5", href: "" },
         ]
     )
       .map((s, i) => {
@@ -99,14 +99,14 @@ module.exports = class {
   <!-- HEADER with logo + area-links -->
   <header> 
     <nav class="navbar">
-      <img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo" class="logo">
+      <img src="/css/images-caney/general/caneylogo.png" alt="CaneyLogo" class="logo">
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <div class="nav-links">
-        <a href="INMUEBLES SANTO DOMINGO.html">Santo Domingo</a>
-        <a href="INMUEBLES PUNTA CANA.html">Punta Cana</a>
-        <a href="INMUEBLES JUAN DOLIO.html">Juan Dolio</a>
-        <a href="INMUEBLES SOLARES.html">Solares</a>
-        <a href="INMUEBLES OTRO.html">Otro</a>
+        <a href="/inmuebles-santo-domingo">Santo Domingo</a>
+        <a href="/inmuebles-punta-cana">Punta Cana</a>
+        <a href="/inmuebles-juan-dolio">Juan Dolio</a>
+        <a href="/inmuebles-solares">Solares</a>
+        <a href="/inmuebles-otro">Otro</a>
       </div>
     </nav>
   </header>
@@ -126,37 +126,37 @@ ${sliderItems}
       <h3 class="quebuscasopening">¿Qué buscas?</h3>
       <div class="quebuscas">
         <div class="SantoDomingo location-card">
-          <img src="CSS/Images caney/GENERAL/1.png" alt="Santo Domingo" class="icon" loading="lazy" decoding="async">
+          <img src="/css/images-caney/general/1.png" alt="Santo Domingo" class="icon" loading="lazy" decoding="async">
           <p class="location-name">Santo Domingo</p>
-          <a href="INMUEBLES SANTO DOMINGO.html" target="_blank" rel="noopener" class="learnmore">
+          <a href="/inmuebles-santo-domingo" target="_blank" rel="noopener" class="learnmore">
             Ver inmuebles
           </a>
         </div>
         <div class="column location-card">
-          <img src="CSS/Images caney/GENERAL/2.png" alt="Punta Cana" class="icon" loading="lazy" decoding="async">
+          <img src="/css/images-caney/general/2.png" alt="Punta Cana" class="icon" loading="lazy" decoding="async">
           <p class="location-name">Punta Cana</p>
-          <a href="INMUEBLES PUNTA CANA.html" target="_blank" rel="noopener" class="learnmore">
+          <a href="/inmuebles-punta-cana" target="_blank" rel="noopener" class="learnmore">
             Ver inmuebles
           </a>
         </div>
         <div class="column location-card">
-          <img src="CSS/Images caney/GENERAL/3.png" alt="Solares" class="icon" loading="lazy" decoding="async">
+          <img src="/css/images-caney/general/3.png" alt="Solares" class="icon" loading="lazy" decoding="async">
           <p class="location-name">Solares</p>
-          <a href="INMUEBLES SOLARES.html" target="_blank" rel="noopener" class="learnmore">
+          <a href="/inmuebles-solares" target="_blank" rel="noopener" class="learnmore">
             Ver inmuebles
           </a>
         </div>
         <div class="column location-card">
-          <img src="CSS/Images caney/GENERAL/4.png" alt="Juan Dolio" class="icon" loading="lazy" decoding="async">
+          <img src="/css/images-caney/general/4.png" alt="Juan Dolio" class="icon" loading="lazy" decoding="async">
           <p class="location-name">Juan Dolio</p>
-          <a href="INMUEBLES JUAN DOLIO.html" target="_blank" rel="noopener" class="learnmore">
+          <a href="/inmuebles-juan-dolio" target="_blank" rel="noopener" class="learnmore">
             Ver inmuebles
           </a>
         </div>
         <div class="column location-card">
-          <img src="CSS/Images caney/GENERAL/OTRO.png" alt="Otro" class="icon" loading="lazy" decoding="async">
+          <img src="/css/images-caney/general/otro.png" alt="Otro" class="icon" loading="lazy" decoding="async">
           <p class="location-name">Otro</p>
-          <a href="INMUEBLES OTRO.html" target="_blank" rel="noopener" class="learnmore">
+          <a href="/inmuebles-otro" target="_blank" rel="noopener" class="learnmore">
             Ver inmuebles
           </a>
         </div>

@@ -29,10 +29,10 @@ module.exports = class {
       // ✅ Metadatos SEO de esta sección
       pageTitle: "Propiedades en Juan Dolio | Caney Inmobiliaria",
       pageDesc: "Explora apartamentos, villas y solares en Juan Dolio. Filtra por precio, sector y tipo. Fotos, detalles y enlaces a cada propiedad.",
-      // pageImage: "CSS/Images caney/GENERAL/og-juandolio.jpg", // opcional
+      // pageImage: "/css/images-caney/GENERAL/og-juandolio.jpg", // opcional
 
       // ✅ CSS del listado (el layout lo incluirá si existe pageCss)
-      pageCSS: "CSS/SantoDomingoinmuebles.css",
+      pageCSS: "/css/santodomingoinmuebles.css",
 
       all, sectors, types,
 
@@ -41,8 +41,8 @@ module.exports = class {
 
       permalink: (data) => {
         const n = data.pagination.pageNumber;
-        return n === 0 ? "INMUEBLES JUAN DOLIO.html"
-                       : `INMUEBLES JUAN DOLIO-${n + 1}.html`;
+        return n === 0 ? "inmuebles-juan-dolio.html"
+                       : `inmuebles-juan-dolio-${n + 1}.html`;
       }
     };
   }
@@ -58,14 +58,14 @@ module.exports = class {
       const typeLabel = Array.isArray(p.type) ? p.type.join(", ") : (p.type || "");
       const typeData = (Array.isArray(p.type) ? p.type : [p.type || ""])
         .map(t => String(t).toLowerCase()).filter(Boolean).join("|");
-      const href = `${slugify(p.title)}-${slugify(p.sector || p.area || "")}.html`;
+      const href = `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`;
 
       return `
         <div class="property-item"
              data-price="${priceNum(p.price)}"
              data-sector="${String(sector).toLowerCase()}"
              data-type="${typeData}">
-          <img src="CSS/Images caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
+          <img src="/css/images-caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
           <div class="property-info">
             <h2>${p.title}</h2>
             <p>Ubicación: ${p.location || ""}</p>
@@ -81,7 +81,7 @@ module.exports = class {
     const sectorOpts = ['<option value="">Todos los sectores</option>', ...sectors.map(s => `<option value="${s}">${s}</option>`)].join("");
     const typeOpts   = ['<option value="">Todos los tipos</option>',   ...types.map(t => `<option value="${t}">${t}</option>`)].join("");
 
-    const pageHref = (n) => (n === 0 ? "INMUEBLES JUAN DOLIO.html" : `INMUEBLES JUAN DOLIO-${n + 1}.html`);
+    const pageHref = (n) => (n === 0 ? "/inmuebles-juan-dolio" : `/inmuebles-juan-dolio-${n + 1}`);
     // ✅ Paginación calculada desde todo el set
     const totalPages = Math.ceil(all.length / PER_PAGE);
     const prev = pagination.pageNumber > 0 ? pageHref(pagination.pageNumber - 1) : null;
@@ -90,7 +90,7 @@ module.exports = class {
     // Dataset completo para filtrar/paginar en cliente
     const ALL_FOR_CLIENT = all.map(p => ({
       ...p,
-      _href: `${slugify(p.title)}-${slugify(p.sector || p.area || "")}.html`,
+      _href: `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`,
       _priceNum: priceNum(p.price),
       _sectorLower: String(p.sector || "").toLowerCase(),
       _typeListLower: (Array.isArray(p.type) ? p.type : (p.type ? [p.type] : []))
@@ -100,7 +100,7 @@ module.exports = class {
     // 🔻 Solo el contenido del <body>; el layout genera <html>, <head>, SEO y header/footer
     return `
 
-<header><nav><a href="/"><img src="CSS/Images caney/GENERAL/CANEYLOGO.png" alt="CaneyLogo"></a></nav></header>
+<header><nav><a href="/"><img src="/css/images-caney/general/caneylogo.png" alt="CaneyLogo"></a></nav></header>
 
 <h1>JUAN DOLIO</h1>
 
@@ -153,7 +153,7 @@ module.exports = class {
     const ALL = JSON.parse(document.getElementById('ALL_DATA').textContent);
 
     const lower = s => String(s||'').toLowerCase();
-    const baseHref = n => (n === 0 ? "INMUEBLES JUAN DOLIO.html" : \`INMUEBLES JUAN DOLIO-\${n + 1}.html\`);
+    const baseHref = n => (n === 0 ? "/inmuebles-juan-dolio" : \`/inmuebles-juan-dolio-\${n + 1}\`);
 
     function qsFromInputs(pageIndex){
       const qs = new URLSearchParams();
@@ -195,7 +195,7 @@ module.exports = class {
              data-price="\${p._priceNum}"
              data-sector="\${lower(p.sector)}"
              data-type="\${p._typeListLower.join('|')}">
-          <img src="CSS/Images caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
+          <img src="/css/images-caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
           <div class="property-info">
             <h2>\${p.title}</h2>
             <p>Ubicación: \${p.location || ""}</p>

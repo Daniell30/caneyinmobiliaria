@@ -1,8 +1,8 @@
 /* styles.css */
 /* —— color palette from your ring logo —— */
-@font-face { font-family: Rubik; src: url(CSS/FONTSS/Rubik-VariableFont_wght.ttf); }
-   @font-face { font-family: Poppins; src: url(CSS/FONTSS/Poppins-Thin.ttf); }
-   @font-face { font-family: 'Poppins Bold'; src: url(CSS/FONTSS/Poppins-Bold.ttf); }
+@font-face { font-family: Rubik; src: url(/css/fonts/rubik-variablefont-wght.ttf); }
+   @font-face { font-family: Poppins; src: url(/css/fonts/poppins-thin.ttf); }
+   @font-face { font-family: 'Poppins Bold'; src: url(/css/fonts/poppins-bold.ttf); }
    
 
 

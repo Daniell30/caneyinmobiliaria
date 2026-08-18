@@ -28,12 +28,12 @@ module.exports = function (eleventyConfig) {
 
     const titleSlug = slugify(prop.title || "");
     const areaSlug  = slugify(prop.sector || prop.area || "");
-    return `${titleSlug}-${areaSlug}.html`;
+    return `/${titleSlug}-${areaSlug}`;
   });
 
   // ---------------- Passthrough copy ----------------
   // Preserve directory structure by passing the *directory* (no globs!)
-  eleventyConfig.addPassthroughCopy("src/CSS");
+  eleventyConfig.addPassthroughCopy("src/css");
 
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "src/favicon-32x32.png": "favicon-32x32.png" });
@@ -43,6 +43,7 @@ module.exports = function (eleventyConfig) {
   // robots.txt is not a template, so it must be copied explicitly or it
   // never reaches the publish directory.
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   // --- Added passthrough mappings (safe, additive) ---
   // Ensure linktree.css is available at site root: /linktree.css
@@ -52,7 +53,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/caneycontactpics": "caneycontactpics" });
 
   // ---------------- Watch targets ----------------
-  eleventyConfig.addWatchTarget("src/CSS");
+  eleventyConfig.addWatchTarget("src/css");
 
   // --- Added watch targets (safe, additive) ---
   eleventyConfig.addWatchTarget("src/linktree.css");

@@ -5,13 +5,6 @@ const slugify = require("./_utils/slugify");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
 
 const S = v => String(v ?? ""); // <- safe string
-const THUMB_PLACEHOLDER = (label) =>
-  `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-      <rect width="80" height="80" rx="10" fill="#f5efe8"/>
-      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#7f6558" font-family="Arial, sans-serif" font-size="20">${label}</text>
-    </svg>`
-  )}`;
 
 module.exports = class {
   data() {
@@ -29,25 +22,28 @@ module.exports = class {
   }
 
   render({ p }) {
-    const base = `/CSS/Images caney/${S(p.folder)}/`;
+    const base = `/css/images-caney/${S(p.folder)}/`;
     const first = (p.images && p.images[0]) ? S(p.images[0]) : "";
     const imageSources = (p.images || []).map((img) => `${base}${S(img)}`);
     const preloadLinks = imageSources
       .slice(0, 1)
       .map((src) => `<link rel="preload" as="image" href="${src}" fetchpriority="high">`)
       .join("\n  ");
+    // Real src on every thumbnail: most AI/search crawlers do not run JS,
+    // so placeholder-src images are invisible to them. Native lazy loading
+    // keeps the page light. (Descriptive per-photo alt text is tracked in
+    // TODO-content.md — do not invent room descriptions here.)
     const thumbs = imageSources
       .map((src, index) => {
-        const placeholder = index === 0 ? src : THUMB_PLACEHOLDER(index + 1);
-        return `<img src="${placeholder}" data-full="${src}" data-thumb="${src}" alt="Vista ${index + 1} de ${S(p.title)}" class="thumbnail-image${index === 0 ? " is-active" : " is-placeholder"}" loading="lazy" decoding="async" fetchpriority="low" onclick="swapImage(this)">`;
+        return `<img src="${src}" data-full="${src}" alt="Vista ${index + 1} de ${S(p.title)}" class="thumbnail-image${index === 0 ? " is-active" : ""}" loading="lazy" decoding="async" fetchpriority="low" onclick="swapImage(this)">`;
       })
       .join("\n          ");
 
     const pageSlug = `${slugify(S(p.title))}-${slugify(S(p.sector || p.area))}`;
     const permalink = `${pageSlug}.html`;
 
-    const primaryImg = (p.images && p.images[0]) ? `/CSS/Images caney/${S(p.folder)}/${S(p.images[0])}` : S(site.logo);
-    const canonical  = new URL(permalink, S(site.url)).toString();
+    const primaryImg = (p.images && p.images[0]) ? `/css/images-caney/${S(p.folder)}/${S(p.images[0])}` : S(site.logo);
+    const canonical  = new URL(pageSlug, S(site.url)).toString(); // extensionless canonical form
     const imgAbs     = new URL(primaryImg, S(site.url)).toString();
 
     const descRaw = S(p.description) || `${S(p.type)} en ${S(p.location)} — ${S(p.size)} ${S(p.price)}`;
@@ -70,7 +66,7 @@ module.exports = class {
   <title>${S(p.title)} | ${S(site.name)}</title>
   <meta name="description" content="${desc}">
   <link rel="canonical" href="${canonical}">
-  <link rel="stylesheet" href="/CSS/Detalles.css">
+  <link rel="stylesheet" href="/css/detalles.css">
   ${preloadLinks}
 
   <meta property="og:type" content="product">
@@ -110,7 +106,7 @@ module.exports = class {
   </script>
 </head>
 <body>
-  <header><nav><a href="/"><img src="/CSS/Images caney/GENERAL/CANEYLOGO.png" alt="Caney Logo"></a></nav></header>
+  <header><nav><a href="/"><img src="/css/images-caney/general/caneylogo.png" alt="Caney Logo"></a></nav></header>
 
   <main>
     <div class="property-container">
@@ -132,7 +128,7 @@ module.exports = class {
         ${p.bedrooms ? `<p class="property-price"><strong>Habitaciones:</strong> ${S(p.bedrooms)}</p>` : ""}
         ${p.bathrooms ? `<p class="property-price"><strong>Baños:</strong> ${S(p.bathrooms)}</p>` : ""}
         <p class="property-description">${S(p.description) || "Para más información o agendar una visita, contáctanos."}</p>
-        <a href="contact.html" class="contact-button">Contáctanos: 809-224-2769 / 829-380-2769</a>
+        <a href="/contact/" class="contact-button">Contáctanos: 809-224-2769 / 829-380-2769</a>
       </div>
     </div>
   </main>
@@ -163,32 +159,6 @@ module.exports = class {
       });
     }
 
-    function hydrateThumbnail(thumb) {
-      if (!thumb || thumb.dataset.loaded === 'true') return;
-      const thumbSrc = thumb.dataset.thumb;
-      if (!thumbSrc) return;
-
-      preloadImage(thumbSrc, 'low').then(() => {
-        thumb.src = thumbSrc;
-        thumb.dataset.loaded = 'true';
-        thumb.classList.remove('is-placeholder');
-      });
-    }
-
-    function hydrateThumbnailsSequentially() {
-      const thumbs = Array.from(document.querySelectorAll('.thumbnail-image'));
-      let index = 1;
-
-      function next() {
-        if (index >= thumbs.length) return;
-        hydrateThumbnail(thumbs[index]);
-        index += 1;
-        window.setTimeout(next, 180);
-      }
-
-      next();
-    }
-
     function markActiveThumbnail(src) {
       const thumbs = document.querySelectorAll('.thumbnail-image');
       thumbs.forEach((thumb) => {
@@ -214,23 +184,8 @@ module.exports = class {
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      const thumbs = Array.from(document.querySelectorAll('.thumbnail-image'));
-      if (thumbs[0]) {
-        thumbs[0].dataset.loaded = 'true';
-        thumbs[0].classList.remove('is-placeholder');
-      }
-
-      thumbs.forEach((thumb) => {
-        thumb.addEventListener('mouseenter', () => hydrateThumbnail(thumb), { passive: true });
-        thumb.addEventListener('focus', () => hydrateThumbnail(thumb), { passive: true });
-      });
-
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => hydrateThumbnailsSequentially(), { timeout: 1200 });
-      } else {
-        window.setTimeout(hydrateThumbnailsSequentially, 700);
-      }
-
+      // Thumbnails carry real src now (native lazy loading); just warm the
+      // first couple of full-size candidates for instant swaps.
       gallerySources.slice(1, 3).forEach((src) => preloadImage(src, 'low'));
     });
   </script>
