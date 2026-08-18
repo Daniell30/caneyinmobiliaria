@@ -1,0 +1,3194 @@
+{
+ "proyecto-residencial-en-sector-honduras-sector-honduras": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Proyecto residencial en Sector Honduras",
+   "description": "Proyecto residencial en el Sector Honduras, Distrito Nacional, con apartamentos de 2 habitaciones y 2.5 baños desde US$156,000. El proyecto contará con ter",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/proyecto-residencial-honduras/2.png"
+   ],
+   "sku": "ProyectoResidencialSectorHonduras",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/proyecto-residencial-en-sector-honduras-sector-honduras",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "156000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/proyecto-residencial-en-sector-honduras-sector-honduras"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Sector Honduras"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Proyecto Residencial"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5 baños"
+    }
+   ]
+  }
+ ],
+ "apartamento-clasico-en-av-enriquillo-los-cacicazgos-los-cacicazgos": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento clásico en Av. Enriquillo, Los Cacicazgos",
+   "description": "Apartamento clásico en venta en Av. Enriquillo, Los Cacicazgos, con 180 m². Cuenta con 3 habitaciones, 2 baños, balcón, 1 parqueo, área de lavado y portón ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/av-enriquillo-apartamento-clasico/1.png"
+   ],
+   "sku": "ApartamentoClasicoLosCacicazgosEnriquillo",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-clasico-en-av-enriquillo-los-cacicazgos-los-cacicazgos",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "240000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-clasico-en-av-enriquillo-los-cacicazgos-los-cacicazgos"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Los Cacicazgos"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "180 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2 baños"
+    }
+   ]
+  }
+ ],
+ "apartamento-en-alquiler-en-piantini-piantini": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento en alquiler en Piantini",
+   "description": "Apartamento en alquiler en Piantini, Distrito Nacional, con 124 m². Cuenta con 3 habitaciones, 2 baños y 1 parqueo. Incluye sala y comedor, cuarto de servi",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/alquiler-piantini/1.png"
+   ],
+   "sku": "ApartamentoPiantiniAlquiler",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-en-alquiler-en-piantini-piantini",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "1000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-en-alquiler-en-piantini-piantini"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Piantini"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "124 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2 baños"
+    }
+   ]
+  }
+ ],
+ "apartamento-en-alquiler-en-serralles-serralles": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento en alquiler en Serrallés",
+   "description": "Apartamento en alquiler en Serrallés, ubicado en un tercer piso, con 135 m². Cuenta con 2 habitaciones, 2.5 baños y 2 parqueos. Incluye línea blanca, aire ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/alquiler-serralles/1.png"
+   ],
+   "sku": "ApartamentoSerrallesAlquiler",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-en-alquiler-en-serralles-serralles",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "1450",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-en-alquiler-en-serralles-serralles"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Serrallés"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "135 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5 baños"
+    }
+   ]
+  }
+ ],
+ "penthouse-en-bella-vista-bella-vista": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Penthouse en Bella Vista",
+   "description": "Penthouse en Bella Vista (Distrito Nacional) con 550 m² de construcción más 80 m² de terraza. Cuenta con 4 habitaciones (cada una con su baño y walk-in clo",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/bella-vista-penthouse-2/1.png"
+   ],
+   "sku": "PenthouseBellaVista",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/penthouse-en-bella-vista-bella-vista",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "550000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/penthouse-en-bella-vista-bella-vista"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Bella Vista"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Penthouse"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "650 m² total (contando parqueo y terraza)"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "4"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "4.5"
+    }
+   ]
+  }
+ ],
+ "apartamento-nuevo-en-evaristo-morales-evaristo-morales": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento NUEVO en Evaristo Morales",
+   "description": "Apartamento nuevo a estrenar en torre nueva de entrega 2026, ubicado en piso 8, en Evaristo Morales, a dos esquinas de la Av. Winston Churchill y en la Cal",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/apartamento-evaristo-morales/1.png"
+   ],
+   "sku": "ApartamentoEvaristoMorales",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-nuevo-en-evaristo-morales-evaristo-morales",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "169500",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-nuevo-en-evaristo-morales-evaristo-morales"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Evaristo Morales"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "79.49 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "1"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "1 baño + 1/2 baño"
+    }
+   ]
+  }
+ ],
+ "apartamento-en-alquiler-en-sector-quisqueya-sector-quisqueya": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento en alquiler en Sector Quisqueya",
+   "description": "Apartamento en alquiler en el Sector Quisqueya (Distrito Nacional) con 90 m². Cuenta con 1 habitación, 2 baños y 1 parqueo. Incluye sala, comedor y cocina.",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/sector-quisqueya-alquiler/1.png"
+   ],
+   "sku": "ApartamentoQuisqueyaAlquiler",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-en-alquiler-en-sector-quisqueya-sector-quisqueya",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "950",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-en-alquiler-en-sector-quisqueya-sector-quisqueya"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Sector Quisqueya"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "90 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "1"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2 baños"
+    }
+   ]
+  }
+ ],
+ "apartamento-en-los-cacicazgos-proximo-a-av-anacaona-los-cacicazgos": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento en Los Cacicazgos, próximo a Av. Anacaona",
+   "description": "Apartamento ubicado en piso 6 con 339.20 m². Cuenta con 3 habitaciones (cada una con su baño; 2 con walk-in closet), 2 salas, comedor, family, cocina fría ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/apartamento-los-cacicazgos-anacaona/1.png"
+   ],
+   "sku": "ApartamentoLosCacicazgosAnacaona",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-en-los-cacicazgos-proximo-a-av-anacaona-los-cacicazgos",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "750000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-en-los-cacicazgos-proximo-a-av-anacaona-los-cacicazgos"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Los Cacicazgos"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "339.20 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "3.5"
+    }
+   ]
+  }
+ ],
+ "solar-villa-en-pedro-brand-lomas-lindas-pedro-brand-lomas-lindas": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar + villa en Pedro Brand, Lomas Lindas",
+   "description": "Solar + villa en venta en Pedro Brand, Lomas Lindas. Cuenta con 5,700 m² de terreno y una villa con 2 habitaciones, 1 baño, sala y cocina. Incluye área de ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/solar-y-villa-pedro-brand-lomas-lindas/1.png"
+   ],
+   "sku": "SolarVillaPedroBrandLomasLindas",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-villa-en-pedro-brand-lomas-lindas-pedro-brand-lomas-lindas",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "33000000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-villa-en-pedro-brand-lomas-lindas-pedro-brand-lomas-lindas"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Pedro Brand / Lomas Lindas"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Villa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "5,700 m² de solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "1 baño"
+    }
+   ]
+  }
+ ],
+ "penthouse-de-lujo-en-los-cacicazgos-los-cacicazgos": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Penthouse de lujo en Los Cacicazgos",
+   "description": "Penthouse de dos niveles con distribución pensada para el confort, lujo y privacidad. 4 habitaciones (cada una con walk-in closet), 4 baños, 2 medios baños",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/penthouse-los-cascicazgos/1.png"
+   ],
+   "sku": "PenthouseLosCacicazgos",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/penthouse-de-lujo-en-los-cacicazgos-los-cacicazgos",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "750000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/penthouse-de-lujo-en-los-cacicazgos-los-cacicazgos"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Los Cacicazgos"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Penthouse"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "420 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "4"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "4 baños + 2 medios baños"
+    }
+   ]
+  }
+ ],
+ "apartamento-de-lujo-en-los-cacicazgos-av-enriquillo-los-cacicazgos": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento de lujo en Los Cacicazgos, Av. Enriquillo",
+   "description": "Apartamento de alto nivel en Av. Enriquillo, Los Cacicazgos, con 450 m². Cuenta con 4 habitaciones y 4.5 baños, 4 parqueos techados y balcón terraza con vi",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/av-enriquillo-los-cacicazgos/1.png"
+   ],
+   "sku": "ApartamentoLosCacicazgosEnriquillo450",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-de-lujo-en-los-cacicazgos-av-enriquillo-los-cacicazgos",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "13000007500",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-de-lujo-en-los-cacicazgos-av-enriquillo-los-cacicazgos"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Los Cacicazgos"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "450 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "4"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "4.5 baños"
+    }
+   ]
+  }
+ ],
+ "apartamento-amueblado-en-bella-vista-bella-vista": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento amueblado en Bella Vista",
+   "description": "Apartamento amueblado en Bella Vista (Distrito Nacional) con 150 m². Cuenta con 2 habitaciones con walk-in closet, 2 baños, 2 parqueos, ascensor y aire aco",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/apartamento-bella-vista-amueblado/1.png"
+   ],
+   "sku": "ApartamentoBellaVistaAmueblado",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-amueblado-en-bella-vista-bella-vista",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "235000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-amueblado-en-bella-vista-bella-vista"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Bella Vista"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "150 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2 baños"
+    }
+   ]
+  }
+ ],
+ "bella-vista-penthouse-bella-vista": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Bella Vista Penthouse",
+   "description": "Exclusivo penthouse de 292 m2 en Bella Vista, a pasos del centro comercial Downtown Center con amplias áreas sociales, estudio, terraza techada, 2 parqueos",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/bella-vista-penthouse/1.png"
+   ],
+   "sku": "BellaVistaPenthouse",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/bella-vista-penthouse-bella-vista",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "337000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/bella-vista-penthouse-bella-vista"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Bella Vista"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Penthouse"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "292 m2 de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "3.5"
+    }
+   ]
+  }
+ ],
+ "apartamento-con-terraza-en-av-independencia-km-10-av-independencia": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento con terraza en Av. Independencia Km 10",
+   "description": "Tu próximo hogar en Av. Independencia KM 10 Apartamento amplio y funcional en Distrito Nacional, ideal para vivir cómodo o invertir con seguridad. Cuenta c",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/independencia-km10/1.png"
+   ],
+   "sku": "ApartamentoIndependenciaKM10",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-con-terraza-en-av-independencia-km-10-av-independencia",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "7500000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-con-terraza-en-av-independencia-km-10-av-independencia"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Av. Independencia"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "82 m² de construcción + 40 m² de terraza"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5 baños"
+    }
+   ]
+  }
+ ],
+ "amplio-apartamento-en-bella-vista-bella-vista": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Amplio Apartamento en Bella Vista",
+   "description": "Vive en uno de los sectores más exclusivos del Distrito Nacional con este impresionante apartamento de 303 m² que combina amplitud y una ubicación privileg",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/bella-vista-torre-gaspar-polanco/1.png"
+   ],
+   "sku": "AptoBellaVista",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/amplio-apartamento-en-bella-vista-bella-vista",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "298000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/amplio-apartamento-en-bella-vista-bella-vista"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Bella Vista"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "303 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "3.5"
+    }
+   ]
+  }
+ ],
+ "apartamento-amueblado-esperilla-la-esperilla": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento Amueblado - Esperilla",
+   "description": "FINAMENTE AMUEBLADO Y DECORADO. 2 parqueos; cocina con desayunador; comedor; sala; balcon; aires acondicionados; planta full; Portón Eléctrico. Áreas socia",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/esperilla-apartamento-alquiler-amueblado/1.png"
+   ],
+   "sku": "ApartamentoAmuebladoEsperilla",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-amueblado-esperilla-la-esperilla",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "2200",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-amueblado-esperilla-la-esperilla"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "La Esperilla"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "110 metros"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "2 habitaciones c/ walk-in closet"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5 baños"
+    }
+   ]
+  }
+ ],
+ "moderno-apartamento-en-venta-en-los-cacicazgos-los-cacicazgos": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Moderno apartamento en venta en Los Cacicazgos",
+   "description": "Confort, estilo y ubicación privilegiada. Apartamento de 95 m² en torre moderna con ascensor, planta eléctrica y áreas sociales. 2 habitaciones, 2 baños co",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/apartamento-los-cacicazgos/1.png"
+   ],
+   "sku": "AptoLosCacicazgos",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/moderno-apartamento-en-venta-en-los-cacicazgos-los-cacicazgos",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "175000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/moderno-apartamento-en-venta-en-los-cacicazgos-los-cacicazgos"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Los Cacicazgos"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "95 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2"
+    }
+   ]
+  }
+ ],
+ "apartamento-amueblado-en-la-esperilla-con-vista-al-mar-la-esperilla": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento Amueblado en La Esperilla con Vista al Mar",
+   "description": "Comodidad y estilo en elegante apartamento amueblado de 85.3 m². Características: 1 habitación, 1.5 baños, cuarto de servicio, amueblado y listo para mudar",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/esperilla-apartamento-amueblado/1.png"
+   ],
+   "sku": "AptoLaEsperillaVistaMar",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-amueblado-en-la-esperilla-con-vista-al-mar-la-esperilla",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "215000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-amueblado-en-la-esperilla-con-vista-al-mar-la-esperilla"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "La Esperilla"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "85.3 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "1"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "1.5"
+    }
+   ]
+  }
+ ],
+ "penthouse-con-terraza-y-vista-en-gazcue-gazcue": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Penthouse con Terraza y Vista en Gazcue",
+   "description": "Penthouse en piso 8 de 300 m² con 4 habitaciones + cuarto de servicio y 3.5 baños + baño de servicio. Sala, comedor, cocina, área de lavado, 2 terrazas, 2 ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/gazcue-penthouse/1.png"
+   ],
+   "sku": "PenthouseGazcue",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/penthouse-con-terraza-y-vista-en-gazcue-gazcue",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "475000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/penthouse-con-terraza-y-vista-en-gazcue-gazcue"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Gazcue"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Penthouse"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "300 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "4"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "3.5"
+    }
+   ]
+  }
+ ],
+ "apartamento-torre-caney-anacaona": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento Torre Caney",
+   "description": "Exclusivo apartamento en piso alto de la Torre Caney con 4 habitaciones con walk-in closets, 5.5 baños, 2 cocinas, sala formal, estudio, family, comedor fo",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/torrecaney/1.png"
+   ],
+   "sku": "ApartamentoTorreCaney",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-torre-caney-anacaona",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "1800000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-torre-caney-anacaona"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Anacaona"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "854m2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "4"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "5.5"
+    }
+   ]
+  }
+ ],
+ "apartamento-de-oportunidad-en-el-pedregal-el-pedregal": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento de Oportunidad en El Pedregal",
+   "description": "Residencial cerrado con seguridad 24/7 en Av. Independencia. 3 habitaciones, 2 baños + 1/2 baño, 2 parqueos techados paralelos. Amenidades: piscina y terra",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/el-pedregal-4/1.png"
+   ],
+   "sku": "AptoElPedregal",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-de-oportunidad-en-el-pedregal-el-pedregal",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "9900000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-de-oportunidad-en-el-pedregal-el-pedregal"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "El Pedregal"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "130 m² de construcción en el 6to nivel"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2 baños + 1/2 baño"
+    }
+   ]
+  }
+ ],
+ "vivienda-frente-al-parque-mirador-sur-mirador-sur": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Vivienda Frente al Parque Mirador Sur",
+   "description": "Vivienda con ubicación privilegiada frente al Parque Mirador Sur. 3 habitaciones + cuarto de servicio, 2.5 baños, sala espaciosa, patio/jardín, marquesina ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/calletano-germosen-casa/5.png"
+   ],
+   "sku": "ViviendaMiradorSur",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/vivienda-frente-al-parque-mirador-sur-mirador-sur",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "420000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/vivienda-frente-al-parque-mirador-sur-mirador-sur"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Mirador Sur"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Casa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "336 m² de solar y 250 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5"
+    }
+   ]
+  }
+ ],
+ "apartamento-ciudad-modelo-tipo-c-ciudad-modelo": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento - CIUDAD MODELO (TIPO C)",
+   "description": "Apartamento en Av. Jacobo Majluta, Santo Domingo Norte — 68m2 US$ 67,000",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/terrazas-del-arroyo-3/3.png"
+   ],
+   "sku": "TerrazasC",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-ciudad-modelo-tipo-c-ciudad-modelo",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "67000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-ciudad-modelo-tipo-c-ciudad-modelo"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Ciudad Modelo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "68m2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2"
+    }
+   ]
+  }
+ ],
+ "apartamento-ciudad-modelo-tipo-b-ciudad-modelo": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento - CIUDAD MODELO (TIPO B)",
+   "description": "Apartamento TIPO B en Ciudad Modelo. Ubicación: Av. Jacobo Majluta, Santo Domingo Norte. Metraje: 79.32m2. Precio: US$ 78,000.",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/terrazas-del-arroyo-3/7.png"
+   ],
+   "sku": "AptoCiudadModeloTipoB",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-ciudad-modelo-tipo-b-ciudad-modelo",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "78000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-ciudad-modelo-tipo-b-ciudad-modelo"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Ciudad Modelo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "79.32m2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2"
+    }
+   ]
+  }
+ ],
+ "apartamento-ciudad-modelo-tipo-a-ciudad-modelo": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento - CIUDAD MODELO (TIPO A)",
+   "description": "Apartamento TIPO A en Ciudad Modelo. Ubicación: Av. Jacobo Majluta, Santo Domingo Norte. Metraje: 90.5m2. Precio: US$ 90,000.",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/terrazas-del-arroyo-3/5.png"
+   ],
+   "sku": "AptoCiudadModeloTipoA",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-ciudad-modelo-tipo-a-ciudad-modelo",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "90000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-ciudad-modelo-tipo-a-ciudad-modelo"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Ciudad Modelo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "90.5m2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2"
+    }
+   ]
+  }
+ ],
+ "torre-en-gazcue-frente-a-bellas-artes-gazcue": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Torre en Gazcue - Frente a Bellas Artes",
+   "description": "Apartamentos amueblados de 1 y 2 habitaciones con diseño vanguardista. Amenidades: estudio, vista al mar, piscina infinity, rooftop con sky bar, gimnasio, ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/jardines-de-bellas-artes/1.png"
+   ],
+   "sku": "TorreGazcueBellasArtes",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/torre-en-gazcue-frente-a-bellas-artes-gazcue",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "183000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/torre-en-gazcue-frente-a-bellas-artes-gazcue"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Gazcue"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "1 y 2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "penthouse-amueblado-en-san-isidro-san-isidro": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Penthouse AMUEBLADO en San Isidro",
+   "description": "Penthouse amueblado con 224 m². 3 habitaciones, 3 baños, cocina equipada, área de lavado, jacuzzi privado, terraza amplia y vista panorámica. Incluye 2 par",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/san-isidro-penthouse-main/1.png"
+   ],
+   "sku": "PenthouseSanIsidro",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/penthouse-amueblado-en-san-isidro-san-isidro",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "179000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/penthouse-amueblado-en-san-isidro-san-isidro"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "San Isidro"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Penthouse"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "224 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "3"
+    }
+   ]
+  }
+ ],
+ "vivienda-de-lujo-la-julia-2-niveles-la-julia": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Vivienda de Lujo - La Julia (2 Niveles)",
+   "description": "Exclusiva vivienda de dos pisos. Nivel 1: recibidor, estudio, sala, terraza, comedor, cocina fría y caliente, dormitorio de visitas con baño y clóset, área",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/la-julia/1.png"
+   ],
+   "sku": "CasaLaJulia",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/vivienda-de-lujo-la-julia-2-niveles-la-julia",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "1.3",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/vivienda-de-lujo-la-julia-2-niveles-la-julia"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "La Julia"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Casa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "463.84 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "4"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "5 baños + 2 medios baños"
+    }
+   ]
+  }
+ ],
+ "proyecto-residencial-las-americas-sde-las-americas": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Proyecto Residencial - Las Américas (SDE)",
+   "description": "Complejo de apartamentos de 3 habitaciones frente al Mar Caribe, con amplias áreas verdes, sociales y deportivas. Proyecto dividido en reserva natural, res",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/las-americas/1.png"
+   ],
+   "sku": "AptLasAmericas",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/proyecto-residencial-las-americas-sde-las-americas",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "62000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/proyecto-residencial-las-americas-sde-las-americas"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Las Américas"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "1 y 2"
+    }
+   ]
+  }
+ ],
+ "apartamento-en-el-millon-el-millon": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento en El Millón",
+   "description": "Sala-comedor con balcón integrado, 2 habitaciones con baños privados (principal con walk-in closet), medio baño de visitas, cocina moderna con desayunador ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/el-millon-1/1.png"
+   ],
+   "sku": "AptoElMillon",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-en-el-millon-el-millon",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "175000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-en-el-millon-el-millon"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "El Millón"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "120.5 m² (98 m² netos sin contar parqueos)"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5"
+    }
+   ]
+  }
+ ],
+ "vivienda-en-costa-verde-santo-domingo-oeste-costa-verde": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Vivienda en Costa Verde - Santo Domingo Oeste",
+   "description": "Amplia y acogedora vivienda de dos niveles en Costa Verde, Santo Domingo Oeste. Cuenta con 3 habitaciones, 2.5 baños, sala y estar, patio/jardín, cocina am",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/costa-verde/1.png"
+   ],
+   "sku": "CostaVerde",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/vivienda-en-costa-verde-santo-domingo-oeste-costa-verde",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "30000000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/vivienda-en-costa-verde-santo-domingo-oeste-costa-verde"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Costa Verde"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Casa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "600 m² de terreno y 384 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5"
+    }
+   ]
+  }
+ ],
+ "casa-ciudad-modelo-2-niveles-ciudad-modelo": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Casa - Ciudad Modelo (2 Niveles)",
+   "description": "Propiedad válida para BONO de RD$50,000 al completar la separación. Casa de 2 niveles con 3 habitaciones (principal con baño y walk-in closet), 2.5 baños, ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/ciudad-modelo-casas/1.png"
+   ],
+   "sku": "CasaCiudadModelo",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/casa-ciudad-modelo-2-niveles-ciudad-modelo",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "168000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/casa-ciudad-modelo-2-niveles-ciudad-modelo"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Ciudad Modelo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Casa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "155 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5"
+    }
+   ]
+  }
+ ],
+ "local-comercial-distrito-nacional-27-de-febrero": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Local Comercial - Distrito Nacional",
+   "description": "Local comercial ubicado en la Avenida 27 de Febrero esquina Calle Barahona, Distrito Nacional. Cuenta con 112 m² de construcción. Ideal para negocio o inve",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/local-comercial-27-febrero/1.png"
+   ],
+   "sku": "LocalComercialDistritoNacional",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/local-comercial-distrito-nacional-27-de-febrero",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "5000000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/local-comercial-distrito-nacional-27-de-febrero"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "27 de Febrero"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Casa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "112m2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2"
+    }
+   ]
+  }
+ ],
+ "casa-en-brisa-oriental-santo-domingo-este-brisa-oriental": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Casa en Brisa Oriental - Santo Domingo Este",
+   "description": "Tu hogar soñado está aquí. Propiedad válida para BONO de RD$50,000 al completar la separación del apartamento a través de Inmobiliaria Caney. Casa de 212 m",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/santo-domingo/brisa-oriental-casas/2.png"
+   ],
+   "sku": "CasaBrisaOriental",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/casa-en-brisa-oriental-santo-domingo-este-brisa-oriental",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "12500000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/casa-en-brisa-oriental-santo-domingo-este-brisa-oriental"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Santo Domingo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Brisa Oriental"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Casa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "212 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5"
+    }
+   ]
+  }
+ ],
+ "solar-colindante-con-el-mirador-sur-mirador-sur-av-jose-contreras": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar colindante con el Mirador Sur",
+   "description": "Solar de 227 m² colindante con el Mirador Sur, con acceso por Av. José Contreras. Excelente oportunidad para desarrollo o inversión en una zona céntrica de",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/solares/solar-mirador-sur-y-jose-contreras/1.png"
+   ],
+   "sku": "SolarMiradorSurJoseContreras",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-colindante-con-el-mirador-sur-mirador-sur-av-jose-contreras",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "12000000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-colindante-con-el-mirador-sur-mirador-sur-av-jose-contreras"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Solares"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Mirador Sur / Av. José Contreras"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "227 m² de solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "solar-con-potencial-industrial-punta-caucedo-2-punta-caucedo": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar con potencial industrial - Punta Caucedo 2",
+   "description": "Solar nivelado y aplanado con potencial industrial en Punta Caucedo. Cuenta con 23,736 m² y precio de US$1.50 por m². Ubicación estratégica cerca del Aerop",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/solares/punta-caucedo-solar-2/1.png"
+   ],
+   "sku": "SolarPuntaCaucedoIndustrial",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-con-potencial-industrial-punta-caucedo-2-punta-caucedo",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "1.50",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-con-potencial-industrial-punta-caucedo-2-punta-caucedo"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Solares"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Punta Caucedo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "23,736 m² de solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "solar-con-potencial-industrial-punta-caucedo-punta-caucedo": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar con Potencial Industrial – Punta Caucedo",
+   "description": "Oportunidad única para desarrollo logístico o industrial. Este terreno de 75,264.63 m² está estratégicamente ubicado cerca del Aeropuerto Internacional de ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/solares/punta-caucedo/1.png"
+   ],
+   "sku": "PuntaCaucedoSolar",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-con-potencial-industrial-punta-caucedo-punta-caucedo",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "135",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-con-potencial-industrial-punta-caucedo-punta-caucedo"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Solares"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Punta Caucedo"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "75,264.63 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "solar-en-autopista-duarte-santo-domingo-oeste-santo-domingo-oeste": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar en Autopista Duarte - Santo Domingo Oeste",
+   "description": "Solar de 9,968 m² estratégicamente ubicado en la Autopista Duarte, próximo al nuevo peaje y al Residencial Lomas Lindas. Ideal para desarrollos industriale",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/solares/autopista-duarte-solar/1.png"
+   ],
+   "sku": "SolarAutopistaDuarte",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-en-autopista-duarte-santo-domingo-oeste-santo-domingo-oeste",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "4000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-en-autopista-duarte-santo-domingo-oeste-santo-domingo-oeste"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Solares"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Santo Domingo Oeste"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "9,968 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "solares-el-higuero-el-higuero": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solares - El Higuero",
+   "description": "A pasos de la Ave. Circunvalación, disponibles 2 solares de 750 m² cada uno con calles afirmadas, electrificación primaria y acceso al Río Higuamo. Zona co",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/solares/solares-en-el-higuero/1.png"
+   ],
+   "sku": "SolaresElHiguero",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solares-el-higuero-el-higuero",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "5000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solares-el-higuero-el-higuero"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Solares"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "El Higuero"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "750 m² cada uno"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "N/A"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "N/A"
+    }
+   ]
+  }
+ ],
+ "solar-sabana-grande-de-palenque-sabana-grande-de-palenque": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar - Sabana Grande de Palenque",
+   "description": "Finca/solar ubicado en Sabana Grande de Palenque, Provincia San Cristóbal, con vista al mar y a 1 km de la Playa de Najayo.",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/solares/san-cristobal-solar/1.png"
+   ],
+   "sku": "SolarSabanaGrandePalenque",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-sabana-grande-de-palenque-sabana-grande-de-palenque",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "10",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-sabana-grande-de-palenque-sabana-grande-de-palenque"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Solares"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Sabana Grande de Palenque"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "32,293 m² de área"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "N/A"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "N/A"
+    }
+   ]
+  }
+ ],
+ "solar-juan-dolio-22-132-m-juan-dolio": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar - Juan Dolio (22,132 m²)",
+   "description": "Solar ubicado en Juan Dolio próximo a la Auto Vía del Este, ideal para desarrollar el proyecto de tus sueños. 22,132 m² a US$50 por metro cuadrado.",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/solares/juan-dolio-solar-3/1.png"
+   ],
+   "sku": "SolarJuanDolio3",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-juan-dolio-22-132-m-juan-dolio",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "50",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-juan-dolio-22-132-m-juan-dolio"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Juan Dolio"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Juan Dolio"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "22,132 m² de área"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "N/A"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "N/A"
+    }
+   ]
+  }
+ ],
+ "solar-metro-country-club-juan-dolio-metro-country-club": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar - Metro Country Club, Juan Dolio",
+   "description": "Construye la casa de tus sueños en este terreno de 1,227 m² ubicado en el prestigioso Metro Country Club, rodeado de tranquilidad, seguridad y todas las co",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/juan-dolio/juan-dolio-solar-1/1.png"
+   ],
+   "sku": "SolarMetroCountryClubJuanDolio",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-metro-country-club-juan-dolio-metro-country-club",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "975000011000000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-metro-country-club-juan-dolio-metro-country-club"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Juan Dolio"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Metro Country Club"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "1,227 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "N/A"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "N/A"
+    }
+   ]
+  }
+ ],
+ "solar-juan-dolio-4-min-de-playa-marbella-juan-dolio": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar - Juan Dolio (4 min de Playa Marbella)",
+   "description": "¡Invierte donde todos quieren estar! Solar en Juan Dolio, a solo 4 minutos de Playa Marbella. 3,185 m² de terreno a US$180/m², ideal para desarrollo turíst",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/juan-dolio/juan-dolio-solar-1/1.png"
+   ],
+   "sku": "SolarJuanDolioPlayaMarbella",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-juan-dolio-4-min-de-playa-marbella-juan-dolio",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "180",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-juan-dolio-4-min-de-playa-marbella-juan-dolio"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Juan Dolio"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Juan Dolio"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "3,185 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "N/A"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "N/A"
+    }
+   ]
+  }
+ ],
+ "solares-juan-dolio-juan-dolio": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solares - Juan Dolio",
+   "description": "Dos solares disponibles en Juan Dolio, San Pedro de Macorís. Cada uno: 4,462 m2. US$150 por metro2.",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/juan-dolio/juan-dolio-solares/1.png"
+   ],
+   "sku": "SolaresJuanDolio2",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solares-juan-dolio-juan-dolio",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "1502",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solares-juan-dolio-juan-dolio"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Juan Dolio"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Juan Dolio"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "4,462 m2 de área"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "solar-en-buena-vista-la-isabela-buena-vista-la-isabela": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Solar en Buena Vista - La Isabela",
+   "description": "Solar en zona tranquila y en crecimiento, ideal para vivienda o proyecto turístico. Superficie de 696 m². Precio RD$4,000,000. Aire puro y entorno natural ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/solares/buenavista-solar/1.png"
+   ],
+   "sku": "SolarBuenaVistaLaIsabela",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/solar-en-buena-vista-la-isabela-buena-vista-la-isabela",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "DOP",
+    "price": "4000000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/solar-en-buena-vista-la-isabela-buena-vista-la-isabela"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Solares"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Buena Vista, La Isabela"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Solar"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "696 m²"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "villa-amueblada-en-ciudad-las-canas-cap-cana-punta-cana-ciudad-las-canas": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Villa amueblada en Ciudad Las Canas, Cap Cana (Punta Cana)",
+   "description": "Dream House Villa en Cap Cana, Punta Cana (Solar 45, Ciudad Las Canas). Residencia de 2 niveles totalmente amueblada y equipada, con 4 habitaciones (todas ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/punta-cana/ciudad-las-canas-cap-cana-casa/1.png"
+   ],
+   "sku": "VillaCiudadLasCanasCapCanaAmueblada",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/villa-amueblada-en-ciudad-las-canas-cap-cana-punta-cana-ciudad-las-canas",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "1325000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/villa-amueblada-en-ciudad-las-canas-cap-cana-punta-cana-ciudad-las-canas"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Ciudad Las Canas"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Villa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "860 m² de construcción (877 m² de terreno)"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "4"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "5 baños"
+    }
+   ]
+  }
+ ],
+ "river-island-bavaro-punta-cana-bavaro": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "River Island – Bávaro, Punta Cana",
+   "description": "Proyecto residencial con diseño rodeado de agua, jardines y arquitectura vanguardista. Amenidades: restaurantes, 16 piscinas, gimnasio, centro comercial, t",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/punta-cana/river-island/1.png"
+   ],
+   "sku": "RiverIslandBavaro",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/river-island-bavaro-punta-cana-bavaro",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "199000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/river-island-bavaro-punta-cana-bavaro"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Bávaro"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "1, 2 y 3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "poseidonia-proyecto-cana-bay-cana-bay": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "POSEIDONIA - Proyecto Cana Bay",
+   "description": "Descubre una oportunidad única de inversión en un concepto innovador que fusiona la esencia del Caribe con la elegancia del estilo clásico romano. Disfruta",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/punta-cana/cana-bay-poseidonia-2/2.png"
+   ],
+   "sku": "CanaBayPoseidonia",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/poseidonia-proyecto-cana-bay-cana-bay",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "169000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/poseidonia-proyecto-cana-bay-cana-bay"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Cana Bay"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Villa, Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "51m2,286m2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "1,2,3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "proyecto-de-villas-cap-cana-cap-cana": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Proyecto de Villas - Cap Cana",
+   "description": "Proyecto exclusivo de villas en Cap Cana con acceso a todas las amenidades, incluye 2 parqueos, piscina, área de BBQ, cuarto de servicio, cocina fría y cal",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/punta-cana/cap-cana-proyecto/1.png"
+   ],
+   "sku": "VillaCapCana",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/proyecto-de-villas-cap-cana-cap-cana",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "590000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/proyecto-de-villas-cap-cana-cap-cana"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Cap Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Villa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "270m2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "3.5"
+    }
+   ]
+  }
+ ],
+ "villa-amueblada-punta-cana-cap-cana": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Villa Amueblada - Punta Cana",
+   "description": "Villa amueblada en Punta Cana Village con 424m2 de construcción y 600m2 de terreno.",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/punta-cana/punta-cana-village-2/1.png"
+   ],
+   "sku": "PuntaCanaVillage",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/villa-amueblada-punta-cana-cap-cana",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "1200000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/villa-amueblada-punta-cana-cap-cana"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Cap Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Villa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "424m2 de construcción, 600m2 de terreno"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "4"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "4.5"
+    }
+   ]
+  }
+ ],
+ "hotel-boutique-punta-cana-wyndham-hotels-resorts-punta-cana": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Hotel Boutique - Punta Cana Wyndham Hotels & Resorts",
+   "description": "Proyecto tipo condo-hotel respaldado por Wyndham con amenidades: piscina de 9,000 m2, club de playa privado, restaurante & bar, mercado gastronómico, spa y",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/punta-cana/oceana-hotel-boutique/1.png"
+   ],
+   "sku": "HotelBoutiquePuntaCana",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/hotel-boutique-punta-cana-wyndham-hotels-resorts-punta-cana",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "269000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/hotel-boutique-punta-cana-wyndham-hotels-resorts-punta-cana"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Hotel Boutique"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "Contáctanos para saber mas sobre las diferentes tipologías disponibles"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "villa-punta-cana-punta-cana": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Villa - Punta Cana",
+   "description": "Villa lista para entrega con 2 parqueos, patio trasero, piscina y gazebo común, seguridad con portón y garita, ebanistería en roble y cocina modular, termi",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/punta-cana/deivi-1-3/1.png"
+   ],
+   "sku": "VillaPuntaCana",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/villa-punta-cana-punta-cana",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "170000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/villa-punta-cana-punta-cana"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Villa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "127m2 de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "2.5"
+    }
+   ]
+  }
+ ],
+ "villa-de-lujo-cap-cana-cap-cana": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Villa de Lujo - Cap Cana",
+   "description": "Villa de lujo en Cap Cana con 747m2 de construcción.",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/punta-cana/villa-lujo-cap-cana/1.png"
+   ],
+   "sku": "CapCanaVillaLujo",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/villa-de-lujo-cap-cana-cap-cana",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "3500000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/villa-de-lujo-cap-cana-cap-cana"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Punta Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Cap Cana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Villa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "747m2"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "6"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "6"
+    }
+   ]
+  }
+ ],
+ "las-terrenas-playa-bonita-proyecto-residencial-playa-bonita": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Las Terrenas - Playa Bonita (Proyecto Residencial)",
+   "description": "Lo NUEVO en Las Terrenas: un destino reinventado. Un exclusivo proyecto residencial que equilibra arquitectura vanguardista y sostenibilidad, integrándose ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/otro/las-terrenas-the-reef/1.png"
+   ],
+   "sku": "LasTerrenasPlayaBonita",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/las-terrenas-playa-bonita-proyecto-residencial-playa-bonita",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "245000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/las-terrenas-playa-bonita-proyecto-residencial-playa-bonita"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Otro"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Playa Bonita"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": ""
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "1, 2 y 3 habitaciones"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": ""
+    }
+   ]
+  }
+ ],
+ "villa-ana-playa-nueva-romana-playa-nueva-romana": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": " Villa Ana - Playa Nueva Romana",
+   "description": "Vive la experiencia del lujo junto al mar en una de las zonas más exclusivas de La Romana. Villa de diseño contemporáneo con acceso a playa privada, rodead",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/otro/playa-nueva-romana/1.png"
+   ],
+   "sku": "VillaAnaPlayaNuevaRomana",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/villa-ana-playa-nueva-romana-playa-nueva-romana",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "595000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/villa-ana-playa-nueva-romana-playa-nueva-romana"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Otro"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Playa Nueva Romana"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Villa"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "437 m² de terreno | 328 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "3"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "3"
+    }
+   ]
+  }
+ ],
+ "apartamento-en-cabarete-con-vista-al-mar-cabarete": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Apartamento en Cabarete con Vista al Mar",
+   "description": "Despierta con vista al mar en Cabarete. Descubre este hermoso apartamento de 1 habitación en un residencial exclusivo con piscina común, acceso controlado ",
+   "image": [
+    "https://caneyinmobiliaria.com/css/images-caney/otro/cabarete/1.png"
+   ],
+   "sku": "ApartamentoCabareteVistaMar",
+   "brand": {
+    "@type": "Brand",
+    "name": "Inmobiliaria Caney"
+   },
+   "category": "Real Estate",
+   "url": "https://caneyinmobiliaria.com/apartamento-en-cabarete-con-vista-al-mar-cabarete",
+   "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "170000",
+    "availability": "https://schema.org/InStock",
+    "url": "https://caneyinmobiliaria.com/apartamento-en-cabarete-con-vista-al-mar-cabarete"
+   },
+   "additionalProperty": [
+    {
+     "@type": "PropertyValue",
+     "name": "Área",
+     "value": "Otro"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Sector",
+     "value": "Cabarete"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Tipo",
+     "value": "Apartamento"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Metraje",
+     "value": "60 m² de construcción"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Habitaciones",
+     "value": "1"
+    },
+    {
+     "@type": "PropertyValue",
+     "name": "Baños",
+     "value": "1"
+    }
+   ]
+  }
+ ]
+}
