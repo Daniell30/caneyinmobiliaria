@@ -33,9 +33,9 @@ module.exports = class {
         const key = String(s.refFilename || s.reffilename || "").trim();
         if (key && byFilename.has(key)) {
           const p = byFilename.get(key);
-          const href = `${slugify(p.title || "")}-${slugify(
+          const href = `/${slugify(p.title || "")}-${slugify(
             p.sector || p.area || ""
-          )}.html`;
+          )}`;
           return { ...s, href };
         }
 

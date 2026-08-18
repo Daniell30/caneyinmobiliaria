@@ -59,7 +59,7 @@ module.exports = class {
       const typeLabel = Array.isArray(p.type) ? p.type.join(", ") : (p.type || "");
       const typeData = (Array.isArray(p.type) ? p.type : [p.type || ""])
         .map(t => String(t).toLowerCase()).filter(Boolean).join("|");
-      const href = `${slugify(p.title)}-${slugify(p.sector || p.area || "")}.html`;
+      const href = `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`;
 
       return `
         <div class="property-item"
@@ -97,7 +97,7 @@ module.exports = class {
     // Minimal dataset for client-side filtering across ALL items
     const ALL_FOR_CLIENT = all.map(p => ({
       ...p,
-      _href: `${slugify(p.title)}-${slugify(p.sector || p.area || "")}.html`,
+      _href: `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`,
       _priceNum: priceNum(p.price),
       _sectorLower: String(p.sector || "").toLowerCase(),
       _typeListLower: (Array.isArray(p.type) ? p.type : (p.type ? [p.type] : []))

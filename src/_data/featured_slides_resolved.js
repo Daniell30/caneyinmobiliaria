@@ -25,7 +25,7 @@ module.exports = () => {
     if (key && byFilename.has(key)) {
       const p = byFilename.get(key);
       const href =
-        `${slugify(p.title || "")}-${slugify(p.sector || p.area || "")}.html`;
+        `/${slugify(p.title || "")}-${slugify(p.sector || p.area || "")}`;
       return { ...s, href };
     }
     // fallback if no match

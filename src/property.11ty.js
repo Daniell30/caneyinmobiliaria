@@ -47,7 +47,7 @@ module.exports = class {
     const permalink = `${pageSlug}.html`;
 
     const primaryImg = (p.images && p.images[0]) ? `/CSS/Images caney/${S(p.folder)}/${S(p.images[0])}` : S(site.logo);
-    const canonical  = new URL(permalink, S(site.url)).toString();
+    const canonical  = new URL(pageSlug, S(site.url)).toString(); // extensionless canonical form
     const imgAbs     = new URL(primaryImg, S(site.url)).toString();
 
     const descRaw = S(p.description) || `${S(p.type)} en ${S(p.location)} — ${S(p.size)} ${S(p.price)}`;
@@ -132,7 +132,7 @@ module.exports = class {
         ${p.bedrooms ? `<p class="property-price"><strong>Habitaciones:</strong> ${S(p.bedrooms)}</p>` : ""}
         ${p.bathrooms ? `<p class="property-price"><strong>Baños:</strong> ${S(p.bathrooms)}</p>` : ""}
         <p class="property-description">${S(p.description) || "Para más información o agendar una visita, contáctanos."}</p>
-        <a href="contact.html" class="contact-button">Contáctanos: 809-224-2769 / 829-380-2769</a>
+        <a href="/contact/" class="contact-button">Contáctanos: 809-224-2769 / 829-380-2769</a>
       </div>
     </div>
   </main>

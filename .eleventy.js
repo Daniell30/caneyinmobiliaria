@@ -28,7 +28,7 @@ module.exports = function (eleventyConfig) {
 
     const titleSlug = slugify(prop.title || "");
     const areaSlug  = slugify(prop.sector || prop.area || "");
-    return `${titleSlug}-${areaSlug}.html`;
+    return `/${titleSlug}-${areaSlug}`;
   });
 
   // ---------------- Passthrough copy ----------------

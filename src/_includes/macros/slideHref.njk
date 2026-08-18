@@ -7,7 +7,7 @@
     {%- set url = '' -%}
     {%- for item in properties -%}
       {%- if item.filename == s.refFilename -%}
-        {%- set url = (item.title | slug) ~ '-' ~ ((item.sector or item.area or '') | slug) ~ '.html' -%}
+        {%- set url = '/' ~ (item.title | slug) ~ '-' ~ ((item.sector or item.area or '') | slug) -%}
       {%- endif -%}
     {%- endfor -%}
     {{- url or '#' -}}

@@ -19,7 +19,6 @@ module.exports = class {
     const props = JSON.parse(fs.readFileSync(path.join(dataDir, "properties.json"), "utf-8"));
 
     const base = site.url.replace(/\/+$/, "");
-    const today = new Date().toISOString().slice(0, 10);
 
     // Area pages and their base filenames (match your listing pages)
     const areaFiles = {
@@ -57,17 +56,16 @@ module.exports = class {
 
     // Property detail pages (pretty slugs)
     for (const p of props) {
-      const slug = `${slugify(p.title)}-${slugify(p.sector || p.area || "")}.html`;
+      const slug = `${slugify(p.title)}-${slugify(p.sector || p.area || "")}`;
       urls.push(`${base}/${slug}`);
     }
 
     // Generate XML
+    // lastmod intentionally omitted: stamping every URL with the build date
+    // is fake freshness. Real per-listing dateModified arrives in Phase 4.
     const xmlItems = urls.map(u => `
   <url>
     <loc>${u}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>`).join("");
 
     return `<?xml version="1.0" encoding="UTF-8"?>
