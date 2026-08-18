@@ -76,18 +76,33 @@ def main():
         if badf: bad(f"{len(badf)} sitemap URLs are not canonical form (e.g. {badf[0]})")
         else: ok("all sitemap URLs use the canonical extensionless form")
 
-    # sample every distinct page type
-    listing = [u for u in urls if not re.search(r"/(inmuebles-|apartamentos-|villas-|casas-|solares-|propiedades-)", u) and u.rstrip("/") != base]
-    sector  = [u for u in urls if re.search(r"/(apartamentos-|villas-|casas-|solares-|propiedades-)", u)]
-    cat     = [u for u in urls if "/inmuebles-" in u]
-    if sector: ok(f"{len(sector)} sector aggregate pages in sitemap")
-    else: warn("no sector aggregate pages found in sitemap")
+    # Fetch every sitemap URL once and classify by CONTENT, never by URL
+    # shape (listing slugs can legitimately start with "solares-").
+    pages = {}
+    for u in urls:
+        st, html = get(u)
+        pages[u] = (st, html)
+    dead = [u for u, (st, _) in pages.items() if st != 200]
+    if dead: bad(f"{len(dead)} sitemap URLs do not return 200 (e.g. {dead[0]})")
+    else: ok(f"all {len(urls)} sitemap URLs return 200")
+
+    listing, sector, other = [], [], []
+    for u, (st, html) in pages.items():
+        if st != 200: continue
+        types = {n.get("@type") for n in nodes(jsonld(html))}
+        if "RealEstateListing" in types: listing.append(u)
+        elif "ItemList" in types: sector.append(u)
+        else: other.append(u)
+    cat = [u for u in other if "/inmuebles-" in u]
+    if sector: ok(f"{len(sector)} sector aggregate pages (detected by ItemList schema)")
+    else: warn("no sector aggregate pages found — one fetch cannot answer a whole sector query")
+    ok(f"page mix: {len(listing)} listings, {len(sector)} sector pages, {len(other)} other")
 
     # ---------- 3. per-page fundamentals (raw HTML, no JS) ----------
-    sample = ([base + "/", base + "/contact/"] + cat[:2] + sector[:3] + listing[:6])
+    sample = [base + "/", base + "/contact/"] + cat[:2] + sector[:3] + listing[:6]
     org_ids, problems = Counter(), 0
     for u in sample:
-        st, html = get(u)
+        st, html = pages.get(u) or get(u)
         path = urllib.parse.urlparse(u).path or "/"
         if st != 200:
             bad(f"{path} returns HTTP {st}"); problems += 1; continue
@@ -113,8 +128,8 @@ def main():
     # ---------- 4. listing pages: the facts a property query filters on ----------
     checked = 0
     facts = Counter()
-    for u in listing[:12]:
-        st, html = get(u)
+    for u in listing:
+        st, html = pages[u]
         if st != 200: continue
         checked += 1
         ns = nodes(jsonld(html))
@@ -142,8 +157,8 @@ def main():
            + ", ".join(f"{k} {v}/{checked}" for k, v in facts.items()))
 
     # ---------- 5. sector pages ----------
-    for u in sector[:3]:
-        st, html = get(u)
+    for u in sector:
+        st, html = pages[u]
         p = urllib.parse.urlparse(u).path
         if st != 200: bad(f"{p} returns HTTP {st}"); continue
         ns = nodes(jsonld(html))
