@@ -66,7 +66,7 @@ module.exports = class {
   <nav class="sector-nav" aria-label="Zonas destacadas">
     <h2>Zonas destacadas</h2>
     <ul>
-      ${areaSectors.map(sp => `<li><a href="/${sp.slug}">${sp.h1} (${sp.items.length})</a></li>`).join("\n      ")}
+      ${areaSectors.map(sp => `<li><a class="sector-chip" href="/${sp.slug}"><span class="sector-chip-name"><span class="visually-hidden">${sp.label}${sp.opPart} en </span>${sp.sector}<span class="visually-hidden">${sp.placeSuffix}</span></span> <span class="sector-chip-count">${sp.items.length}</span><span class="visually-hidden"> propiedades</span></a></li>`).join("\n      ")}
     </ul>
   </nav>` : "";
 

@@ -54,14 +54,17 @@ function sectorPages(props) {
     const label = familyLabel(items);
     const allSale = items.every(p => !isLease(p));
     const opPart = allSale ? " en venta" : "";          // mixed ops: no claim
-    const place = (sector.toLowerCase() === area.toLowerCase() || NON_PLACE_AREAS.has(area.toLowerCase()))
-      ? sector
-      : `${sector}, ${area}`;
+    // placeSuffix is split out so link text can show just the sector name
+    // while the full phrase stays in the anchor for crawlers/screen readers.
+    const placeSuffix = (sector.toLowerCase() === area.toLowerCase() || NON_PLACE_AREAS.has(area.toLowerCase()))
+      ? ""
+      : `, ${area}`;
+    const place = `${sector}${placeSuffix}`;
     pages.push({
       area, sector, items,
       slug: slugify(`${label}${opPart} ${sector}`),
       h1: `${label}${opPart} en ${place}`,
-      label, opPart, allSale
+      label, opPart, placeSuffix, allSale
     });
   }
   return pages.sort((a, b) => b.items.length - a.items.length || a.slug.localeCompare(b.slug, "es"));
