@@ -381,18 +381,20 @@ footer span {
   }
 }
 
-/* Homepage H1: the page had no h1 at all (heading hierarchy started at h3),
-   which costs both search and AI-answer engines their main topic signal. */
+/* Homepage H1: the page had no h1 at all, which costs search and AI-answer
+   engines their main topic signal. The owner wants the minimalist hero
+   untouched, so the h1 stays in the markup for crawlers and screen readers
+   but is visually hidden (standard accessibility clip pattern — not display:
+   none, which some engines discount). */
 .home-title {
-  font-family: 'Poppins Bold', sans-serif;
-  color: var(--caney-text);
-  font-size: clamp(1.35rem, 2.6vw, 1.9rem);
-  line-height: 1.3;
-  text-align: center;
-  max-width: 1120px;
-  margin: 0 auto 1.75rem;
-  padding: 0 2rem;
-}
-@media (max-width: 600px) {
-  .home-title { font-size: 1.2rem; padding: 0 1rem; margin-bottom: 1.25rem; }
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
