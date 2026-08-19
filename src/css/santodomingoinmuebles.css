@@ -427,5 +427,12 @@ h1 {
 .sector-table a { color: #7f6558; }
 
 @media (max-width: 700px) {
-  .sector-table { display: block; overflow-x: auto; white-space: nowrap; }
+  /* A six-column comparison table cannot fit a phone. Let cells wrap (that
+     alone cuts the scroll width from ~1400px to ~580px) and keep horizontal
+     scrolling as the fallback, with an inset edge shadow so it is visible
+     that there is more table to the right. */
+  .sector-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    box-shadow: inset -14px 0 14px -14px rgba(0, 0, 0, 0.35); }
+  .sector-table th,
+  .sector-table td { padding: 6px 8px; font-size: 0.85rem; }
 }
