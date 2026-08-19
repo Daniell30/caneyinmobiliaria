@@ -68,11 +68,15 @@ def main():
 
     # ---------- 2. sitemap ----------
     st, sx = get(base + "/sitemap.xml")
-    urls = re.findall(r"<loc>([^<]+)</loc>", sx) if st == 200 else []
+    locs = re.findall(r"<loc>([^<]+)</loc>", sx) if st == 200 else []
+    # <loc> values are absolute canonical (production) URLs by design. When
+    # auditing a deploy preview we must fetch the SAME PATHS on the host under
+    # test, or we would silently audit production instead.
+    urls = [base + (urllib.parse.urlparse(u.strip()).path or "/") for u in locs]
     if st != 200: bad(f"sitemap.xml returns HTTP {st}")
     else:
-        ok(f"sitemap.xml lists {len(urls)} URLs")
-        badf = [u for u in urls if u.endswith(".html") or " " in u or "%20" in u]
+        ok(f"sitemap.xml lists {len(locs)} URLs")
+        badf = [u for u in locs if u.endswith(".html") or " " in u or "%20" in u]
         if badf: bad(f"{len(badf)} sitemap URLs are not canonical form (e.g. {badf[0]})")
         else: ok("all sitemap URLs use the canonical extensionless form")
 
