@@ -122,8 +122,10 @@ ${sliderItems}
 
   <!-- 2) ¿Qué buscas? -->
   <main class="members">
+    <h1 class="home-title">Inmobiliaria Caney — propiedades en venta y alquiler en República Dominicana</h1>
+
     <section class="search-section">
-      <h3 class="quebuscasopening">¿Qué buscas?</h3>
+      <h2 class="quebuscasopening">¿Qué buscas?</h2>
       <div class="quebuscas">
         <div class="SantoDomingo location-card">
           <img src="/css/images-caney/general/1.png" alt="Santo Domingo" class="icon" loading="lazy" decoding="async">
@@ -165,10 +167,10 @@ ${sliderItems}
 
     <!-- 3) Intro text -->
     <section class="intro-section">
-      <h3 class="intro">
+      <p class="intro">
         Inmobiliaria Caney te ofrece más de dos décadas de experiencia en el mercado inmobiliario de la República Dominicana, con propiedades en las mejores zonas de Santo Domingo, Punta Cana, y más. Ya sea que busques alquilar, comprar o invertir en terrenos, estamos aquí para hacer realidad tu visión de hogar o negocio con confianza y profesionalismo.
-      </h3>
-      <h3 class="intro2">¡Descubre tu destino con nosotros!</h3>
+      </p>
+      <p class="intro2">¡Descubre tu destino con nosotros!</p>
     </section>
   </main>
 
