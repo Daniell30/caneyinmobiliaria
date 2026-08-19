@@ -37,6 +37,7 @@ import os
 import posixpath
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -185,7 +186,7 @@ def run_dir_mode(root):
 
 # ---------------- URL mode ----------------
 
-def http_status(url, cache):
+def http_status(url, cache, _retry=True):
     if url in cache:
         return cache[url]
     status = None
@@ -204,6 +205,11 @@ def http_status(url, cache):
         except Exception:
             status = -1
             break
+    # 5xx from a CDN is usually transient (cold cache on a large asset), not a
+    # broken link: retry once before reporting it.
+    if status is not None and (status >= 500 or status < 0) and _retry:
+        time.sleep(2)
+        return http_status(url, cache, _retry=False)
     cache[url] = status
     return status
 

@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const slugify = require("./_utils/slugify");
+const { sectorPages } = require("./_utils/sectors");
 
 const PER_PAGE = 20;
 
@@ -53,6 +54,9 @@ module.exports = class {
         urls.push(`${base}/${file}`);
       }
     }
+
+    // Sector aggregate pages
+    for (const sp of sectorPages(props)) urls.push(`${base}/${sp.slug}`);
 
     // Property detail pages (pretty slugs)
     for (const p of props) {

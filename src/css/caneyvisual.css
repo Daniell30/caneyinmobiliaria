@@ -380,3 +380,21 @@ footer span {
     grid-template-columns: 1fr;
   }
 }
+
+/* Homepage H1: the page had no h1 at all, which costs search and AI-answer
+   engines their main topic signal. The owner wants the minimalist hero
+   untouched, so the h1 stays in the markup for crawlers and screen readers
+   but is visually hidden (standard accessibility clip pattern — not display:
+   none, which some engines discount). */
+.home-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

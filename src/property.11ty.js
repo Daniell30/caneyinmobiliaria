@@ -2,9 +2,12 @@
 const fs = require("fs");
 const path = require("path");
 const slugify = require("./_utils/slugify");
+const { sectorPageFor } = require("./_utils/sectors");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
+const listingDates = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "listing_dates.json"), "utf-8"));
 
 const S = v => String(v ?? ""); // <- safe string
+const allProps = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "properties.json"), "utf-8"));
 
 // ---------- schema.org helpers (Phase 3 migration) ----------
 // Parse, never invent: every helper returns null when the source string is
@@ -101,6 +104,72 @@ function parseStreet(loc) {
   return /^(Av\.?|Ave\.?|Avenida|Calle|Autopista|Carretera|Res\.)\s/i.test(first) ? first : null;
 }
 
+// ---------- Phase 4 helpers: spec table, status, freshness ----------
+
+// Operation is stated in the price string; explicit `operation` wins.
+function operationOf(p) {
+  if (S(p.operation).trim()) return S(p.operation).trim();
+  return isLease(p.price) ? "Alquiler" : "Venta";
+}
+
+// Most specific municipality named in the location string; null if unclear.
+function parseMunicipality(loc) {
+  const s = S(loc);
+  const known = ["Santo Domingo Este", "Santo Domingo Norte", "Santo Domingo Oeste",
+                 "Distrito Nacional", "Pedro Brand", "Sabana Grande de Palenque",
+                 "San Pedro de Macorís", "La Romana", "Las Terrenas", "Juan Dolio",
+                 "Punta Cana", "Cabarete", "Puerto Plata", "San Cristóbal", "Bávaro"];
+  for (const k of known) if (new RegExp(k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i").test(s)) return k;
+  return null;
+}
+
+const STATUS = {
+  "disponible": { label: "Disponible", availability: "https://schema.org/InStock" },
+  "reservado":  { label: "Reservado",  availability: "https://schema.org/LimitedAvailability" },
+  "vendido":    { label: "Vendido",    availability: "https://schema.org/SoldOut" },
+  "alquilado":  { label: "Alquilado",  availability: "https://schema.org/SoldOut" }
+};
+function statusOf(p) {
+  const key = S(p.status).trim().toLowerCase();
+  return STATUS[key] || STATUS["disponible"];   // live listing = available
+}
+
+const MONTHS = ["enero","febrero","marzo","abril","mayo","junio","julio",
+                "agosto","septiembre","octubre","noviembre","diciembre"];
+function formatDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(S(iso).trim());
+  if (!m) return null;
+  return `${parseInt(m[3], 10)} de ${MONTHS[parseInt(m[2], 10) - 1]} de ${m[1]}`;
+}
+
+const escapeHtml = v => S(v).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+  .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// Specification table rows, in the vocabulary Dominican buyers actually use.
+// Only rows with real data are rendered; every gap is listed per listing in
+// TODO-content.md, and the empty fields are visible in properties.json.
+function specRows(p) {
+  const typeLabel = Array.isArray(p.type) ? p.type.map(S).join(", ") : S(p.type);
+  const sizeLabel = Array.isArray(p.size) ? p.size.map(S).join(" / ") : S(p.size);
+  return [
+    ["Tipo", typeLabel],
+    ["Operación", operationOf(p)],
+    ["Precio", S(p.price)],
+    ["Sector", S(p.sector)],
+    ["Dirección", S(p.location)],
+    ["Municipio", parseMunicipality(p.location)],
+    ["Metros cuadrados", sizeLabel],
+    ["Habitaciones", S(p.bedrooms)],
+    ["Baños", S(p.bathrooms)],
+    ["Parqueos", S(p.parking)],
+    ["Nivel", S(p.level)],
+    ["Año de construcción", S(p.yearBuilt)],
+    ["Condición", S(p.condition)],
+    ["Amueblado", S(p.furnished)],
+    ["Código de referencia", S(p.filename)]
+  ].filter(([, v]) => S(v).trim() && S(v).trim().toUpperCase() !== "N/A");
+}
+
 module.exports = class {
   data() {
     const p = path.join(__dirname, "_data", "properties.json");
@@ -144,6 +213,43 @@ module.exports = class {
     const descRaw = S(p.description) || `${S(p.type)} en ${S(p.location)} — ${S(p.size)} ${S(p.price)}`;
     const desc    = descRaw.trim().slice(0, 155);
 
+    // ---------- Phase 4: spec table, status, freshness, FAQ ----------
+    const rows = specRows(p);
+    const specTable = `<table class="spec-table">
+            <caption>Ficha técnica</caption>
+            <tbody>
+              ${rows.map(([k, v]) => `<tr><th scope="row">${escapeHtml(k)}</th><td>${escapeHtml(v)}</td></tr>`).join("\n              ")}
+            </tbody>
+          </table>`;
+
+    const status = statusOf(p);
+    const datePosted   = S(p.datePosted).trim() || S(listingDates[S(p.filename)]).trim();
+    const dateModified = S(p.updated).trim();
+    const shownDate = dateModified
+      ? { label: "Actualizado", iso: dateModified }
+      : (datePosted ? { label: "Publicado", iso: datePosted } : null);
+    const shownDateHtml = shownDate && formatDate(shownDate.iso)
+      ? `<p class="property-freshness">${shownDate.label}: <time datetime="${shownDate.iso}">${formatDate(shownDate.iso)}</time></p>`
+      : "";
+
+    // Link to the sector aggregate page this listing belongs to (Phase 5).
+    const sectorPage = sectorPageFor(allProps, p);
+    const sectorLinkHtml = sectorPage
+      ? `<p class="sector-link">Ver todos los <a href="/${sectorPage.slug}">${sectorPage.label.toLowerCase()} en ${escapeHtml(sectorPage.sector)}</a> (${sectorPage.items.length})</p>`
+      : "";
+
+    // FAQ is owner-written (see TODO-content.md); nothing is generated here.
+    const faq = Array.isArray(p.faq)
+      ? p.faq.filter(f => f && S(f.q).trim() && S(f.a).trim())
+      : [];
+    const faqHtml = faq.length ? `
+      <section class="property-faq">
+        <h2>Preguntas frecuentes</h2>
+        <dl>
+          ${faq.map(f => `<dt>${escapeHtml(f.q)}</dt><dd>${escapeHtml(f.a)}</dd>`).join("\n          ")}
+        </dl>
+      </section>` : "";
+
     // ---------- structured data: RealEstateListing @graph ----------
     // Replaces the old Product block (never both: two overlapping JSON-LD
     // graphs on one page can be discounted by crawlers). Carried over from
@@ -179,6 +285,20 @@ module.exports = class {
       if (baths.partial) residence.numberOfPartialBathrooms = baths.partial;
       residence.numberOfBathroomsTotal = baths.full + baths.partial;
     }
+    // Optional owner-supplied facts (empty until filled in properties.json)
+    const parkingCount = parseCount(p.parking);
+    const amenities = [];
+    if (parkingCount !== null) amenities.push({ "@type": "LocationFeatureSpecification", "name": "Parqueos", "value": parkingCount });
+    if (S(p.furnished).trim()) {
+      const furnishedYes = /^(s(i|í)|amueblado|true)/i.test(S(p.furnished).trim());
+      amenities.push({ "@type": "LocationFeatureSpecification", "name": "Amueblado", "value": furnishedYes });
+    }
+    if (amenities.length) residence.amenityFeature = amenities;
+    const yearBuilt = parseCount(p.yearBuilt);
+    if (yearBuilt !== null && schemaType !== "Place") residence.yearBuilt = String(yearBuilt);
+    const floorLevel = parseCount(p.level);
+    if (floorLevel !== null && schemaType !== "Place") residence.floorLevel = String(floorLevel);
+
     const sqm = parseSqm(p.size);
     if (sqm !== null && schemaType !== "Place") {
       residence.floorSize = { "@type": "QuantitativeValue", "value": sqm, "unitCode": "MTK", "unitText": "m²" };
@@ -192,7 +312,7 @@ module.exports = class {
       "@type": "Offer",
       "@id": `${canonical}#offer`,
       "priceCurrency": S(p.price).includes("RD$") ? "DOP" : "USD",
-      "availability": "https://schema.org/InStock",
+      "availability": status.availability,
       "businessFunction": isLease(p.price)
         ? "http://purl.org/goodrelations/v1#LeaseOut"
         : "http://purl.org/goodrelations/v1#Sell",
@@ -222,16 +342,30 @@ module.exports = class {
       "name": S(p.title),
       "description": descRaw.trim(),
       "inLanguage": S(site.lang) || "es-DO",
+      ...(datePosted ? { "datePosted": datePosted } : {}),
+      ...(dateModified ? { "dateModified": dateModified } : {}),
       "identifier": S(p.filename),
       "image": imagesAbs,
       "provider": { "@id": ORG_ID },
+      "isPartOf": { "@id": `${S(site.url)}/#website` },
       "mainEntity": { "@id": `${canonical}#residence` },
       "offers": { "@id": `${canonical}#offer` }
     };
 
+    const graph = [listing, residence, offer];
+    if (faq.length) {
+      graph.push({
+        "@type": "FAQPage",
+        "@id": `${canonical}#faq`,
+        "mainEntity": faq.map(f => ({
+          "@type": "Question",
+          "name": S(f.q),
+          "acceptedAnswer": { "@type": "Answer", "text": S(f.a) }
+        }))
+      });
+    }
     const schemaJson = JSON.stringify(
-      { "@context": "https://schema.org", "@graph": [listing, residence, offer] },
-      null, 2
+      { "@context": "https://schema.org", "@graph": graph }, null, 2
     );
 
     return `<!DOCTYPE html>
@@ -281,6 +415,8 @@ ${schemaJson}
 
       <div class="property-details">
         <h1 class="property-title">${S(p.title)}</h1>
+        <p class="property-meta"><span class="status-badge status-${slugify(status.label)}">${status.label}</span></p>
+        ${shownDateHtml}
         ${p.location ? `<p class="property-location"><strong>Ubicación:</strong> ${S(p.location)}</p>` : ""}
         ${p.price ? `<p class="property-price"><strong>Precio:</strong> ${S(p.price)}</p>` : ""}
         ${p.rent ? `<p class="property-price"><strong>Alquiler:</strong> ${S(p.rent)}</p>` : ""}
@@ -288,9 +424,12 @@ ${schemaJson}
         ${p.bedrooms ? `<p class="property-price"><strong>Habitaciones:</strong> ${S(p.bedrooms)}</p>` : ""}
         ${p.bathrooms ? `<p class="property-price"><strong>Baños:</strong> ${S(p.bathrooms)}</p>` : ""}
         <p class="property-description">${S(p.description) || "Para más información o agendar una visita, contáctanos."}</p>
+        ${specTable}
+        ${sectorLinkHtml}
         <a href="/contact/" class="contact-button">Contáctanos: 809-224-2769 / 829-380-2769</a>
       </div>
     </div>
+    ${faqHtml}
   </main>
 
   <footer>

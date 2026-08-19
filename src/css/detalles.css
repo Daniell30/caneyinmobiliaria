@@ -262,3 +262,67 @@ footer span {
     transform: translateX(100%);
   }
 }
+
+/* --- Phase 4: specification table, status badge, freshness, FAQ --- */
+.property-meta { margin: 6px 0 2px; }
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: #e6f4ea;
+  color: #1e6b34;
+  border: 1px solid #b7dfc4;
+}
+.status-badge.status-reservado { background: #fdf3d8; color: #8a6100; border-color: #f0dca6; }
+.status-badge.status-vendido,
+.status-badge.status-alquilado { background: #f4e6e6; color: #8a2020; border-color: #e2bcbc; }
+
+.property-freshness {
+  margin: 2px 0 14px;
+  font-size: 0.85rem;
+  color: #7f6558;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95rem;
+}
+.spec-table caption {
+  text-align: left;
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: 1.05rem;
+  padding-bottom: 8px;
+}
+.spec-table th,
+.spec-table td {
+  border: 1px solid #e7ddd2;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.spec-table th[scope="row"] {
+  width: 38%;
+  background: #faf5ef;
+  font-family: 'Poppins Bold', sans-serif;
+  font-weight: normal;
+}
+.spec-table tbody tr:nth-child(even) td { background: #fdfaf7; }
+
+.sector-link { margin: 14px 0; }
+
+.property-faq { margin: 28px 0; }
+.property-faq h2 { font-family: 'Poppins Bold', sans-serif; font-size: 1.15rem; }
+.property-faq dt { font-family: 'Poppins Bold', sans-serif; margin-top: 12px; }
+.property-faq dd { margin: 4px 0 0; }
+
+@media (max-width: 600px) {
+  .spec-table { font-size: 0.9rem; }
+  .spec-table th[scope="row"] { width: 45%; }
+}
