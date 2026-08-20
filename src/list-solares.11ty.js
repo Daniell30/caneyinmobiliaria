@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const slugify = require("./_utils/slugify");
-const { sectorPages } = require("./_utils/sectors");
+const { sectorPages, operationOf } = require("./_utils/sectors");
 
 const PER_PAGE = 20;
 
@@ -55,6 +55,7 @@ module.exports = class {
       fs.readFileSync(path.join(__dirname, "_data", "properties.json"), "utf-8"));
     const areaSectors = sectorPages(allProps)
       .filter(sp => String(sp.area || "").toLowerCase() === "solares");
+
     const sectorNav = areaSectors.length ? `
   <nav class="sector-nav" aria-label="Zonas destacadas">
     <h2>Zonas destacadas</h2>
@@ -64,6 +65,19 @@ module.exports = class {
   </nav>` : "";
 
     const { pageItems, all, pagination, sectors, types } = data;
+
+    // Quick Venta / Alquiler filter — only worth showing where the area
+    // actually has both kinds of listing.
+    const opCounts = all.reduce((acc, p) => {
+      const op = operationOf(p);
+      acc[op] = (acc[op] || 0) + 1;
+      return acc;
+    }, {});
+    const opFilter = (opCounts.venta && opCounts.alquiler) ? `
+  <div class="op-filter" role="group" aria-label="Filtrar por operación">
+    <button type="button" class="op-btn" data-op="venta" aria-pressed="false">Venta <span class="op-count">${opCounts.venta}</span></button>
+    <button type="button" class="op-btn" data-op="alquiler" aria-pressed="false">Alquiler <span class="op-count">${opCounts.alquiler}</span></button>
+  </div>` : "";
 
     const priceNum = s => Number(String(s || "").replace(/[^\d.]/g, "") || 0);
 
@@ -80,7 +94,8 @@ module.exports = class {
         <div class="property-item"
              data-price="${priceNum(p.price)}"
              data-sector="${String(sector).toLowerCase()}"
-             data-type="${typeData}">
+             data-type="${typeData}"
+             data-operation="${operationOf(p)}">
           <img src="/css/images-caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
           <div class="property-info">
             <h2>${p.title}</h2>
@@ -108,6 +123,7 @@ module.exports = class {
       ...p,
       _href: `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`,
       _priceNum: priceNum(p.price),
+      _operation: operationOf(p),
       _sectorLower: String(p.sector || "").toLowerCase(),
       _typeListLower: (Array.isArray(p.type) ? p.type : (p.type ? [p.type] : []))
         .map(t => String(t).toLowerCase()).filter(Boolean)
@@ -119,6 +135,7 @@ module.exports = class {
 <header><nav><a href="/"><img src="/css/images-caney/general/caneylogo.png" alt="CaneyLogo"></a></nav></header>
 
 <h1>SOLARES</h1>
+  ${opFilter}
   ${sectorNav}
 
 <div class="toolbar">
@@ -184,6 +201,8 @@ module.exports = class {
 
     const ALL = JSON.parse(document.getElementById('ALL_DATA').textContent);
 
+    let activeOp = '';
+
     const lower = s => String(s||'').toLowerCase();
     const baseHref = n => (n === 0 ? "/inmuebles-solares" : \`/inmuebles-solares-\${n + 1}\`);
 
@@ -193,6 +212,7 @@ module.exports = class {
       if (maxI.value) qs.set('max', maxI.value);
       if (sectorSel.value) qs.set('sector', sectorSel.value);
       if (typeSel.value) qs.set('type', typeSel.value);
+      if (activeOp) qs.set('op', activeOp);
       qs.set('p', String(pageIndex || 0));
       return qs.toString();
     }
@@ -203,6 +223,7 @@ module.exports = class {
       if (q.has('max')) maxI.value = q.get('max');
       if (q.has('sector')) sectorSel.value = q.get('sector');
       if (q.has('type')) typeSel.value = q.get('type');
+      if (q.has('op')) setOp(q.get('op'), false);
       return q;
     }
 
@@ -215,7 +236,8 @@ module.exports = class {
         const okPrice  = p._priceNum >= min && p._priceNum <= max;
         const okSector = !sector || lower(p.sector) === sector;
         const okType   = !type || p._typeListLower.includes(type);
-        return okPrice && okSector && okType;
+        const okOp     = !activeOp || p._operation === activeOp;
+        return okPrice && okSector && okType && okOp;
       });
     }
 
@@ -226,7 +248,8 @@ module.exports = class {
         <div class="property-item"
              data-price="\${p._priceNum}"
              data-sector="\${lower(p.sector)}"
-             data-type="\${p._typeListLower.join('|')}">
+             data-type="\${p._typeListLower.join('|')}"
+             data-operation="\${p._operation}">
           <img src="/css/images-caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
           <div class="property-info">
             <h2>\${p.title}</h2>
@@ -271,9 +294,45 @@ module.exports = class {
       location.reload(); // volver al SSR con paginación estática
     });
 
+    function setOp(op, rerender){
+
+      activeOp = op || '';
+
+      document.querySelectorAll('.op-btn').forEach(b => {
+
+        const on = b.dataset.op === activeOp;
+
+        b.classList.toggle('is-active', on);
+
+        b.setAttribute('aria-pressed', String(on));
+
+      });
+
+      if (rerender) {
+
+        const qs = qsFromInputs(0);
+
+        history.replaceState(null, "", qs ? ('?' + qs) : location.pathname);
+
+        renderFiltered(0);
+
+      }
+
+    }
+
+
+    // Clicking the active button clears it and shows everything again.
+
+    document.querySelectorAll('.op-btn').forEach(b => {
+
+      b.addEventListener('click', () => setOp(activeOp === b.dataset.op ? '' : b.dataset.op, true));
+
+    });
+
+
     // Si hay query params, render en cliente sobre TODO el set
     const q = readQS();
-    if (['min','max','sector','type','p'].some(k => q.has(k))) {
+    if (['min','max','sector','type','p','op'].some(k => q.has(k))) {
       const pIdx = parseInt(q.get('p') || '0', 10) || 0;
       renderFiltered(pIdx);
     }
