@@ -35,6 +35,11 @@ espacios ni paréntesis.
 
 ## 2. Agregar la propiedad en `src/_data/properties.json`
 
+**El objeto nuevo va SIEMPRE de primero en el arreglo** (arriba del todo del
+archivo). El orden del arreglo es el orden en que salen las propiedades en la
+página de su zona, así que ponerlo primero hace que la propiedad nueva aparezca
+de primera en Santo Domingo, Punta Cana, etc.
+
 Copia un bloque existente y cambia los valores. `folder` es la ruta **a partir
 de** `images-caney/`:
 

@@ -69,7 +69,8 @@ Amenidades del residencial:
 ## Qué hace Claude con eso (no hay que pedirlo)
 
 1. Copia las fotos a `src/css/images-caney/<zona>/<nombre-slug>/`
-2. Agrega el objeto en `src/_data/properties.json` con los campos correctos
+2. Agrega el objeto **de primero** en `src/_data/properties.json`, para que la
+   propiedad salga primera en la página de su zona
 3. Escribe la descripción **solo con los datos que diste** (no inventa
    metraje, precios, amenidades ni ubicaciones)
 4. Ejecuta `check_properties.py`, `derive_listing_dates.py` y
@@ -82,6 +83,7 @@ Amenidades del residencial:
 
 - **No inventa nada.** Si no diste el año de construcción, esa fila no
   aparece; no se rellena con suposiciones.
+- **Las propiedades nuevas van siempre de primeras** en su zona.
 - Si la propiedad hace que un sector llegue a 2 inmuebles, se crea sola su
   página de zona (tabla comparativa, schema y enlace incluidos).
 - La propiedad entra sola en el sitemap, en la página de su zona, en los
