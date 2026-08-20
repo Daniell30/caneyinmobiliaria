@@ -33,6 +33,15 @@ function familyLabel(items) {
 
 const isLease = p => !/venta/i.test(S(p.price)) && /alquiler|renta/i.test(S(p.price));
 
+// "venta" | "alquiler" — an explicit `operation` on the listing wins over the
+// price string. Shared with the category templates so the quick filter, the
+// ficha tecnica and the sector-page labels can never disagree.
+function operationOf(p) {
+  const explicit = S(p.operation).trim().toLowerCase();
+  if (explicit) return /^(alq|rent)/.test(explicit) ? "alquiler" : "venta";
+  return isLease(p) ? "alquiler" : "venta";
+}
+
 // "Solares" and "Otro" are inventory categories, not places: never append
 // them to a sector name in a heading.
 const NON_PLACE_AREAS = new Set(["solares", "otro"]);
@@ -52,7 +61,7 @@ function sectorPages(props) {
   for (const { area, sector, items } of groups.values()) {
     if (items.length < MIN_LISTINGS) continue;
     const label = familyLabel(items);
-    const allSale = items.every(p => !isLease(p));
+    const allSale = items.every(p => operationOf(p) === "venta");
     const opPart = allSale ? " en venta" : "";          // mixed ops: no claim
     // placeSuffix is split out so link text can show just the sector name
     // while the full phrase stays in the anchor for crawlers/screen readers.
@@ -76,4 +85,4 @@ function sectorPageFor(props, p) {
   return sectorPages(props).find(sp => `${sp.area}|${sp.sector}` === key) || null;
 }
 
-module.exports = { sectorPages, sectorPageFor, MIN_LISTINGS };
+module.exports = { sectorPages, sectorPageFor, operationOf, MIN_LISTINGS };

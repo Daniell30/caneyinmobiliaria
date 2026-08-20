@@ -1,5 +1,34 @@
 [
  {
+  "title": "Apartamento amueblado en alquiler en El Millón",
+  "filename": "ApartamentoElMillonAlquiler",
+  "area": "Santo Domingo",
+  "sector": "El Millón",
+  "type": "Apartamento",
+  "location": "El Millón, Distrito Nacional",
+  "price": "US$950 mensuales (alquiler)",
+  "size": "90 m² de construcción",
+  "bedrooms": "1",
+  "bathrooms": "1 baño",
+  "operation": "",
+  "parking": "Techado",
+  "level": "",
+  "yearBuilt": "",
+  "condition": "",
+  "furnished": "Sí",
+  "status": "",
+  "updated": "",
+  "faq": [],
+  "folder": "santo-domingo/el-millon-alquiler",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png"
+  ],
+  "description": "Apartamento amueblado en alquiler en el Sector El Millón, Distrito Nacional, con 90 m² de construcción distribuidos en dos niveles. Cuenta con 1 habitación, 1 baño y terraza privada. El residencial ofrece piscina, gimnasio, parqueo techado y planta eléctrica. Precio de alquiler: US$950.00 mensuales."
+ },
+ {
   "title": "Proyecto residencial en Sector Honduras",
   "filename": "ProyectoResidencialSectorHonduras",
   "area": "Santo Domingo",
