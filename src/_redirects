@@ -23,6 +23,9 @@
 /inmuebles%20otro  /inmuebles-otro  301!
 
 # Listing pages: .html -> extensionless (generated per listing)
+/apartamento-en-alquiler-en-av-enriquillo-los-cacicazgos.html  /apartamento-en-alquiler-en-av-enriquillo-los-cacicazgos  301!
+/apartamento-en-bella-vista-proximo-a-av-anacaona-bella-vista.html  /apartamento-en-bella-vista-proximo-a-av-anacaona-bella-vista  301!
+/apartamento-amueblado-en-alquiler-en-el-millon-el-millon.html  /apartamento-amueblado-en-alquiler-en-el-millon-el-millon  301!
 /proyecto-residencial-en-sector-honduras-sector-honduras.html  /proyecto-residencial-en-sector-honduras-sector-honduras  301!
 /apartamento-clasico-en-av-enriquillo-los-cacicazgos-los-cacicazgos.html  /apartamento-clasico-en-av-enriquillo-los-cacicazgos-los-cacicazgos  301!
 /apartamento-en-alquiler-en-piantini-piantini.html  /apartamento-en-alquiler-en-piantini-piantini  301!
@@ -53,7 +56,6 @@
 /vivienda-de-lujo-la-julia-2-niveles-la-julia.html  /vivienda-de-lujo-la-julia-2-niveles-la-julia  301!
 /proyecto-residencial-las-americas-sde-las-americas.html  /proyecto-residencial-las-americas-sde-las-americas  301!
 /apartamento-en-el-millon-el-millon.html  /apartamento-en-el-millon-el-millon  301!
-/apartamento-amueblado-en-alquiler-en-el-millon-el-millon.html  /apartamento-amueblado-en-alquiler-en-el-millon-el-millon  301!
 /vivienda-en-costa-verde-santo-domingo-oeste-costa-verde.html  /vivienda-en-costa-verde-santo-domingo-oeste-costa-verde  301!
 /casa-ciudad-modelo-2-niveles-ciudad-modelo.html  /casa-ciudad-modelo-2-niveles-ciudad-modelo  301!
 /local-comercial-distrito-nacional-27-de-febrero.html  /local-comercial-distrito-nacional-27-de-febrero  301!
@@ -80,6 +82,18 @@
 /las-terrenas-playa-bonita-proyecto-residencial-playa-bonita.html  /las-terrenas-playa-bonita-proyecto-residencial-playa-bonita  301!
 /villa-ana-playa-nueva-romana-playa-nueva-romana.html  /villa-ana-playa-nueva-romana-playa-nueva-romana  301!
 /apartamento-en-cabarete-con-vista-al-mar-cabarete.html  /apartamento-en-cabarete-con-vista-al-mar-cabarete  301!
+
+# Zone pages: previous slug -> current slug
+/apartamentos-en-venta-los-cacicazgos  /apartamentos-los-cacicazgos  301!
+/apartamentos-bella-vista  /apartamentos-en-venta-bella-vista  301!
+/apartamentos-en-venta-el-millon  /apartamentos-el-millon  301!
+/apartamentos-en-venta-la-esperilla  /apartamentos-la-esperilla  301!
+/apartamentos-gazcue  /apartamentos-en-venta-gazcue  301!
+/propiedades-ciudad-modelo  /propiedades-en-venta-ciudad-modelo  301!
+/solares-punta-caucedo  /solares-en-venta-punta-caucedo  301!
+/solares-juan-dolio  /solares-en-venta-juan-dolio  301!
+/villas-cap-cana  /villas-en-venta-cap-cana  301!
+/propiedades-punta-cana  /propiedades-en-venta-punta-cana  301!
 
 # Renamed assets (spaces/parens removed). Netlify SERVES files
 # case-insensitively (case-only renames need no rule) but MATCHES
