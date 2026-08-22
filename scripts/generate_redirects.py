@@ -18,6 +18,7 @@ Rerun after inventory changes:  python3 scripts/generate_redirects.py
 import json
 import os
 import re
+import subprocess
 import sys
 import unicodedata
 import urllib.parse
@@ -35,6 +36,93 @@ def slugify(s):
 
 def enc(path):
     return urllib.parse.quote(path, safe="/()!_.~-")
+
+
+# Mirrors src/_utils/sectors.js (the build-time source of truth). verify_zone_slugs()
+# executes that JS and aborts if the two disagree, because a stale mapping here
+# would leave a zone page 404-ing.
+FAMILY = {"apartamento": "Apartamentos", "penthouse": "Apartamentos",
+          "villa": "Villas", "casa": "Casas", "solar": "Solares"}
+NON_PLACE_AREAS = {"solares", "otro"}
+MIN_LISTINGS = 2
+
+
+def _types(p):
+    t = p.get("type")
+    return [str(x).strip().lower() for x in (t if isinstance(t, list) else [t]) if str(x).strip()]
+
+
+def _is_lease(p):
+    price = str(p.get("price") or "")
+    return not re.search(r"venta", price, re.I) and bool(re.search(r"alquiler|renta", price, re.I))
+
+
+def _operation(p):
+    explicit = str(p.get("operation") or "").strip().lower()
+    if explicit:
+        return "alquiler" if re.match(r"^(alq|rent)", explicit) else "venta"
+    return "alquiler" if _is_lease(p) else "venta"
+
+
+def sector_pages(props):
+    """Active zone pages, plus the slug each one would have under the opposite
+    sale/rental mix — that alternative is what must 301 to the live page."""
+    groups = {}
+    for p in props:
+        sector, area = str(p.get("sector") or "").strip(), str(p.get("area") or "").strip()
+        if sector and area:
+            groups.setdefault((area, sector), []).append(p)
+
+    pages = []
+    for (area, sector), items in groups.items():
+        if len(items) < MIN_LISTINGS:
+            continue
+        labels = set()
+        generic = False
+        for p in items:
+            for t in _types(p):
+                if t not in FAMILY:
+                    generic = True
+                else:
+                    labels.add(FAMILY[t])
+        label = "Propiedades" if (generic or len(labels) != 1) else next(iter(labels))
+        all_sale = all(_operation(p) == "venta" for p in items)
+        slug = slugify(f"{label}{' en venta' if all_sale else ''} {sector}")
+        alt = slugify(f"{label}{'' if all_sale else ' en venta'} {sector}")
+        pages.append({"slug": slug, "alt": alt})
+    return pages
+
+
+def verify_zone_slugs(props, computed):
+    """Run the real sectors.js and abort if this file's mirror has drifted.
+    Uses JavaScriptCore via osascript (macOS); skipped elsewhere."""
+    js_path = os.path.join(ROOT, "src/_utils/sectors.js")
+    slug_path = os.path.join(ROOT, "src/_utils/slugify.js")
+    driver = (
+        "var SLUG=%s, SECT=%s;\n"
+        "function req(n){ if(n.indexOf('slugify')>=0){var m={exports:{}};"
+        "(new Function('module',SLUG))(m);return m.exports;} throw new Error('x'); }\n"
+        "var m={exports:{}};(new Function('require','module','exports',SECT))(req,m,m.exports);\n"
+        "JSON.stringify(m.exports.sectorPages(%s).map(function(p){return p.slug;}));"
+        % (json.dumps(open(slug_path).read()), json.dumps(open(js_path).read()),
+           json.dumps(props))
+    )
+    try:
+        out = subprocess.run(["osascript", "-l", "JavaScript", "-e", driver],
+                             capture_output=True, text=True, timeout=120)
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        print("  (aviso: no se pudo verificar contra sectors.js; se omite el chequeo)")
+        return
+    if out.returncode != 0:
+        print("  (aviso: sectors.js no se pudo ejecutar; se omite el chequeo)")
+        return
+    from_js = set(json.loads(out.stdout))
+    from_py = {z["slug"] for z in computed}
+    if from_js != from_py:
+        print("ERROR: este script y src/_utils/sectors.js no coinciden en las páginas de zona.")
+        print(f"  solo en sectors.js: {sorted(from_js - from_py)}")
+        print(f"  solo aquí:          {sorted(from_py - from_js)}")
+        sys.exit(1)
 
 
 def main():
@@ -79,6 +167,17 @@ def main():
     for p in props:
         slug = f"{slugify(p['title'])}-{slugify(p.get('sector') or p.get('area') or '')}"
         lines.append(f"/{slug}.html  /{slug}  301!")
+
+    # Zone pages: the slug carries "en venta" only while every listing in the
+    # sector is a sale. Adding one rental flips the URL, so the previous form
+    # must keep resolving.
+    zone = sector_pages(props)
+    verify_zone_slugs(props, zone)
+    active = {z["slug"] for z in zone}
+    zone_lines = [f"/{z['alt']}  /{z['slug']}  301!"
+                  for z in zone if z["alt"] != z["slug"] and z["alt"] not in active]
+    if zone_lines:
+        lines += ["", "# Zone pages: previous slug -> current slug"] + zone_lines
 
     lines += ["", "# Renamed assets (spaces/parens removed). Netlify SERVES files",
               "# case-insensitively (case-only renames need no rule) but MATCHES",

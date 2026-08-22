@@ -83,6 +83,18 @@
 /villa-ana-playa-nueva-romana-playa-nueva-romana.html  /villa-ana-playa-nueva-romana-playa-nueva-romana  301!
 /apartamento-en-cabarete-con-vista-al-mar-cabarete.html  /apartamento-en-cabarete-con-vista-al-mar-cabarete  301!
 
+# Zone pages: previous slug -> current slug
+/apartamentos-en-venta-los-cacicazgos  /apartamentos-los-cacicazgos  301!
+/apartamentos-bella-vista  /apartamentos-en-venta-bella-vista  301!
+/apartamentos-en-venta-el-millon  /apartamentos-el-millon  301!
+/apartamentos-en-venta-la-esperilla  /apartamentos-la-esperilla  301!
+/apartamentos-gazcue  /apartamentos-en-venta-gazcue  301!
+/propiedades-ciudad-modelo  /propiedades-en-venta-ciudad-modelo  301!
+/solares-punta-caucedo  /solares-en-venta-punta-caucedo  301!
+/solares-juan-dolio  /solares-en-venta-juan-dolio  301!
+/villas-cap-cana  /villas-en-venta-cap-cana  301!
+/propiedades-punta-cana  /propiedades-en-venta-punta-cana  301!
+
 # Renamed assets (spaces/parens removed). Netlify SERVES files
 # case-insensitively (case-only renames need no rule) but MATCHES
 # redirect sources case-sensitively — so each rule is emitted both
