@@ -1,5 +1,35 @@
 [
  {
+  "title": "Apartamento amueblado en alquiler en Zona Universitaria",
+  "filename": "ApartamentoZonaUniversitariaAlquiler",
+  "area": "Santo Domingo",
+  "sector": "Zona Universitaria",
+  "type": "Apartamento",
+  "location": "Zona Universitaria, Distrito Nacional",
+  "price": "US$850 mensuales (alquiler, mantenimiento incluido)",
+  "size": "",
+  "bedrooms": "1",
+  "bathrooms": "1.5 baños",
+  "operation": "",
+  "parking": "1",
+  "level": "",
+  "yearBuilt": "",
+  "condition": "",
+  "furnished": "Sí",
+  "status": "",
+  "updated": "",
+  "faq": [],
+  "folder": "santo-domingo/zona-universitaria-alquiler",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png"
+  ],
+  "description": "Este acogedor apartamento amueblado es ideal para quienes buscan un espacio moderno, práctico y listo para habitar, en una de las zonas más céntricas de Santo Domingo. Cuenta con 1 habitación, 1.5 baños y 1 parqueo, totalmente amueblado. El edificio ofrece gimnasio y área social con piscina y espacio para niños. Alquiler: US$850 mensuales, mantenimiento incluido."
+ },
+ {
   "title": "Apartamento en alquiler en Av. Enriquillo",
   "filename": "ApartamentoAvEnriquilloAlquiler",
   "area": "Santo Domingo",
