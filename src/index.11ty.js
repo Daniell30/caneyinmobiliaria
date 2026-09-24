@@ -122,6 +122,7 @@ module.exports = class {
         <a href="/inmuebles-juan-dolio">Juan Dolio</a>
         <a href="/inmuebles-solares">Solares</a>
         <a href="/inmuebles-otro">Otro</a>
+        <a href="/vender/" class="nav-vender">Vender</a>
       </div>
     </nav>
   </header>

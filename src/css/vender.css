@@ -1,0 +1,242 @@
+/* Página "Quiero vender". Hereda tipografía, colores y sombras de
+   caneyvisual.css, que se carga antes. */
+
+.navbar--simple {
+  justify-content: center;
+  padding: 0.9rem 1.5rem;
+}
+.navbar--simple .logo {
+  height: 84px;
+  width: auto;
+}
+
+.vender {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+/* —— Columna izquierda: confianza —— */
+.vender-intro h1 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--caney-text);
+  margin: 0 0 1rem;
+}
+
+.vender-lead {
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--caney-muted);
+  margin: 0 0 1.75rem;
+}
+
+.vender-equipo {
+  margin: 0 0 1.75rem;
+}
+.vender-equipo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 22px;
+  box-shadow: var(--caney-shadow);
+}
+.vender-equipo figcaption {
+  margin-top: 0.6rem;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 0.85rem;
+  color: var(--caney-muted);
+  text-align: center;
+}
+
+.vender-puntos {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.vender-puntos li {
+  position: relative;
+  padding-left: 1.6rem;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--caney-text);
+}
+.vender-puntos li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e6ccaa;
+}
+.vender-puntos strong {
+  font-family: "Montserrat Bold", sans-serif;
+  font-weight: 700;
+}
+
+.vender-directo {
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 0.95rem;
+  color: var(--caney-muted);
+}
+.vender-directo a {
+  color: var(--caney-text);
+  font-family: "Montserrat Bold", sans-serif;
+}
+
+/* —— Columna derecha: formulario —— */
+.vender-form-wrap {
+  background: var(--caney-surface);
+  border: 1px solid var(--caney-border);
+  border-radius: 26px;
+  box-shadow: var(--caney-shadow);
+  padding: 2rem;
+}
+.vender-form-wrap h2 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--caney-text);
+  margin: 0 0 1.5rem;
+}
+
+.vender-form { display: grid; gap: 1.1rem; }
+
+.campo { display: grid; gap: 0.4rem; min-width: 0; }
+.campo-fila {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.campo label {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--caney-muted);
+}
+.campo span[aria-hidden] { color: #b08f7d; }
+
+.vender-form input[type="text"],
+.vender-form input[type="tel"],
+.vender-form input[type="email"],
+.vender-form select,
+.vender-form textarea {
+  width: 100%;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 1rem;
+  color: var(--caney-text);
+  background: #fff;
+  border: 1px solid var(--caney-border);
+  border-radius: 14px;
+  padding: 0.75rem 0.9rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.vender-form textarea { resize: vertical; line-height: 1.55; }
+.vender-form input:focus,
+.vender-form select:focus,
+.vender-form textarea:focus {
+  outline: none;
+  border-color: #e6ccaa;
+  box-shadow: 0 0 0 4px rgba(230, 204, 170, 0.28);
+}
+
+.campo--check {
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 1.5rem;
+  align-items: center;
+}
+.campo--check label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 0.98rem;
+  color: var(--caney-text);
+}
+.campo--check input { accent-color: #b08f7d; width: 18px; height: 18px; }
+
+.vender-submit {
+  margin-top: 0.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: #e6ccaa;
+  color: var(--caney-text);
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 1rem;
+  padding: 0.95rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+.vender-submit:hover,
+.vender-submit:focus-visible {
+  background: #d9bb93;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px rgba(127, 101, 88, 0.18);
+}
+
+.vender-nota {
+  margin: 0;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 0.85rem;
+  color: var(--caney-muted);
+  text-align: center;
+}
+
+/* Trampa antispam de Netlify: invisible para personas. */
+.vender-hp { position: absolute; left: -5000px; }
+
+/* —— Página de gracias —— */
+.gracias {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+  text-align: center;
+}
+.gracias h1 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  color: var(--caney-text);
+  margin: 0 0 1rem;
+}
+.gracias p {
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--caney-muted);
+  margin: 0 0 1.75rem;
+}
+.gracias .vender-submit { display: inline-block; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .vender {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding-top: 1.75rem;
+  }
+  .vender-form-wrap { padding: 1.5rem; }
+}
+
+@media (max-width: 560px) {
+  .campo-fila { grid-template-columns: 1fr; }
+  .campo--check { grid-auto-flow: row; gap: 0.6rem; }
+  .navbar--simple .logo { height: 68px; }
+}
