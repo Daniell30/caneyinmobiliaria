@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const slugify = require("./_utils/slugify");
 const { sectorPages, operationOf } = require("./_utils/sectors");
+const { priceParts } = require("./_utils/price");
 
 const PER_PAGE = 20; // cards per page
 
@@ -95,6 +96,8 @@ module.exports = class {
       const typeData = (Array.isArray(p.type) ? p.type : [p.type || ""])
         .map(t => String(t).toLowerCase()).filter(Boolean).join("|");
       const href = `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`;
+      const pp = priceParts(p.price);
+      const op = operationOf(p);
 
       return `
         <div class="property-item"
@@ -104,9 +107,11 @@ module.exports = class {
              data-operation="${operationOf(p)}">
           <img src="/css/images-caney/${p.folder}/${img}" alt="${p.title}" class="property-image">
           <div class="property-info">
+            ${pp.main ? `<p class="card-price">${pp.main}</p>` : ""}
+            ${op === "alquiler" ? `<p class="card-op">Alquiler</p>` : ""}
+            ${pp.note ? `<p class="card-price-note">${pp.note}</p>` : ""}
             <h2>${p.title}</h2>
             <p>Ubicación: ${p.location || ""}</p>
-            ${p.price ? `<p>Precio: ${p.price}</p>` : ""}
             ${p.size  ? `<p>Metraje: ${p.size}</p>` : ""}
             ${sector  ? `<p>Sector: ${sector}</p>` : ""}
             ${typeLabel ? `<p>Tipo: ${typeLabel}</p>` : ""}
@@ -129,6 +134,8 @@ module.exports = class {
       _href: `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`,
       _priceNum: priceNum(p.price),
       _operation: operationOf(p),
+      _priceMain: priceParts(p.price).main,
+      _priceNote: priceParts(p.price).note,
       _sectorLower: String(p.sector || "").toLowerCase(),
       _typeListLower: (Array.isArray(p.type) ? p.type : (p.type ? [p.type] : []))
         .map(t => String(t).toLowerCase()).filter(Boolean)
@@ -257,9 +264,11 @@ module.exports = class {
              data-operation="\${p._operation}">
           <img src="/css/images-caney/\${p.folder}/\${img}" alt="\${p.title}" class="property-image">
           <div class="property-info">
+            \${p._priceMain ? \`<p class="card-price">\${p._priceMain}</p>\` : ""}
+            \${p._operation === "alquiler" ? \`<p class="card-op">Alquiler</p>\` : ""}
+            \${p._priceNote ? \`<p class="card-price-note">\${p._priceNote}</p>\` : ""}
             <h2>\${p.title}</h2>
             <p>Ubicación: \${p.location || ""}</p>
-            \${p.price ? \`<p>Precio: \${p.price}</p>\` : ""}
             \${p.size  ? \`<p>Metraje: \${p.size}</p>\` : ""}
             \${p.sector? \`<p>Sector: \${p.sector}</p>\` : ""}
             \${typeLabel ? \`<p>Tipo: \${typeLabel}</p>\` : ""}

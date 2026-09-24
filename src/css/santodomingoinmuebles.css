@@ -262,12 +262,55 @@ h1 {
 
 .property-info h2,
 .property-info h3 {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.5rem;
   color: var(--caney-text);
+  font-family: "Montserrat Bold", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.02rem, 1.15vw, 1.15rem);
+  line-height: 1.3;
+}
+
+/* Precio como titular de la tarjeta (petición 2, al estilo de los portales):
+   es el dato que más se compara al escanear un listado. */
+.property-info .card-price {
+  margin: 0;
+  color: var(--caney-text);
+  font-family: "Montserrat Bold", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.35rem, 1.7vw, 1.6rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+/* Subtítulo fino: sólo aparece en alquileres. */
+.property-info .card-op {
+  margin: 0.15rem 0 0;
   font-family: "Montserrat Light", sans-serif;
-  font-size: clamp(1.15rem, 1.35vw, 1.4rem);
   font-weight: 300;
-  line-height: 1.25;
+  font-size: 0.9rem;
+  color: var(--caney-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Resto del precio (mantenimiento incluido, negociable, segunda opción…). */
+.property-info .card-price-note {
+  margin: 0.2rem 0 0;
+  font-family: "Montserrat Light", sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--caney-muted);
+}
+
+/* Separa el bloque de precio del título. */
+.property-info .card-price + h2,
+.property-info .card-price + h3,
+.property-info .card-op + h2,
+.property-info .card-op + h3,
+.property-info .card-price-note + h2,
+.property-info .card-price-note + h3 {
+  margin-top: 0.85rem;
 }
 
 .property-info p {
@@ -395,7 +438,11 @@ h1 {
 
   .property-info h2,
   .property-info h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+  }
+
+  .property-info .card-price {
+    font-size: 1.3rem;
   }
 
   .property-info p {

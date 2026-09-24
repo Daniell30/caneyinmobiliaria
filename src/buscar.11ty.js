@@ -7,6 +7,7 @@ const path = require("path");
 const slugify = require("./_utils/slugify");
 const { operationOf } = require("./_utils/sectors");
 const { searchSection, esc } = require("./_utils/search");
+const { priceParts } = require("./_utils/price");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
 
 const S = v => String(v ?? "");
@@ -37,6 +38,7 @@ module.exports = class {
       const tipos = (Array.isArray(p.type) ? p.type : [p.type]).map(t => norm(t)).filter(Boolean);
       const tipoLabel = Array.isArray(p.type) ? p.type.join(", ") : S(p.type);
       const size = Array.isArray(p.size) ? p.size.join(" / ") : S(p.size);
+      const pp = priceParts(p.price);
       return `
         <article class="property-item"
                  data-sector="${esc(norm(p.sector))}"
@@ -45,9 +47,11 @@ module.exports = class {
                  data-area="${esc(norm(p.area))}">
           <img src="${img}" alt="${esc(p.title)}" class="property-image" loading="lazy" decoding="async">
           <div class="property-info">
+            ${pp.main ? `<p class="card-price">${esc(pp.main)}</p>` : ""}
+            ${operationOf(p) === "alquiler" ? `<p class="card-op">Alquiler</p>` : ""}
+            ${pp.note ? `<p class="card-price-note">${esc(pp.note)}</p>` : ""}
             <h2>${esc(p.title)}</h2>
             <p>Ubicación: ${esc(p.location)}</p>
-            ${p.price ? `<p>Precio: ${esc(p.price)}</p>` : ""}
             ${size ? `<p>Metraje: ${esc(size)}</p>` : ""}
             ${p.sector ? `<p>Sector: ${esc(p.sector)}</p>` : ""}
             ${tipoLabel ? `<p>Tipo: ${esc(tipoLabel)}</p>` : ""}
