@@ -301,6 +301,34 @@ header {
   stroke-linecap: round;
 }
 
+/* Atajo bajo el buscador: lleva a /buscar/?op=alquiler, que ya lista todos
+   los alquileres. Deliberadamente más discreto que las pestañas para que se
+   lea como acceso rápido y no compita con la acción principal. */
+.search-quick {
+  margin: 0.85rem 0 0;
+  text-align: center;
+}
+
+.search-pill {
+  display: inline-block;
+  padding: 0.42rem 1rem;
+  border: 1px solid var(--caney-border);
+  border-radius: 999px;
+  background: var(--caney-surface);
+  color: var(--caney-text);
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+.search-pill:hover,
+.search-pill:focus-visible {
+  background: rgba(230, 204, 170, 0.35);
+  border-color: var(--caney-border-strong);
+  color: var(--caney-text);
+}
+
 /* Sugerencias de sector */
 .search-suggestions {
   position: absolute;

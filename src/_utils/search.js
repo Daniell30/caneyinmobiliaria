@@ -52,6 +52,10 @@ function searchSection(sectors, types) {
       </button>
     </form>
 
+    <p class="search-quick">
+      <a class="search-pill" href="/buscar/?op=alquiler">Todos los alquileres</a>
+    </p>
+
     <script id="SECTORS_DATA" type="application/json">${JSON.stringify(sectors)}</script>
 
   <script>
