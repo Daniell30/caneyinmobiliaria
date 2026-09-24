@@ -1,11 +1,28 @@
+/* Montserrat variable (100-900): un solo archivo cubre todos los pesos.
+   'Montserrat Light' (300) sustituye a la antigua Poppins Thin y
+   'Montserrat Bold' (700) a Poppins Bold, así los selectores existentes
+   siguen expresando la intención tipográfica sin repetir font-weight. */
+@font-face {
+  font-family: Montserrat;
+  src: url(/css/fonts/montserrat-variablefont-wght.ttf);
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat Light";
+  src: url(/css/fonts/montserrat-variablefont-wght.ttf);
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(/css/fonts/montserrat-variablefont-wght.ttf);
+  font-weight: 700;
+  font-display: swap;
+}
+
 /* styles.css */
 /* —— color palette from your ring logo —— */
-@font-face { font-family: Rubik; src: url(/css/fonts/rubik-variablefont-wght.ttf); }
-   @font-face { font-family: Poppins; src: url(/css/fonts/poppins-thin.ttf); }
-   @font-face { font-family: 'Poppins Bold'; src: url(/css/fonts/poppins-bold.ttf); }
-   
-
-
 :root {
     --bg: #fcf6f0;             /* warm beige */
     --white: #333;          /* white glow */
@@ -22,7 +39,7 @@
   body {
     background: var(--bg);
     color: var(--white);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "Montserrat Light", sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -103,7 +120,7 @@
   }
   
   .contactanos {
-    font-family: 'Poppins Bold', sans-serif;
+    font-family: "Montserrat Bold", sans-serif;
     color:#353232;
     font-size: 25px;
   }

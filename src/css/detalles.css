@@ -1,18 +1,25 @@
+/* Montserrat variable (100-900): un solo archivo cubre todos los pesos.
+   'Montserrat Light' (300) sustituye a la antigua Poppins Thin y
+   'Montserrat Bold' (700) a Poppins Bold, así los selectores existentes
+   siguen expresando la intención tipográfica sin repetir font-weight. */
 @font-face {
-  font-family: Rubik;
-  src: url(fonts/rubik-variablefont-wght.ttf);
+  font-family: Montserrat;
+  src: url(fonts/montserrat-variablefont-wght.ttf);
+  font-weight: 100 900;
+  font-display: swap;
 }
-
 @font-face {
-  font-family: Poppins;
-  src: url(fonts/poppins-thin.ttf);
+  font-family: "Montserrat Light";
+  src: url(fonts/montserrat-variablefont-wght.ttf);
+  font-weight: 300;
+  font-display: swap;
 }
-
 @font-face {
-  font-family: Poppins Bold;
-  src: url(fonts/poppins-bold.ttf);
+  font-family: "Montserrat Bold";
+  src: url(fonts/montserrat-variablefont-wght.ttf);
+  font-weight: 700;
+  font-display: swap;
 }
-
 
 /* --- Global Styles --- */
 body {
@@ -143,10 +150,10 @@ nav img:hover {
 .property-details {
   flex: 1 1 400px;
   padding: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Montserrat Light", sans-serif;
 }
 .property-title {
-  font-family: 'Poppins Bold', sans-serif;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 2em;
   margin-bottom: 10px;
   color: #353232;
@@ -154,7 +161,7 @@ nav img:hover {
 .property-location,
 .property-price,
 .property-size {
-  font-family: Rubik;
+  font-family: Montserrat;
   font-size: 1.2em;
   font-weight: 300;
   color: #353232;
@@ -168,12 +175,12 @@ nav img:hover {
   color: #353232;
   padding: 10px 20px;
   border-radius: 5px;
-  font-family: 'Poppins Bold', sans-serif;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 1em;
   transition: background-color 0.3s ease;
 }
 .property-description {
-  font-family: Poppins;
+  font-family: "Montserrat Light";
   font-weight: 700;
   font-size: 1em;
   color: #555;
@@ -189,7 +196,7 @@ nav img:hover {
   color: #353232;
   padding: 10px 20px;
   border-radius: 5px;
-  font-family: 'Poppins Bold', sans-serif;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 1em;
   transition: background-color 0.3s ease;
 }
@@ -211,15 +218,15 @@ footer span {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   font-size: 15px;
-  font-family: Poppins, sans-serif;
+  font-family: "Montserrat Light", sans-serif;
 }
 
 .footerbutton {
-  font-family: Poppins;
+  font-family: "Montserrat Light";
   color: #c0b79b;
   padding: 0px 40px;
   border-radius: 2px;
-  font-family: 'Poppins Bold', sans-serif;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 1em;
   transition: background-color 0.3s ease;
 }
@@ -270,7 +277,7 @@ footer span {
   display: inline-block;
   padding: 4px 12px;
   border-radius: 9999px;
-  font-family: 'Poppins Bold', sans-serif;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -296,7 +303,7 @@ footer span {
 }
 .spec-table caption {
   text-align: left;
-  font-family: 'Poppins Bold', sans-serif;
+  font-family: "Montserrat Bold", sans-serif;
   font-size: 1.05rem;
   padding-bottom: 8px;
 }
@@ -310,7 +317,7 @@ footer span {
 .spec-table th[scope="row"] {
   width: 38%;
   background: #faf5ef;
-  font-family: 'Poppins Bold', sans-serif;
+  font-family: "Montserrat Bold", sans-serif;
   font-weight: normal;
 }
 .spec-table tbody tr:nth-child(even) td { background: #fdfaf7; }
@@ -318,8 +325,8 @@ footer span {
 .sector-link { margin: 14px 0; }
 
 .property-faq { margin: 28px 0; }
-.property-faq h2 { font-family: 'Poppins Bold', sans-serif; font-size: 1.15rem; }
-.property-faq dt { font-family: 'Poppins Bold', sans-serif; margin-top: 12px; }
+.property-faq h2 { font-family: "Montserrat Bold", sans-serif; font-size: 1.15rem; }
+.property-faq dt { font-family: "Montserrat Bold", sans-serif; margin-top: 12px; }
 .property-faq dd { margin: 4px 0 0; }
 
 @media (max-width: 600px) {
