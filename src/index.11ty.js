@@ -2,6 +2,10 @@
 const fs = require("fs");
 const path = require("path");
 const slugify = require("./_utils/slugify");
+const { searchSection } = require("./_utils/search");
+
+
+
 
 module.exports = class {
   data() {
@@ -44,6 +48,15 @@ module.exports = class {
       })
       .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
+    // Sectores y tipos reales del catálogo, para el autocompletado y el
+    // desplegable del buscador.
+    const sectors = [...new Set(props.map(p => String(p.sector || "").trim()).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b, "es"));
+    const types = [...new Set(
+      props.flatMap(p => (Array.isArray(p.type) ? p.type : [p.type]))
+           .map(t => String(t || "").trim()).filter(Boolean)
+    )].sort((a, b) => a.localeCompare(b, "es"));
+
     return {
       // Use the shared layout (adds <html>, <head>, SEO tags)
       layout: "layouts/base.njk",
@@ -62,11 +75,13 @@ module.exports = class {
 
       // Page data
       slidesResolved,
+      sectors,
+      types,
       eleventyExcludeFromCollections: true,
     };
   }
 
-  render({ slidesResolved }) {
+  render({ slidesResolved, sectors, types }) {
     const sliderItems = (slidesResolved && slidesResolved.length
       ? slidesResolved
       : [
@@ -120,12 +135,13 @@ ${sliderItems}
     <button class="slider-btn next" aria-label="Siguiente">›</button>
   </section>
 
-  <!-- 2) ¿Qué buscas? -->
+  <!-- 2) Buscador + zonas -->
   <main class="members">
     <h1 class="home-title">Inmobiliaria Caney — propiedades en venta y alquiler en República Dominicana</h1>
 
+    ${searchSection(sectors, types)}
+
     <section class="search-section">
-      <h2 class="quebuscasopening">¿Qué buscas?</h2>
       <div class="quebuscas">
         <div class="SantoDomingo location-card">
           <img src="/css/images-caney/general/1.png" alt="Santo Domingo" class="icon" loading="lazy" decoding="async">
@@ -182,6 +198,7 @@ ${sliderItems}
   <footer>
     <span>Inmobiliaria Caney ${new Date().getFullYear()}</span>
   </footer>
+
 
   <!-- Mobile nav toggle -->
   <script>
