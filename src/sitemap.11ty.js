@@ -55,6 +55,10 @@ module.exports = class {
       }
     }
 
+    // Páginas fijas
+    urls.push(`${base}/contact/`);
+    urls.push(`${base}/vender/`);
+
     // Sector aggregate pages
     for (const sp of sectorPages(props)) urls.push(`${base}/${sp.slug}`);
 

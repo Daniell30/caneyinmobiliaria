@@ -6,7 +6,8 @@
 const fs = require("fs");
 const path = require("path");
 const slugify = require("./_utils/slugify");
-const { sectorPages } = require("./_utils/sectors");
+const { sectorPages, operationOf } = require("./_utils/sectors");
+const { priceParts } = require("./_utils/price");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
 
 const S = v => String(v ?? "");
@@ -48,12 +49,15 @@ module.exports = class {
     const cards = items.map((p) => {
       const img = (p.images && p.images[0])
         ? `/css/images-caney/${S(p.folder)}/${S(p.images[0])}` : S(site.logo);
+      const pp = priceParts(p.price);
       return `<article class="property-item">
           <img src="${img}" alt="${esc(p.title)}" class="property-image" loading="lazy" decoding="async">
           <div class="property-info">
+            ${pp.main ? `<p class="card-price">${esc(pp.main)}</p>` : ""}
+            ${operationOf(p) === "alquiler" ? `<p class="card-op">Alquiler</p>` : ""}
+            ${pp.note ? `<p class="card-price-note">${esc(pp.note)}</p>` : ""}
             <h3>${esc(p.title)}</h3>
             <p>Ubicación: ${esc(p.location)}</p>
-            ${p.price ? `<p>Precio: ${esc(p.price)}</p>` : ""}
             ${p.size ? `<p>Metraje: ${esc(Array.isArray(p.size) ? p.size.join(" / ") : p.size)}</p>` : ""}
             <a href="/${listingSlug(p)}" class="view-details">Ver Detalles</a>
           </div>
