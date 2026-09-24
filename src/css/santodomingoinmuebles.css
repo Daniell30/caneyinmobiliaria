@@ -100,6 +100,14 @@ h1 {
   padding-right: 1.5rem;
 }
 
+/* Rejilla de tarjetas: 3 por fila en escritorio, 2 en tableta, 1 en móvil. */
+.property-listing {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
 .toolbar {
   display: flex;
   justify-content: flex-end;
@@ -203,10 +211,9 @@ h1 {
 }
 
 .property-item {
-  display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  gap: 1.5rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
   background: var(--caney-surface);
   border: 1px solid var(--caney-border);
   border-radius: 24px;
@@ -222,8 +229,9 @@ h1 {
 }
 
 .property-image {
-  width: 240px;
-  height: 240px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
   object-fit: cover;
   object-position: center;
   border-radius: 18px;
@@ -233,19 +241,27 @@ h1 {
 
 .property-info {
   min-width: 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.4rem;
 }
 
-.property-info h2 {
+/* El CTA se pega al fondo para que quede a la misma altura en toda la fila. */
+.property-info .view-details {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.property-info h2,
+.property-info h3 {
   margin: 0 0 0.4rem;
   color: var(--caney-text);
   font-family: "Montserrat Light", sans-serif;
-  font-size: clamp(1.7rem, 2vw, 2.35rem);
+  font-size: clamp(1.15rem, 1.35vw, 1.4rem);
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.25;
 }
 
 .property-info p {
@@ -303,13 +319,8 @@ h1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .property-item {
-    grid-template-columns: 220px minmax(0, 1fr);
-  }
-
-  .property-image {
-    width: 220px;
-    height: 220px;
+  .property-listing {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -345,32 +356,17 @@ h1 {
     grid-template-columns: 1fr 1fr;
   }
 
-  .property-item {
+  .property-listing {
     grid-template-columns: 1fr;
-    gap: 1.1rem;
+    gap: 1.25rem;
+  }
+
+  .property-item {
     padding: 1rem;
   }
 
   .property-image {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    justify-self: center;
-  }
-
-  .property-info {
-    text-align: center;
-    align-items: center;
-  }
-
-  .property-info h2 {
-    font-size: 1.8rem;
-  }
-
-  .view-details {
-    align-self: center;
-    width: min(100%, 320px);
+    aspect-ratio: 16 / 10;
   }
 
   .pager {
@@ -391,8 +387,9 @@ h1 {
     width: 100%;
   }
 
-  .property-info h2 {
-    font-size: 1.55rem;
+  .property-info h2,
+  .property-info h3 {
+    font-size: 1.15rem;
   }
 
   .property-info p {
