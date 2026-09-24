@@ -348,7 +348,9 @@ header {
     padding-left: 0;
   }
   .search-submit { justify-content: center; width: 100%; }
-  .search-suggestions { position: static; box-shadow: none; border: 0; padding: 0.2rem 0; }
+  /* El desplegable sigue siendo absoluto también en móvil: en estático se
+     colocaba como hermano flex, es decir al lado del campo en vez de debajo. */
+  .search-suggestions { max-height: 13rem; }
 }
 
 .search-section {

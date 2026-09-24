@@ -222,6 +222,12 @@ h1 {
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
+/* El atributo hidden tiene que ganarle al display:flex de la tarjeta; si no,
+   /buscar/ marca las tarjetas como ocultas pero se siguen viendo todas. */
+.property-item[hidden] {
+  display: none;
+}
+
 .property-item:hover {
   transform: translateY(-3px);
   box-shadow: var(--caney-shadow-hover);

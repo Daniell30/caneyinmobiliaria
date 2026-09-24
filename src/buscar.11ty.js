@@ -122,15 +122,27 @@ module.exports = class {
     if (visible) visibles += 1;
   });
 
-  const partes = [];
-  if (params.get('tipo'))   partes.push(params.get('tipo'));
-  if (params.get('sector')) partes.push('en ' + params.get('sector'));
-  if (op === 'venta')       partes.push('en venta');
-  if (op === 'alquiler')    partes.push('en alquiler');
+  // Titular en español natural: "Apartamentos en venta en Bella Vista".
+  const PLURAL = {
+    'Apartamento': 'Apartamentos', 'Casa': 'Casas', 'Villa': 'Villas',
+    'Penthouse': 'Penthouses', 'Solar': 'Solares',
+    'Hotel Boutique': 'Hoteles boutique',
+    'Proyecto Residencial': 'Proyectos residenciales'
+  };
+  const tipoRaw = params.get('tipo') || '';
+  const sectorRaw = params.get('sector') || '';
+  let encabezado = tipoRaw ? (PLURAL[tipoRaw] || tipoRaw) : 'Propiedades';
+  if (op === 'venta') encabezado += ' en venta';
+  else if (op === 'alquiler') encabezado += ' en alquiler';
+  if (sectorRaw) encabezado += ' en ' + sectorRaw;
+  if (!tipoRaw && !sectorRaw && !op) encabezado = 'Todas las propiedades';
 
   const titulo = document.getElementById('resultadosTitulo');
   const resumen = document.getElementById('resultadosResumen');
-  if (partes.length && titulo) titulo.textContent = partes.join(' ');
+  if (titulo) {
+    titulo.textContent = encabezado;
+    document.title = encabezado + ' | Inmobiliaria Caney';
+  }
   if (resumen) {
     resumen.textContent = visibles === 1
       ? '1 propiedad encontrada'
