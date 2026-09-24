@@ -1,5 +1,36 @@
 [
  {
+  "title": "Apartamento en alquiler en Piantini",
+  "filename": "ApartamentoPiantiniAlquiler",
+  "area": "Santo Domingo",
+  "sector": "Piantini",
+  "type": "Apartamento",
+  "location": "Piantini, Distrito Nacional",
+  "price": "RD$52,000 mensuales (alquiler, mantenimiento incluido, opción a línea blanca por +RD$3,000)",
+  "size": "124 m²",
+  "bedrooms": "3",
+  "bathrooms": "2 baños",
+  "operation": "",
+  "parking": "1",
+  "level": "",
+  "yearBuilt": "",
+  "condition": "",
+  "furnished": "",
+  "status": "",
+  "updated": "2026-09-24",
+  "faq": [],
+  "folder": "santo-domingo/alquiler-piantini",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png"
+  ],
+  "description": "Apartamento en alquiler en Piantini, Distrito Nacional, con 124 m². Cuenta con 3 habitaciones, 2 baños y 1 parqueo. Incluye sala y comedor, cuarto de servicio y área de lavado. Precio de alquiler: RD$52,000 mensuales con mantenimiento incluido, con opción a línea blanca por RD$3,000 adicionales."
+ },
+ {
   "title": "Penthouse remodelado en venta en Los Cacicazgos",
   "filename": "PenthouseLosCacicazgosRemodelado",
   "area": "Santo Domingo",
@@ -222,37 +253,6 @@
    "9.png"
   ],
   "description": "Apartamento clásico en venta en Av. Enriquillo, Los Cacicazgos, con 180 m². Cuenta con 3 habitaciones, 2 baños, balcón, 1 parqueo, área de lavado y portón eléctrico. Una opción amplia y funcional en una ubicación privilegiada del Distrito Nacional."
- },
- {
-  "title": "Apartamento en alquiler en Piantini",
-  "filename": "ApartamentoPiantiniAlquiler",
-  "area": "Santo Domingo",
-  "sector": "Piantini",
-  "type": "Apartamento",
-  "location": "Piantini, Distrito Nacional",
-  "price": "US$1,000 (alquiler, mantenimiento incluido)",
-  "size": "124 m²",
-  "bedrooms": "3",
-  "bathrooms": "2 baños",
-  "operation": "",
-  "parking": "",
-  "level": "",
-  "yearBuilt": "",
-  "condition": "",
-  "furnished": "",
-  "status": "",
-  "updated": "",
-  "faq": [],
-  "folder": "santo-domingo/alquiler-piantini",
-  "images": [
-   "1.png",
-   "2.png",
-   "3.png",
-   "4.png",
-   "5.png",
-   "6.png"
-  ],
-  "description": "Apartamento en alquiler en Piantini, Distrito Nacional, con 124 m². Cuenta con 3 habitaciones, 2 baños y 1 parqueo. Incluye sala y comedor, cuarto de servicio y área de lavado. Precio de alquiler: US$1,000 con mantenimiento incluido."
  },
  {
   "title": "Apartamento en alquiler en Serrallés",
