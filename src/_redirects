@@ -65,7 +65,7 @@
 /solar-colindante-con-el-mirador-sur-mirador-sur-av-jose-contreras.html  /solar-colindante-con-el-mirador-sur-mirador-sur-av-jose-contreras  301!
 /solar-con-potencial-industrial-punta-caucedo-2-punta-caucedo.html  /solar-con-potencial-industrial-punta-caucedo-2-punta-caucedo  301!
 /solar-con-potencial-industrial-punta-caucedo-punta-caucedo.html  /solar-con-potencial-industrial-punta-caucedo-punta-caucedo  301!
-/solar-en-autopista-duarte-santo-domingo-oeste-santo-domingo-oeste.html  /solar-en-autopista-duarte-santo-domingo-oeste-santo-domingo-oeste  301!
+/solar-en-autopista-duarte-pedro-brand-pedro-brand.html  /solar-en-autopista-duarte-pedro-brand-pedro-brand  301!
 /solares-el-higuero-el-higuero.html  /solares-el-higuero-el-higuero  301!
 /solar-sabana-grande-de-palenque-sabana-grande-de-palenque.html  /solar-sabana-grande-de-palenque-sabana-grande-de-palenque  301!
 /solar-juan-dolio-22-132-m-juan-dolio.html  /solar-juan-dolio-22-132-m-juan-dolio  301!
@@ -84,6 +84,10 @@
 /las-terrenas-playa-bonita-proyecto-residencial-playa-bonita.html  /las-terrenas-playa-bonita-proyecto-residencial-playa-bonita  301!
 /villa-ana-playa-nueva-romana-playa-nueva-romana.html  /villa-ana-playa-nueva-romana-playa-nueva-romana  301!
 /apartamento-en-cabarete-con-vista-al-mar-cabarete.html  /apartamento-en-cabarete-con-vista-al-mar-cabarete  301!
+
+# Fichas renombradas: URL anterior -> URL actual
+/solar-en-autopista-duarte-santo-domingo-oeste-santo-domingo-oeste       /solar-en-autopista-duarte-pedro-brand-pedro-brand  301!
+/solar-en-autopista-duarte-santo-domingo-oeste-santo-domingo-oeste.html  /solar-en-autopista-duarte-pedro-brand-pedro-brand  301!
 
 # Zone pages: previous slug -> current slug
 /apartamentos-en-venta-los-cacicazgos  /apartamentos-los-cacicazgos  301!
