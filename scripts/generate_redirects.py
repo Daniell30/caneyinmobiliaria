@@ -5,6 +5,9 @@ Inputs:
   - src/_data/properties.json  (listing slugs: .html -> extensionless)
   - scripts/rename-map.json    (old asset URL -> new asset URL, from the
                                 Phase 1 bulk rename)
+  - scripts/legacy-slugs.json  (old listing slug -> current slug, para cuando
+                                se renombra o recategoriza una propiedad ya
+                                publicada y su URL cambia)
 
 Netlify notes:
   - first match wins; `301!` forces the redirect even when a file exists
@@ -128,6 +131,8 @@ def verify_zone_slugs(props, computed):
 def main():
     props = json.load(open(os.path.join(ROOT, "src/_data/properties.json")))
     rename_map = json.load(open(os.path.join(ROOT, "scripts/rename-map.json")))
+    legacy_path = os.path.join(ROOT, "scripts/legacy-slugs.json")
+    legacy_slugs = json.load(open(legacy_path)) if os.path.exists(legacy_path) else {}
 
     lines = [
         "# GENERATED FILE — do not edit by hand.",
@@ -167,6 +172,26 @@ def main():
     for p in props:
         slug = f"{slugify(p['title'])}-{slugify(p.get('sector') or p.get('area') or '')}"
         lines.append(f"/{slug}.html  /{slug}  301!")
+
+    # Fichas renombradas: cambiar el título o el sector de una propiedad ya
+    # publicada cambia su URL, así que la anterior tiene que seguir resolviendo.
+    if legacy_slugs:
+        current = {
+            f"{slugify(p['title'])}-{slugify(p.get('sector') or p.get('area') or '')}"
+            for p in props
+        }
+        legacy_lines = []
+        for old_slug, new_slug in sorted(legacy_slugs.items()):
+            if old_slug in current:
+                print(f"ERROR: '{old_slug}' sigue siendo una ficha activa; "
+                      f"no puede redirigir a '{new_slug}'.")
+                sys.exit(1)
+            if new_slug not in current:
+                print(f"ERROR: '{new_slug}' no existe entre las fichas actuales.")
+                sys.exit(1)
+            legacy_lines.append(f"/{old_slug}       /{new_slug}  301!")
+            legacy_lines.append(f"/{old_slug}.html  /{new_slug}  301!")
+        lines += ["", "# Fichas renombradas: URL anterior -> URL actual"] + legacy_lines
 
     # Zone pages: the slug carries "en venta" only while every listing in the
     # sector is a sale. Adding one rental flips the URL, so the previous form
