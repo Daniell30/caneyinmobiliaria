@@ -1,5 +1,37 @@
 [
  {
+  "title": "Apartamento en venta en Bayahibe",
+  "filename": "ApartamentoBayahibe",
+  "area": "Otro",
+  "sector": "Bayahibe",
+  "type": "Apartamento",
+  "location": "Bayahibe",
+  "price": "US$150,000 (negociable)",
+  "size": "64 m²",
+  "bedrooms": "1",
+  "bathrooms": "1 baño",
+  "operation": "",
+  "parking": "1",
+  "level": "",
+  "yearBuilt": "",
+  "condition": "",
+  "furnished": "",
+  "status": "",
+  "updated": "",
+  "faq": [],
+  "folder": "otro/bayahibe-apartamento",
+  "images": [
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png",
+   "8.png",
+   "9.png"
+  ],
+  "description": "Apartamento de 64 m² en venta en Bayahibe, con 1 habitación, 1 baño y 1 parqueo. Amenidades del edificio: piscina con playa artificial, gimnasio, jacuzzi y espacio de coworking. Precio: US$150,000, negociable."
+ },
+ {
   "title": "Apartamento en alquiler en Piantini",
   "filename": "ApartamentoPiantiniAlquiler",
   "area": "Santo Domingo",
