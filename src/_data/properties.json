@@ -1,5 +1,37 @@
 [
  {
+  "title": "Apartamento amueblado en alquiler en Naco",
+  "filename": "ApartamentoNacoAmuebladoAlquiler",
+  "area": "Santo Domingo",
+  "sector": "Naco",
+  "type": "Apartamento",
+  "location": "Sector Naco, Distrito Nacional",
+  "price": "US$2,000 mensuales (alquiler)",
+  "size": "129 m² (metraje total)",
+  "bedrooms": "2",
+  "bathrooms": "2.5 baños",
+  "operation": "",
+  "parking": "2",
+  "level": "",
+  "yearBuilt": "",
+  "condition": "",
+  "furnished": "Sí",
+  "status": "",
+  "updated": "",
+  "faq": [],
+  "folder": "santo-domingo/alquiler-naco-amueblado",
+  "images": [
+   "1.png",
+   "2.png",
+   "3.png",
+   "4.png",
+   "5.png",
+   "6.png",
+   "7.png"
+  ],
+  "description": "Apartamento amueblado en alquiler en el Sector Naco, Distrito Nacional, con 129 m² de metraje total. Cuenta con 2 habitaciones, 2.5 baños, 2 parqueos y balcón. El edificio ofrece área social, gimnasio y jacuzzi. Precio de alquiler: US$2,000 mensuales."
+ },
+ {
   "title": "Apartamento en venta en Bayahibe",
   "filename": "ApartamentoBayahibe",
   "area": "Otro",
