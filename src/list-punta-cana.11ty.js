@@ -1,7 +1,5 @@
 // src/list-punta-cana.11ty.js
-const fs = require("fs");
-const path = require("path");
-const slugify = require("./_utils/slugify");
+const { loadProperties, publicFields } = require("./_utils/catalogo");
 const { sectorPages, operationOf } = require("./_utils/sectors");
 const { priceParts } = require("./_utils/price");
 
@@ -9,8 +7,7 @@ const PER_PAGE = 20; // cards per page
 
 module.exports = class {
   data() {
-    const p = path.join(__dirname, "_data", "properties.json");
-    const props = JSON.parse(fs.readFileSync(p, "utf-8"));
+    const props = loadProperties();
 
     // All items for this area
     const all = props.filter(
@@ -59,8 +56,7 @@ module.exports = class {
   render(data) {
     // Phase 5: links to this area's sector aggregate pages (internal linking
     // so they are reachable by crawlers and users).
-    const allProps = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "_data", "properties.json"), "utf-8"));
+    const allProps = loadProperties();
     const areaSectors = sectorPages(allProps)
       .filter(sp => String(sp.area || "").toLowerCase() === "punta cana");
 
@@ -95,7 +91,7 @@ module.exports = class {
       const typeLabel = Array.isArray(p.type) ? p.type.join(", ") : (p.type || "");
       const typeData = (Array.isArray(p.type) ? p.type : [p.type || ""])
         .map(t => String(t).toLowerCase()).filter(Boolean).join("|");
-      const href = `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`;
+      const href = `/${p.slug}`;
       const pp = priceParts(p.price);
       const op = operationOf(p);
 
@@ -130,8 +126,8 @@ module.exports = class {
 
     // ----- Minimal dataset for client-side filtering across ALL items -----
     const ALL_FOR_CLIENT = all.map(p => ({
-      ...p,
-      _href: `/${slugify(p.title)}-${slugify(p.sector || p.area || "")}`,
+      ...publicFields(p),
+      _href: `/${p.slug}`,
       _priceNum: priceNum(p.price),
       _operation: operationOf(p),
       _priceMain: priceParts(p.price).main,

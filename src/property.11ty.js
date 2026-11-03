@@ -3,11 +3,12 @@ const fs = require("fs");
 const path = require("path");
 const slugify = require("./_utils/slugify");
 const { sectorPageFor } = require("./_utils/sectors");
+const { loadProperties } = require("./_utils/catalogo");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
 const listingDates = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "listing_dates.json"), "utf-8"));
 
 const S = v => String(v ?? ""); // <- safe string
-const allProps = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "properties.json"), "utf-8"));
+const allProps = loadProperties();
 
 // ---------- schema.org helpers (Phase 3 migration) ----------
 // Parse, never invent: every helper returns null when the source string is
@@ -147,7 +148,7 @@ const escapeHtml = v => S(v).replace(/&/g, "&amp;").replace(/</g, "&lt;")
 
 // Specification table rows, in the vocabulary Dominican buyers actually use.
 // Only rows with real data are rendered; every gap is listed per listing in
-// TODO-content.md, and the empty fields are visible in properties.json.
+// TODO-content.md, and the empty fields are visible in src/propiedades/.
 function specRows(p) {
   const typeLabel = Array.isArray(p.type) ? p.type.map(S).join(", ") : S(p.type);
   const sizeLabel = Array.isArray(p.size) ? p.size.map(S).join(" / ") : S(p.size);
@@ -172,15 +173,12 @@ function specRows(p) {
 
 module.exports = class {
   data() {
-    const p = path.join(__dirname, "_data", "properties.json");
-    const props = JSON.parse(fs.readFileSync(p, "utf-8"));
+    const props = loadProperties();
     return {
       props,
       pagination: { data: "props", size: 1, alias: "p" },
-      permalink: (data) => {
-        const slug = `${slugify(S(data.p.title))}-${slugify(S(data.p.sector || data.p.area))}`;
-        return `${slug}.html`;
-      },
+      // URL fija: sale del campo `slug`, no del título.
+      permalink: (data) => `${S(data.p.slug)}.html`,
       eleventyExcludeFromCollections: true
     };
   }
@@ -203,7 +201,7 @@ module.exports = class {
       })
       .join("\n          ");
 
-    const pageSlug = `${slugify(S(p.title))}-${slugify(S(p.sector || p.area))}`;
+    const pageSlug = S(p.slug);
     const permalink = `${pageSlug}.html`;
 
     const primaryImg = (p.images && p.images[0]) ? `/css/images-caney/${S(p.folder)}/${S(p.images[0])}` : S(site.logo);
@@ -285,7 +283,7 @@ module.exports = class {
       if (baths.partial) residence.numberOfPartialBathrooms = baths.partial;
       residence.numberOfBathroomsTotal = baths.full + baths.partial;
     }
-    // Optional owner-supplied facts (empty until filled in properties.json)
+    // Optional owner-supplied facts (empty until filled in src/propiedades/)
     const parkingCount = parseCount(p.parking);
     const amenities = [];
     if (parkingCount !== null) amenities.push({ "@type": "LocationFeatureSpecification", "name": "Parqueos", "value": parkingCount });

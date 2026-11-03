@@ -1,8 +1,8 @@
 // src/index.11ty.js
 const fs = require("fs");
 const path = require("path");
-const slugify = require("./_utils/slugify");
 const { searchSection } = require("./_utils/search");
+const { loadProperties } = require("./_utils/catalogo");
 
 
 
@@ -13,9 +13,7 @@ module.exports = class {
     const slides = JSON.parse(
       fs.readFileSync(path.join(dataDir, "featured_slides.json"), "utf-8")
     );
-    const props = JSON.parse(
-      fs.readFileSync(path.join(dataDir, "properties.json"), "utf-8")
-    );
+    const props = loadProperties();
 
     // Map by filename for quick lookup
     const byFilename = new Map(
@@ -37,10 +35,7 @@ module.exports = class {
         const key = String(s.refFilename || s.reffilename || "").trim();
         if (key && byFilename.has(key)) {
           const p = byFilename.get(key);
-          const href = `/${slugify(p.title || "")}-${slugify(
-            p.sector || p.area || ""
-          )}`;
-          return { ...s, href };
+          return { ...s, href: `/${p.slug}` };
         }
 
         // No link

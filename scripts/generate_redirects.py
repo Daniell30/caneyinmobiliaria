@@ -2,7 +2,8 @@
 """Generate src/_redirects from the data sources — never hand-type rules.
 
 Inputs:
-  - src/_data/properties.json  (listing slugs: .html -> extensionless)
+  - src/propiedades/*.json     (listing slugs, read through scripts/catalogo.py:
+                                .html -> extensionless)
   - scripts/rename-map.json    (old asset URL -> new asset URL, from the
                                 Phase 1 bulk rename)
   - scripts/legacy-slugs.json  (old listing slug -> current slug, para cuando
@@ -25,6 +26,8 @@ import subprocess
 import sys
 import unicodedata
 import urllib.parse
+
+import catalogo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PER_PAGE = 20  # keep in sync with the list-*.11ty.js templates
@@ -129,7 +132,7 @@ def verify_zone_slugs(props, computed):
 
 
 def main():
-    props = json.load(open(os.path.join(ROOT, "src/_data/properties.json")))
+    props = catalogo.load_properties()
     rename_map = json.load(open(os.path.join(ROOT, "scripts/rename-map.json")))
     legacy_path = os.path.join(ROOT, "scripts/legacy-slugs.json")
     legacy_slugs = json.load(open(legacy_path)) if os.path.exists(legacy_path) else {}
@@ -170,16 +173,13 @@ def main():
 
     lines += ["", "# Listing pages: .html -> extensionless (generated per listing)"]
     for p in props:
-        slug = f"{slugify(p['title'])}-{slugify(p.get('sector') or p.get('area') or '')}"
-        lines.append(f"/{slug}.html  /{slug}  301!")
+        lines.append(f"/{p['slug']}.html  /{p['slug']}  301!")
 
-    # Fichas renombradas: cambiar el título o el sector de una propiedad ya
-    # publicada cambia su URL, así que la anterior tiene que seguir resolviendo.
+    # Fichas renombradas: la URL sale del campo `slug`, que no cambia al editar
+    # el título; si alguna vez se cambia a propósito, la anterior tiene que
+    # seguir resolviendo.
     if legacy_slugs:
-        current = {
-            f"{slugify(p['title'])}-{slugify(p.get('sector') or p.get('area') or '')}"
-            for p in props
-        }
+        current = {p["slug"] for p in props}
         legacy_lines = []
         for old_slug, new_slug in sorted(legacy_slugs.items()):
             if old_slug in current:

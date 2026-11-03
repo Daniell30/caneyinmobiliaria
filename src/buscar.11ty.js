@@ -4,8 +4,8 @@
 // catálogo completo en vez de una página vacía.
 const fs = require("fs");
 const path = require("path");
-const slugify = require("./_utils/slugify");
 const { operationOf } = require("./_utils/sectors");
+const { loadProperties } = require("./_utils/catalogo");
 const { searchSection, esc } = require("./_utils/search");
 const { priceParts } = require("./_utils/price");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
@@ -15,8 +15,7 @@ const norm = v => S(v).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
 module.exports = class {
   data() {
-    const props = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "_data", "properties.json"), "utf-8"));
+    const props = loadProperties();
     return {
       props,
       permalink: "buscar/index.html",
@@ -55,7 +54,7 @@ module.exports = class {
             ${size ? `<p>Metraje: ${esc(size)}</p>` : ""}
             ${p.sector ? `<p>Sector: ${esc(p.sector)}</p>` : ""}
             ${tipoLabel ? `<p>Tipo: ${esc(tipoLabel)}</p>` : ""}
-            <a href="/${slugify(S(p.title))}-${slugify(S(p.sector || p.area))}" class="view-details">Ver Detalles</a>
+            <a href="/${S(p.slug)}" class="view-details">Ver Detalles</a>
           </div>
         </article>`;
     }).join("\n");

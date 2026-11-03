@@ -3,9 +3,11 @@
 
 Nothing here can be produced by the tooling — these are facts and local
 market knowledge only Inmobiliaria Caney has. Re-run after editing
-properties.json:  python3 scripts/generate_todo.py
+the catalog (src/propiedades/):  python3 scripts/generate_todo.py
 """
 import json, os, re, subprocess, unicodedata
+
+import catalogo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -15,7 +17,7 @@ def slug(s):
     s = re.sub(r"[^a-z0-9]+", "-", s)
     return re.sub(r"(^-|-$)", "", s)
 
-props = json.load(open(os.path.join(ROOT, "src/_data/properties.json")))
+props = catalogo.load_properties()
 
 # sector pages come from the same module the templates use
 node_pages = []
@@ -34,7 +36,7 @@ L = ["# TODO — contenido pendiente (para el dueño)", "",
      "Archivo generado por `scripts/generate_todo.py`. Cada punto necesita",
      "información que sólo Inmobiliaria Caney tiene: la herramienta no inventa",
      "datos, descripciones ni coordenadas.", "",
-     "Los campos opcionales ya existen (vacíos) en `src/_data/properties.json`:",
+     "Los campos opcionales ya existen (vacíos) en cada archivo de `src/propiedades/`:",
      "basta con escribir el valor entre las comillas y el sitio lo muestra en la",
      "ficha técnica y en los datos estructurados.", "",
      "---", ""]
@@ -64,7 +66,7 @@ L.append("")
 
 # 3. FAQ (Phase 4.3)
 L += ["## 3. Preguntas frecuentes por propiedad", "",
-      'Formato en `properties.json`: `"faq": [{"q": "¿...?", "a": "..."}]`.',
+      'Formato en el archivo de la propiedad: `"faq": [{"q": "¿...?", "a": "..."}]`.',
       "Al llenarlo aparece la sección visible y el schema `FAQPage`.",
       "Sugerencias de preguntas reales: mantenimiento mensual, si aplica bono de",
       "primera vivienda, formas de pago/financiamiento, tiempo de entrega,",

@@ -5,14 +5,14 @@
 const fs = require("fs");
 const path = require("path");
 const { esc } = require("./_utils/search");
+const { loadProperties } = require("./_utils/catalogo");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
 
 const S = v => String(v ?? "");
 
 module.exports = class {
   data() {
-    const props = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "_data", "properties.json"), "utf-8"));
+    const props = loadProperties();
     return {
       props,
       permalink: "vender/index.html",

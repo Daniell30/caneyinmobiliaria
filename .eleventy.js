@@ -1,14 +1,13 @@
 // .eleventy.js  (project root)
-const fs = require("fs");
-const path = require("path");
 const slugify = require("./src/_utils/slugify");
+const { loadProperties } = require("./src/_utils/catalogo");
 
 module.exports = function (eleventyConfig) {
   // ---------------- Filters ----------------
   eleventyConfig.addNunjucksFilter("slug", s => slugify(s || ""));
 
   // Robust link resolver: uses featured slide, tries passed-in "properties";
-  // if not available, loads src/_data/properties.json directly.
+  // if not available, loads the catalog (src/propiedades/) directly.
   eleventyConfig.addNunjucksFilter("slideHref", (s, propsMaybe) => {
     if (s && s.href) return s.href;        // explicit link wins
     if (!s || !s.refFilename) return "#";
@@ -16,8 +15,7 @@ module.exports = function (eleventyConfig) {
     let list = Array.isArray(propsMaybe) && propsMaybe.length ? propsMaybe : null;
     if (!list) {
       try {
-        const p = path.join(__dirname, "src", "_data", "properties.json");
-        list = JSON.parse(fs.readFileSync(p, "utf-8"));
+        list = loadProperties();
       } catch {
         list = [];
       }
@@ -26,9 +24,7 @@ module.exports = function (eleventyConfig) {
     const prop = list.find(p => String(p.filename).trim() === String(s.filename).trim());
     if (!prop) return "#";
 
-    const titleSlug = slugify(prop.title || "");
-    const areaSlug  = slugify(prop.sector || prop.area || "");
-    return `/${titleSlug}-${areaSlug}`;
+    return `/${prop.slug}`;
   });
 
   // ---------------- Passthrough copy ----------------
@@ -54,6 +50,8 @@ module.exports = function (eleventyConfig) {
 
   // ---------------- Watch targets ----------------
   eleventyConfig.addWatchTarget("src/css");
+  // Catalog: one JSON file per listing, read by src/_utils/catalogo.js
+  eleventyConfig.addWatchTarget("src/propiedades");
 
   // --- Added watch targets (safe, additive) ---
   eleventyConfig.addWatchTarget("src/linktree.css");

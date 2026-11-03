@@ -5,8 +5,8 @@
 // Market-context prose is deliberately NOT generated (see TODO-content.md).
 const fs = require("fs");
 const path = require("path");
-const slugify = require("./_utils/slugify");
 const { sectorPages, operationOf } = require("./_utils/sectors");
+const { loadProperties } = require("./_utils/catalogo");
 const { priceParts } = require("./_utils/price");
 const site = JSON.parse(fs.readFileSync(path.join(__dirname, "_data", "site.json"), "utf-8"));
 
@@ -14,12 +14,11 @@ const S = v => String(v ?? "");
 const esc = v => S(v).replace(/&/g, "&amp;").replace(/</g, "&lt;")
   .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-const listingSlug = p => `${slugify(S(p.title))}-${slugify(S(p.sector || p.area))}`;
+const listingSlug = p => S(p.slug);
 
 module.exports = class {
   data() {
-    const props = JSON.parse(
-      fs.readFileSync(path.join(__dirname, "_data", "properties.json"), "utf-8"));
+    const props = loadProperties();
     return {
       pages: sectorPages(props),
       pagination: { data: "pages", size: 1, alias: "sp" },
