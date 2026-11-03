@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate properties.json against the image folders on disk.
+"""Validate the catalog (src/propiedades/*.json) against the image folders on disk.
 
 Run this BEFORE pushing a new listing — it catches the mistakes that would
 otherwise only show up as 404 images on the live site:
@@ -8,26 +8,49 @@ otherwise only show up as 404 images on the live site:
 
 Checks per listing: required fields, that the image folder exists under
 src/css/images-caney/, that every referenced image file exists, that folder
-and file names follow the lowercase-hyphenated convention, that the
-generated URL slug is unique, and that optional fields (status, updated,
-faq) hold valid values. Exits non-zero if anything is wrong.
+and file names follow the lowercase-hyphenated convention, that the fixed
+URL `slug` is present, well formed and unique, that `filename` is unique,
+that `orden` and `datePosted` hold valid values, and that optional fields
+(status, updated, faq) hold valid values. Exits non-zero if anything is wrong.
 """
-import json, os, re, sys, unicodedata
+import os, re, sys
+
+import catalogo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG_ROOT = os.path.join(ROOT, "src/css/images-caney")
 VALID_STATUS = {"", "Disponible", "Reservado", "Vendido", "Alquilado"}
 BAD_NAME = re.compile(r"[ ()]|[A-Z]|%20")
-
-def slugify(s):
-    s = unicodedata.normalize("NFD", str(s or ""))
-    s = "".join(c for c in s if not unicodedata.combining(c)).lower()
-    s = re.sub(r"[^a-z0-9]+", "-", s)
-    return re.sub(r"(^-|-$)", "", s)
+SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
 
 def main():
-    props = json.load(open(os.path.join(ROOT, "src/_data/properties.json")))
-    errors, warnings, slugs = [], [], {}
+    files = catalogo.read_files()
+    errors, warnings, slugs, codes = [], [], {}, {}
+
+    # Per file: the fields that keep the URL, the order and the date fixed.
+    for fname, p in files:
+        where = f"src/propiedades/{fname}"
+        slug = p.get("slug")
+        if not str(slug or "").strip():
+            errors.append(f"{where}: falta 'slug' (la URL fija de la ficha)")
+        elif not isinstance(slug, str) or not SLUG.fullmatch(slug):
+            errors.append(f"{where}: 'slug' debe ir en minúsculas, con números y guiones "
+                          f"— recibido '{slug}'")
+        elif fname != f"{slug}.json":
+            warnings.append(f"{where}: el archivo debería llamarse {slug}.json, como su slug")
+        orden = p.get("orden")
+        if orden is not None and (isinstance(orden, bool) or not isinstance(orden, int)):
+            errors.append(f"{where}: 'orden' debe ser un número entero — recibido '{orden}'")
+        posted = p.get("datePosted")
+        if not isinstance(posted, str) or not DATE.fullmatch(posted):
+            errors.append(f"{where}: 'datePosted' debe tener formato AAAA-MM-DD — recibido '{posted}'")
+        code = str(p.get("filename") or "").strip()
+        if code and code in codes:
+            errors.append(f"{where}: 'filename' {code} repetido (también en {codes[code]})")
+        codes[code] = where
+
+    props = catalogo.ordenar([p for _, p in files])
 
     for i, p in enumerate(props):
         name = p.get("title") or f"(sin título, posición {i + 1})"
@@ -36,9 +59,9 @@ def main():
             if not str(p.get(field) or "").strip():
                 errors.append(f"{name}: falta el campo obligatorio '{field}'")
 
-        slug = f"{slugify(p.get('title'))}-{slugify(p.get('sector') or p.get('area') or '')}"
+        slug = p["slug"]
         if slug in slugs:
-            errors.append(f"{name}: genera el mismo URL que '{slugs[slug]}' (/{slug})")
+            errors.append(f"{name}: tiene el mismo URL que '{slugs[slug]}' (/{slug})")
         slugs[slug] = name
 
         folder = str(p.get("folder") or "").strip()
@@ -95,7 +118,6 @@ def main():
     print(f"\n{len(props)} propiedades revisadas — {len(errors)} errores, {len(warnings)} avisos")
     if not errors:
         print("Todo correcto. Después de agregar propiedades, ejecuta también:")
-        print("  python3 scripts/derive_listing_dates.py   # fecha de publicación")
         print("  python3 scripts/generate_redirects.py     # redirección .html de la nueva página")
     sys.exit(1 if errors else 0)
 

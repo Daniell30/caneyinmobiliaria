@@ -7,24 +7,20 @@ be diffed and no data silently lost:
     python3 scripts/dump_jsonld.py --base-url https://caneyinmobiliaria.com \
         --out scripts/jsonld-pre-migration.json
 
-Slugs are derived from src/_data/properties.json exactly as the templates
-derive them. Output: { "<slug>": [ <parsed JSON-LD block>, ... ] }.
+Slugs come from each listing's fixed `slug` (src/propiedades/*.json, read
+through scripts/catalogo.py) exactly as the templates use them.
+Output: { "<slug>": [ <parsed JSON-LD block>, ... ] }.
 """
 import argparse
 import json
 import os
 import re
 import sys
-import unicodedata
 import urllib.request
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import catalogo
 
-def slugify(s):
-    s = unicodedata.normalize("NFD", str(s or ""))
-    s = "".join(c for c in s if not unicodedata.combining(c)).lower()
-    s = re.sub(r"[^a-z0-9]+", "-", s)
-    return re.sub(r"(^-|-$)", "", s)
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 LD_RE = re.compile(
     r'<script[^>]*type\s*=\s*["\']application/ld\+json["\'][^>]*>(.*?)</script>',
@@ -38,10 +34,10 @@ def main():
     args = ap.parse_args()
     base = args.base_url.rstrip("/")
 
-    props = json.load(open(os.path.join(ROOT, "src/_data/properties.json")))
+    props = catalogo.load_properties()
     result, errors = {}, 0
     for p in props:
-        slug = f"{slugify(p['title'])}-{slugify(p.get('sector') or p.get('area') or '')}"
+        slug = p["slug"]
         url = f"{base}/{slug}"
         try:
             with urllib.request.urlopen(
