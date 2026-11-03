@@ -1,8 +1,8 @@
 // src/sitemap.11ty.js
 const fs = require("fs");
 const path = require("path");
-const slugify = require("./_utils/slugify");
 const { sectorPages } = require("./_utils/sectors");
+const { loadProperties } = require("./_utils/catalogo");
 
 const PER_PAGE = 20;
 
@@ -17,7 +17,7 @@ module.exports = class {
   render() {
     const dataDir = path.join(__dirname, "_data");
     const site = JSON.parse(fs.readFileSync(path.join(dataDir, "site.json"), "utf-8"));
-    const props = JSON.parse(fs.readFileSync(path.join(dataDir, "properties.json"), "utf-8"));
+    const props = loadProperties();
 
     const base = site.url.replace(/\/+$/, "");
 
@@ -62,11 +62,8 @@ module.exports = class {
     // Sector aggregate pages
     for (const sp of sectorPages(props)) urls.push(`${base}/${sp.slug}`);
 
-    // Property detail pages (pretty slugs)
-    for (const p of props) {
-      const slug = `${slugify(p.title)}-${slugify(p.sector || p.area || "")}`;
-      urls.push(`${base}/${slug}`);
-    }
+    // Property detail pages (fixed slugs)
+    for (const p of props) urls.push(`${base}/${p.slug}`);
 
     // Generate XML
     // lastmod intentionally omitted: stamping every URL with the build date

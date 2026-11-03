@@ -1,7 +1,7 @@
 // src/_data/featured_slides_resolved.js
 const fs = require("fs");
 const path = require("path");
-const slugify = require("../_utils/slugify"); // note the ../_utils path from _data/
+const { loadProperties } = require("../_utils/catalogo"); // note the ../_utils path from _data/
 
 module.exports = () => {
   const dataDir = path.join(process.cwd(), "src", "_data");
@@ -9,9 +9,7 @@ module.exports = () => {
   const slides = JSON.parse(
     fs.readFileSync(path.join(dataDir, "featured_slides.json"), "utf-8")
   );
-  const props = JSON.parse(
-    fs.readFileSync(path.join(dataDir, "properties.json"), "utf-8")
-  );
+  const props = loadProperties();
 
   const byFilename = new Map(
     props.map(p => [String(p.filename || "").trim(), p])
@@ -24,9 +22,7 @@ module.exports = () => {
     const key = String(s.refFilename || "").trim();
     if (key && byFilename.has(key)) {
       const p = byFilename.get(key);
-      const href =
-        `/${slugify(p.title || "")}-${slugify(p.sector || p.area || "")}`;
-      return { ...s, href };
+      return { ...s, href: `/${p.slug}` };
     }
     // fallback if no match
     return { ...s, href: "#" };

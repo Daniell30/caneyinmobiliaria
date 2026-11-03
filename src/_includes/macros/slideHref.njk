@@ -3,11 +3,11 @@
   {% if s.href %}
     {{- s.href -}}
   {% elif s.refFilename %}
-    {# find property by refFilename and build the same SEO slug as property.11ty.js #}
+    {# find property by refFilename and use its fixed slug, like property.11ty.js #}
     {%- set url = '' -%}
     {%- for item in properties -%}
       {%- if item.filename == s.refFilename -%}
-        {%- set url = '/' ~ (item.title | slug) ~ '-' ~ ((item.sector or item.area or '') | slug) -%}
+        {%- set url = '/' ~ item.slug -%}
       {%- endif -%}
     {%- endfor -%}
     {{- url or '#' -}}
