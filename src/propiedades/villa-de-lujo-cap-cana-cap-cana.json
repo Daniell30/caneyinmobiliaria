@@ -1,0 +1,32 @@
+{
+  "slug": "villa-de-lujo-cap-cana-cap-cana",
+  "orden": 60,
+  "datePosted": "2025-08-31",
+  "title": "Villa de Lujo - Cap Cana",
+  "filename": "CapCanaVillaLujo",
+  "area": "Punta Cana",
+  "sector": "Cap Cana",
+  "type": "Villa",
+  "location": "Cap Cana, Punta Cana",
+  "price": "USD$3,500,000",
+  "size": "747m2",
+  "bedrooms": "6",
+  "bathrooms": "6",
+  "operation": "",
+  "parking": "",
+  "level": "",
+  "yearBuilt": "",
+  "condition": "",
+  "furnished": "",
+  "status": "",
+  "updated": "",
+  "faq": [],
+  "folder": "punta-cana/villa-lujo-cap-cana",
+  "images": [
+    "1.png",
+    "3.png",
+    "4.png",
+    "5.png"
+  ],
+  "description": "Villa de lujo en Cap Cana con 747m2 de construcción."
+}
