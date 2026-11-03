@@ -4,7 +4,7 @@ Archivo generado por `scripts/generate_todo.py`. Cada punto necesita
 información que sólo Inmobiliaria Caney tiene: la herramienta no inventa
 datos, descripciones ni coordenadas.
 
-Los campos opcionales ya existen (vacíos) en `src/_data/properties.json`:
+Los campos opcionales ya existen (vacíos) en cada archivo de `src/propiedades/`:
 basta con escribir el valor entre las comillas y el sitio lo muestra en la
 ficha técnica y en los datos estructurados.
 
@@ -33,6 +33,7 @@ mantenimiento).
 - [ ] **Proyecto de Villas - Cap Cana** — 30 palabras, faltan ~220
 - [ ] **Vivienda en Costa Verde - Santo Domingo Oeste** — 31 palabras, faltan ~219
 - [ ] **Hotel Boutique - Punta Cana Wyndham Hotels & Resorts** — 31 palabras, faltan ~219
+- [ ] **Apartamento en venta en Bayahibe** — 32 palabras, faltan ~218
 - [ ] **Apartamento amueblado en Bella Vista** — 32 palabras, faltan ~218
 - [ ] **Solar - Metro Country Club, Juan Dolio** — 32 palabras, faltan ~218
 - [ ] **Solar en Buena Vista - La Isabela** — 32 palabras, faltan ~218
@@ -44,14 +45,17 @@ mantenimiento).
 - [ ] **Apartamento Amueblado en La Esperilla con Vista al Mar** — 35 palabras, faltan ~215
 - [ ] **Proyecto Residencial - Las Américas (SDE)** — 36 palabras, faltan ~214
 - [ ] **Solar colindante con el Mirador Sur** — 36 palabras, faltan ~214
-- [ ] **Solar en Autopista Duarte - Santo Domingo Oeste** — 36 palabras, faltan ~214
-- [ ] **Apartamento en alquiler en Piantini** — 37 palabras, faltan ~213
 - [ ] **Vivienda Frente al Parque Mirador Sur** — 37 palabras, faltan ~213
 - [ ] **Solar con potencial industrial - Punta Caucedo 2** — 37 palabras, faltan ~213
+- [ ] **Apartamento en alquiler en Av. Enriquillo** — 38 palabras, faltan ~212
+- [ ] **Apartamento en Bella Vista, próximo a Av. Anacaona** — 38 palabras, faltan ~212
+- [ ] **Apartamento amueblado en alquiler en Naco** — 39 palabras, faltan ~211
 - [ ] **Apartamento clásico en Av. Enriquillo, Los Cacicazgos** — 39 palabras, faltan ~211
 - [ ] **Bella Vista Penthouse** — 39 palabras, faltan ~211
+- [ ] **Apartamento amueblado en alquiler en El Millón** — 44 palabras, faltan ~206
 - [ ] **POSEIDONIA - Proyecto Cana Bay** — 44 palabras, faltan ~206
 - [ ] **Solar + villa en Pedro Brand, Lomas Lindas** — 45 palabras, faltan ~205
+- [ ] **Apartamento en alquiler en Piantini** — 46 palabras, faltan ~204
 - [ ] **Apartamento de Oportunidad en El Pedregal** — 46 palabras, faltan ~204
 - [ ] **Casa - Ciudad Modelo (2 Niveles)** — 46 palabras, faltan ~204
 - [ ] **Proyecto residencial en Sector Honduras** — 48 palabras, faltan ~202
@@ -61,8 +65,10 @@ mantenimiento).
 - [ ] **Apartamento Amueblado - Esperilla** — 49 palabras, faltan ~201
 - [ ] **Apartamento en El Millón** — 50 palabras, faltan ~200
 - [ ] **Apartamento en Cabarete con Vista al Mar** — 54 palabras, faltan ~196
+- [ ] **Apartamento amueblado en alquiler en Zona Universitaria** — 56 palabras, faltan ~194
 - [ ] **Penthouse con Terraza y Vista en Gazcue** — 56 palabras, faltan ~194
 - [ ] **Vivienda de Lujo - La Julia (2 Niveles)** — 58 palabras, faltan ~192
+- [ ] **Solar en Autopista Duarte, Pedro Brand** — 58 palabras, faltan ~192
 - [ ] **Apartamento Torre Caney** — 59 palabras, faltan ~191
 - [ ] **Apartamento con terraza en Av. Independencia Km 10** — 66 palabras, faltan ~184
 - [ ] **Apartamento en Los Cacicazgos, próximo a Av. Anacaona** — 68 palabras, faltan ~182
@@ -74,12 +80,20 @@ mantenimiento).
 - [ ] **Penthouse de lujo en Los Cacicazgos** — 92 palabras, faltan ~158
 - [ ] **Apartamento de lujo en Los Cacicazgos, Av. Enriquillo** — 93 palabras, faltan ~157
 - [ ] **Casa en Brisa Oriental - Santo Domingo Este** — 124 palabras, faltan ~126
+- [ ] **Penthouse remodelado en venta en Los Cacicazgos** — 151 palabras, faltan ~99
 
 ## 2. Datos de ficha técnica
 
+- [ ] **Apartamento amueblado en alquiler en Naco**: Nivel, Año de construcción, Condición (nueva / usada), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en venta en Bayahibe**: Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en alquiler en Piantini**: Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido)
+- [ ] **Penthouse remodelado en venta en Los Cacicazgos**: Año de construcción, Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento amueblado en alquiler en Zona Universitaria**: Metraje, Nivel, Año de construcción, Condición (nueva / usada), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en alquiler en Av. Enriquillo**: Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento en Bella Vista, próximo a Av. Anacaona**: Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Apartamento amueblado en alquiler en El Millón**: Nivel, Año de construcción, Condición (nueva / usada), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Proyecto residencial en Sector Honduras**: Metraje, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Apartamento clásico en Av. Enriquillo, Los Cacicazgos**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
-- [ ] **Apartamento en alquiler en Piantini**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Apartamento en alquiler en Serrallés**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Penthouse en Bella Vista**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Apartamento NUEVO en Evaristo Morales**: Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
@@ -114,7 +128,7 @@ mantenimiento).
 - [ ] **Solar colindante con el Mirador Sur**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Solar con potencial industrial - Punta Caucedo 2**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Solar con Potencial Industrial – Punta Caucedo**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
-- [ ] **Solar en Autopista Duarte - Santo Domingo Oeste**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
+- [ ] **Solar en Autopista Duarte, Pedro Brand**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido)
 - [ ] **Solares - El Higuero**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Solar - Sabana Grande de Palenque**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
 - [ ] **Solar - Juan Dolio (22,132 m²)**: Habitaciones, Baños, Parqueos, Nivel, Año de construcción, Condición (nueva / usada), Amueblado (sí / no), Estado (Disponible / Reservado / Vendido), Fecha de actualización (AAAA-MM-DD)
@@ -136,15 +150,22 @@ mantenimiento).
 
 ## 3. Preguntas frecuentes por propiedad
 
-Formato en `properties.json`: `"faq": [{"q": "¿...?", "a": "..."}]`.
+Formato en el archivo de la propiedad: `"faq": [{"q": "¿...?", "a": "..."}]`.
 Al llenarlo aparece la sección visible y el schema `FAQPage`.
 Sugerencias de preguntas reales: mantenimiento mensual, si aplica bono de
 primera vivienda, formas de pago/financiamiento, tiempo de entrega,
 si acepta mascotas, qué incluye el precio.
 
+- [ ] Apartamento amueblado en alquiler en Naco
+- [ ] Apartamento en venta en Bayahibe
+- [ ] Apartamento en alquiler en Piantini
+- [ ] Penthouse remodelado en venta en Los Cacicazgos
+- [ ] Apartamento amueblado en alquiler en Zona Universitaria
+- [ ] Apartamento en alquiler en Av. Enriquillo
+- [ ] Apartamento en Bella Vista, próximo a Av. Anacaona
+- [ ] Apartamento amueblado en alquiler en El Millón
 - [ ] Proyecto residencial en Sector Honduras
 - [ ] Apartamento clásico en Av. Enriquillo, Los Cacicazgos
-- [ ] Apartamento en alquiler en Piantini
 - [ ] Apartamento en alquiler en Serrallés
 - [ ] Penthouse en Bella Vista
 - [ ] Apartamento NUEVO en Evaristo Morales
@@ -179,7 +200,7 @@ si acepta mascotas, qué incluye el precio.
 - [ ] Solar colindante con el Mirador Sur
 - [ ] Solar con potencial industrial - Punta Caucedo 2
 - [ ] Solar con Potencial Industrial – Punta Caucedo
-- [ ] Solar en Autopista Duarte - Santo Domingo Oeste
+- [ ] Solar en Autopista Duarte, Pedro Brand
 - [ ] Solares - El Higuero
 - [ ] Solar - Sabana Grande de Palenque
 - [ ] Solar - Juan Dolio (22,132 m²)
@@ -205,6 +226,74 @@ Hoy cada foto lleva un alt genérico («Vista N de …»). Una frase por foto
 que diga qué muestra (p. ej. «Sala del apartamento de 180 m² en Av.
 Enriquillo») las hace útiles para buscadores y asistentes de IA.
 
+### Apartamento amueblado en alquiler en Naco
+- [ ] `santo-domingo/alquiler-naco-amueblado/1.png` — 
+- [ ] `santo-domingo/alquiler-naco-amueblado/2.png` — 
+- [ ] `santo-domingo/alquiler-naco-amueblado/3.png` — 
+- [ ] `santo-domingo/alquiler-naco-amueblado/4.png` — 
+- [ ] `santo-domingo/alquiler-naco-amueblado/5.png` — 
+- [ ] `santo-domingo/alquiler-naco-amueblado/6.png` — 
+- [ ] `santo-domingo/alquiler-naco-amueblado/7.png` — 
+
+### Apartamento en venta en Bayahibe
+- [ ] `otro/bayahibe-apartamento/3.png` — 
+- [ ] `otro/bayahibe-apartamento/4.png` — 
+- [ ] `otro/bayahibe-apartamento/5.png` — 
+- [ ] `otro/bayahibe-apartamento/6.png` — 
+- [ ] `otro/bayahibe-apartamento/7.png` — 
+- [ ] `otro/bayahibe-apartamento/8.png` — 
+- [ ] `otro/bayahibe-apartamento/9.png` — 
+
+### Apartamento en alquiler en Piantini
+- [ ] `santo-domingo/alquiler-piantini/1.png` — 
+- [ ] `santo-domingo/alquiler-piantini/2.png` — 
+- [ ] `santo-domingo/alquiler-piantini/3.png` — 
+- [ ] `santo-domingo/alquiler-piantini/4.png` — 
+- [ ] `santo-domingo/alquiler-piantini/5.png` — 
+- [ ] `santo-domingo/alquiler-piantini/6.png` — 
+
+### Penthouse remodelado en venta en Los Cacicazgos
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/1.png` — 
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/2.png` — 
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/3.png` — 
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/4.png` — 
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/5.png` — 
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/6.png` — 
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/7.png` — 
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/8.png` — 
+- [ ] `santo-domingo/penthouse-los-cacicazgos-remodelado/9.png` — 
+
+### Apartamento amueblado en alquiler en Zona Universitaria
+- [ ] `santo-domingo/zona-universitaria-alquiler/1.png` — 
+- [ ] `santo-domingo/zona-universitaria-alquiler/2.png` — 
+- [ ] `santo-domingo/zona-universitaria-alquiler/3.png` — 
+- [ ] `santo-domingo/zona-universitaria-alquiler/4.png` — 
+- [ ] `santo-domingo/zona-universitaria-alquiler/5.png` — 
+
+### Apartamento en alquiler en Av. Enriquillo
+- [ ] `santo-domingo/av-enriquillo-alquiler/1.png` — 
+- [ ] `santo-domingo/av-enriquillo-alquiler/2.png` — 
+- [ ] `santo-domingo/av-enriquillo-alquiler/3.png` — 
+- [ ] `santo-domingo/av-enriquillo-alquiler/4.png` — 
+- [ ] `santo-domingo/av-enriquillo-alquiler/5.png` — 
+
+### Apartamento en Bella Vista, próximo a Av. Anacaona
+- [ ] `santo-domingo/bella-vista-av-anacaona/1.png` — 
+- [ ] `santo-domingo/bella-vista-av-anacaona/2.png` — 
+- [ ] `santo-domingo/bella-vista-av-anacaona/3.png` — 
+- [ ] `santo-domingo/bella-vista-av-anacaona/4.png` — 
+- [ ] `santo-domingo/bella-vista-av-anacaona/5.png` — 
+- [ ] `santo-domingo/bella-vista-av-anacaona/6.png` — 
+- [ ] `santo-domingo/bella-vista-av-anacaona/7.png` — 
+- [ ] `santo-domingo/bella-vista-av-anacaona/8.png` — 
+- [ ] `santo-domingo/bella-vista-av-anacaona/9.png` — 
+
+### Apartamento amueblado en alquiler en El Millón
+- [ ] `santo-domingo/el-millon-alquiler/1.png` — 
+- [ ] `santo-domingo/el-millon-alquiler/2.png` — 
+- [ ] `santo-domingo/el-millon-alquiler/3.png` — 
+- [ ] `santo-domingo/el-millon-alquiler/4.png` — 
+
 ### Proyecto residencial en Sector Honduras
 - [ ] `santo-domingo/proyecto-residencial-honduras/2.png` — 
 - [ ] `santo-domingo/proyecto-residencial-honduras/3.png` — 
@@ -225,14 +314,6 @@ Enriquillo») las hace útiles para buscadores y asistentes de IA.
 - [ ] `santo-domingo/av-enriquillo-apartamento-clasico/7.png` — 
 - [ ] `santo-domingo/av-enriquillo-apartamento-clasico/8.png` — 
 - [ ] `santo-domingo/av-enriquillo-apartamento-clasico/9.png` — 
-
-### Apartamento en alquiler en Piantini
-- [ ] `santo-domingo/alquiler-piantini/1.png` — 
-- [ ] `santo-domingo/alquiler-piantini/2.png` — 
-- [ ] `santo-domingo/alquiler-piantini/3.png` — 
-- [ ] `santo-domingo/alquiler-piantini/4.png` — 
-- [ ] `santo-domingo/alquiler-piantini/5.png` — 
-- [ ] `santo-domingo/alquiler-piantini/6.png` — 
 
 ### Apartamento en alquiler en Serrallés
 - [ ] `santo-domingo/alquiler-serralles/1.png` — 
@@ -506,10 +587,9 @@ Enriquillo») las hace útiles para buscadores y asistentes de IA.
 - [ ] `solares/punta-caucedo/4.png` — 
 - [ ] `solares/punta-caucedo/5.png` — 
 
-### Solar en Autopista Duarte - Santo Domingo Oeste
+### Solar en Autopista Duarte, Pedro Brand
 - [ ] `solares/autopista-duarte-solar/1.png` — 
 - [ ] `solares/autopista-duarte-solar/2.png` — 
-- [ ] `solares/autopista-duarte-solar/3.png` — 
 
 ### Solares - El Higuero
 - [ ] `solares/solares-en-el-higuero/1.png` — 
@@ -642,11 +722,12 @@ Falta el texto: es la ventaja competitiva real frente a los portales, y
 por eso no se genera automáticamente. Entregar a Claude o pegarlo en el
 comentario TODO de cada página.
 
-- [ ] **Los Cacicazgos** (Santo Domingo) — 5 propiedades
-- [ ] **Bella Vista** (Santo Domingo) — 4 propiedades
+- [ ] **Los Cacicazgos** (Santo Domingo) — 7 propiedades
+- [ ] **Bella Vista** (Santo Domingo) — 5 propiedades
 - [ ] **Ciudad Modelo** (Santo Domingo) — 4 propiedades
 - [ ] **Juan Dolio** (Juan Dolio) — 3 propiedades
 - [ ] **Cap Cana** (Punta Cana) — 3 propiedades
+- [ ] **El Millón** (Santo Domingo) — 2 propiedades
 - [ ] **La Esperilla** (Santo Domingo) — 2 propiedades
 - [ ] **Gazcue** (Santo Domingo) — 2 propiedades
 - [ ] **Punta Caucedo** (Solares) — 2 propiedades
@@ -662,9 +743,16 @@ comentario TODO de cada página.
 Opcional pero útil para búsquedas por cercanía. Google Maps → clic derecho
 sobre el punto → copiar coordenadas.
 
+- [ ] Apartamento amueblado en alquiler en Naco — lat: ____ , lng: ____
+- [ ] Apartamento en venta en Bayahibe — lat: ____ , lng: ____
+- [ ] Apartamento en alquiler en Piantini — lat: ____ , lng: ____
+- [ ] Penthouse remodelado en venta en Los Cacicazgos — lat: ____ , lng: ____
+- [ ] Apartamento amueblado en alquiler en Zona Universitaria — lat: ____ , lng: ____
+- [ ] Apartamento en alquiler en Av. Enriquillo — lat: ____ , lng: ____
+- [ ] Apartamento en Bella Vista, próximo a Av. Anacaona — lat: ____ , lng: ____
+- [ ] Apartamento amueblado en alquiler en El Millón — lat: ____ , lng: ____
 - [ ] Proyecto residencial en Sector Honduras — lat: ____ , lng: ____
 - [ ] Apartamento clásico en Av. Enriquillo, Los Cacicazgos — lat: ____ , lng: ____
-- [ ] Apartamento en alquiler en Piantini — lat: ____ , lng: ____
 - [ ] Apartamento en alquiler en Serrallés — lat: ____ , lng: ____
 - [ ] Penthouse en Bella Vista — lat: ____ , lng: ____
 - [ ] Apartamento NUEVO en Evaristo Morales — lat: ____ , lng: ____
@@ -699,7 +787,7 @@ sobre el punto → copiar coordenadas.
 - [ ] Solar colindante con el Mirador Sur — lat: ____ , lng: ____
 - [ ] Solar con potencial industrial - Punta Caucedo 2 — lat: ____ , lng: ____
 - [ ] Solar con Potencial Industrial – Punta Caucedo — lat: ____ , lng: ____
-- [ ] Solar en Autopista Duarte - Santo Domingo Oeste — lat: ____ , lng: ____
+- [ ] Solar en Autopista Duarte, Pedro Brand — lat: ____ , lng: ____
 - [ ] Solares - El Higuero — lat: ____ , lng: ____
 - [ ] Solar - Sabana Grande de Palenque — lat: ____ , lng: ____
 - [ ] Solar - Juan Dolio (22,132 m²) — lat: ____ , lng: ____
