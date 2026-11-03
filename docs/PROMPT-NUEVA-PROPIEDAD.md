@@ -69,12 +69,12 @@ Amenidades del residencial:
 ## Qué hace Claude con eso (no hay que pedirlo)
 
 1. Copia las fotos a `src/css/images-caney/<zona>/<nombre-slug>/`
-2. Agrega el objeto **de primero** en `src/_data/properties.json`, para que la
-   propiedad salga primera en la página de su zona
+2. Crea `src/propiedades/<slug>.json` con el `slug` (la URL, que queda fija),
+   `"orden": 0` y `datePosted` con la fecha de hoy, para que la propiedad
+   salga primera en la página de su zona
 3. Escribe la descripción **solo con los datos que diste** (no inventa
    metraje, precios, amenidades ni ubicaciones)
-4. Ejecuta `check_properties.py`, `derive_listing_dates.py` y
-   `generate_redirects.py`
+4. Ejecuta `check_properties.py` y `generate_redirects.py`
 5. Verifica que la página, la ficha técnica y los datos estructurados salgan
    bien antes de hacer commit
 6. Te deja los commits listos y te dice el comando para subirlos
@@ -83,7 +83,8 @@ Amenidades del residencial:
 
 - **No inventa nada.** Si no diste el año de construcción, esa fila no
   aparece; no se rellena con suposiciones.
-- **Las propiedades nuevas van siempre de primeras** en su zona.
+- **Las propiedades nuevas van siempre de primeras** en su zona
+  (`"orden": 0` y la fecha de hoy; entre varias nuevas, la más reciente arriba).
 - Si la propiedad hace que un sector llegue a 2 inmuebles, se crea sola su
   página de zona (tabla comparativa, schema y enlace incluidos).
 - La propiedad entra sola en el sitemap, en la página de su zona, en los
