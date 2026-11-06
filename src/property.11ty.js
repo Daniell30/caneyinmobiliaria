@@ -431,7 +431,7 @@ ${schemaJson}
   </main>
 
   <footer>
-    <span>Inmobiliaria Caney ${new Date().getFullYear()}</span>
+    <span>© ${new Date().getFullYear()} Inmobiliaria Caney · CANEY INMOBILIARIA DOMINICANA LL, S.R.L.</span>
     <span><a href="/" class="footerbutton" rel="noopener">Ver más propiedades</a></span>
   </footer>
 
