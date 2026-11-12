@@ -1,6 +1,8 @@
 // .eleventy.js  (project root)
 const slugify = require("./src/_utils/slugify");
 const { loadProperties } = require("./src/_utils/catalogo");
+const { warnRemovedUrls } = require("./src/_utils/urls-publicadas");
+const site = require("./src/_data/site.json");
 
 module.exports = function (eleventyConfig) {
   // ---------------- Filters ----------------
@@ -47,6 +49,13 @@ module.exports = function (eleventyConfig) {
 
   // Ensure contact page images are available at site root: /caneycontactpics/...
   eleventyConfig.addPassthroughCopy({ "src/caneycontactpics": "caneycontactpics" });
+
+  // ---------------- After the build ----------------
+  // Warn (never fail) when a URL published in production disappears without
+  // a redirect, e.g. an edited slug. Runs only on Netlify.
+  eleventyConfig.on("eleventy.after", async ({ dir }) => {
+    await warnRemovedUrls((dir && dir.output) || "_site", site.url);
+  });
 
   // ---------------- Watch targets ----------------
   eleventyConfig.addWatchTarget("src/css");
