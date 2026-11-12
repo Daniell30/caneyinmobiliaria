@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Verify every rule in src/_redirects against a deployed site.
+"""Verify every rule of the site's _redirects against a deployed site.
 
 Usage:
     python3 scripts/check_redirects.py --base-url https://deploy-preview-2--caneyinmobiliaria.netlify.app
+
+_redirects is generated in the Netlify build (src/redirects.11ty.js), so the
+rules are produced here by running that same JS with JavaScriptCore
+(scripts/jsc.py). `--rules FILE` checks a saved copy instead.
 
 For each non-comment rule `from  to  status`, requests `from` and asserts:
   - the response status matches the rule (redirects: 301/302; a trailing
@@ -16,7 +20,7 @@ import sys
 import urllib.parse
 import urllib.request
 
-ROOT = __file__.rsplit("/", 2)[0]
+import jsc
 
 
 def head(url):
@@ -44,11 +48,13 @@ def norm(path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--base-url", required=True)
+    ap.add_argument("--rules", help="saved _redirects file (default: generate it like the build)")
     args = ap.parse_args()
     base = args.base_url.rstrip("/")
+    rules = open(args.rules).read() if args.rules else jsc.redirects()
 
     failures = checked = 0
-    for lineno, raw in enumerate(open(f"{ROOT}/src/_redirects"), 1):
+    for lineno, raw in enumerate(rules.splitlines(), 1):
         line = raw.strip()
         if not line or line.startswith("#"):
             continue

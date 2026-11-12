@@ -74,7 +74,7 @@ Amenidades del residencial:
    salga primera en la página de su zona
 3. Escribe la descripción **solo con los datos que diste** (no inventa
    metraje, precios, amenidades ni ubicaciones)
-4. Ejecuta `check_properties.py` y `generate_redirects.py`
+4. Ejecuta `validar_catalogo.py` (la misma validación que corre en el build)
 5. Verifica que la página, la ficha técnica y los datos estructurados salgan
    bien antes de hacer commit
 6. Te deja los commits listos y te dice el comando para subirlos
@@ -93,6 +93,6 @@ Amenidades del residencial:
 ## Si algo sale mal
 
 ```bash
-python3 scripts/check_properties.py     # valida carpetas, fotos y campos
+python3 scripts/validar_catalogo.py     # valida carpetas, fotos y campos
 python3 scripts/check_links.py --base-url https://caneyinmobiliaria.com
 ```
