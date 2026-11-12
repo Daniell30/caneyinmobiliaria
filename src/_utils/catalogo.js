@@ -28,22 +28,30 @@ function compare(a, b) {
     || cmp(a.slug, b.slug);
 }
 
-function loadProperties() {
-  const props = fs.readdirSync(DIR)
+// [{ file, data }] tal como están en disco, en orden alfabético de archivo.
+function readFiles() {
+  return fs.readdirSync(DIR)
     .filter(f => f.endsWith(".json"))
     .sort()
     .map(f => {
-      const file = path.join(DIR, f);
       try {
-        return JSON.parse(fs.readFileSync(file, "utf-8"));
+        return { file: f, data: JSON.parse(fs.readFileSync(path.join(DIR, f), "utf-8")) };
       } catch (err) {
         throw new Error(`src/propiedades/${f}: JSON inválido (${err.message})`);
       }
     });
+}
+
+// Completa el slug que falte y devuelve las propiedades en el orden del sitio.
+function prepare(props) {
   for (const p of props) {
     if (!String(p.slug || "").trim()) p.slug = fallbackSlug(p);
   }
   return props.sort(compare);
+}
+
+function loadProperties() {
+  return prepare(readFiles().map(f => f.data));
 }
 
 // La propiedad sin los campos de administración, con el resto en su orden.
@@ -51,4 +59,4 @@ function publicFields(p) {
   return Object.fromEntries(Object.entries(p).filter(([k]) => !CMS_FIELDS.includes(k)));
 }
 
-module.exports = { loadProperties, publicFields };
+module.exports = { loadProperties, publicFields, readFiles, prepare };
