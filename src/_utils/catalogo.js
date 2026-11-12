@@ -13,7 +13,7 @@ const DIR = path.join(__dirname, "..", "propiedades");
 const CMS_FIELDS = ["slug", "orden", "datePosted"];
 
 // URL de respaldo para un archivo sin `slug`: la misma fórmula de siempre.
-// check_properties.py lo marca como error, porque sin slug fijo la URL
+// La validación del build (validar.js) lo marca como error: sin slug fijo la URL
 // vuelve a depender del título.
 const fallbackSlug = p => `${slugify(p.title || "")}-${slugify(p.sector || p.area || "")}`;
 

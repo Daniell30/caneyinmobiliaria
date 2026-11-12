@@ -100,29 +100,28 @@ campos son los que controlan la URL, el orden y la fecha:
 ## 3. Verificar antes de subir
 
 ```bash
-python3 scripts/check_properties.py
+python3 scripts/validar_catalogo.py
 ```
 
 Revisa que la carpeta y cada foto existan, que los nombres cumplan la
 convención, que `slug`, `orden` y `datePosted` estén bien escritos y que no
 haya URLs ni códigos duplicados. Si sale `0 errores`, está listo.
 
-## 4. Actualizar el archivo generado
+Es la misma validación que corre **en cada build de Netlify**: si algo está
+mal, el build falla con un mensaje que dice qué archivo y qué campo, y el
+sitio en vivo se queda como estaba hasta que se corrija. Correrla antes solo
+ahorra el viaje.
+
+## 4. Subir
 
 ```bash
-python3 scripts/generate_redirects.py     # redirección .html → URL sin extensión
-```
-
-No es obligatorio para que el sitio funcione, pero sin él la URL con `.html`
-de la propiedad nueva no redirige a la versión limpia. (Ya no hace falta
-`derive_listing_dates.py`: la fecha va en `datePosted`.)
-
-## 5. Subir
-
-```bash
-git add src/propiedades src/css/images-caney src/_redirects
+git add src/propiedades src/css/images-caney
 git commit -m "Agregar propiedad: Apartamento en Naco" && git push
 ```
+
+Ya no hay que generar nada a mano: `_redirects` (incluida la redirección
+`.html` → URL limpia de la propiedad nueva) se genera en cada build, y la
+fecha va en `datePosted`.
 
 Netlify reconstruye el sitio solo. Después de que despliegue:
 
@@ -136,7 +135,7 @@ python3 scripts/check_links.py --base-url https://caneyinmobiliaria.com
 
 - La página de detalle en la URL de su `slug` (`/apartamento-en-naco-torre-sol-naco`)
 - La tarjeta en la página de la zona y en los filtros
-- `sitemap.xml`
+- `sitemap.xml` y `_redirects`
 - Los datos estructurados (`RealEstateListing`, precio, dirección, habitaciones…)
 - Las páginas de zona: si el sector llega a **2 propiedades**, se crea sola su
   página (ej. `/apartamentos-en-venta-naco`) con su tabla comparativa
