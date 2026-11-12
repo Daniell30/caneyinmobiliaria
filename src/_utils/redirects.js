@@ -41,7 +41,7 @@ const AREAS = [
 function buildRedirects(props, renameMap, legacySlugs) {
   const lines = [
     "# GENERATED FILE — do not edit by hand.",
-    "# Rebuild with: python3 scripts/generate_redirects.py",
+    "# Rebuilt on every Netlify build by src/redirects.11ty.js.",
     "",
     "# Contact variants",
     "/contact.html            /contact/   301!",
